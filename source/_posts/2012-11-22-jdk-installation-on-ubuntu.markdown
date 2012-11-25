@@ -4,8 +4,8 @@ title: "JDK installation on Ubuntu"
 date: 2012-11-22 22:25
 comments: true
 categories:
-- Linux
-- Setup & Configuration
+- linux
+- setup-configuration
 ---
 
 There may have many ways to install Java on Ubuntu. However, in this example I'll show the manual way which is download the [JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html) from the official website.

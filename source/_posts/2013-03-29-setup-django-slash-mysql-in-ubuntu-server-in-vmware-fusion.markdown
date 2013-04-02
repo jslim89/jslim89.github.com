@@ -169,12 +169,8 @@ server {
     location / {
         fastcgi_pass 127.0.0.1:8000;
         fastcgi_split_path_info ^()(.*)$;
+        include /etc/nginx/fastcgi_params;
         fastcgi_param PATH_INFO $fastcgi_script_name;
-        fastcgi_param REQUEST_METHOD $query_string;
-        fastcgi_param SERVER_NAME $server_name;
-        fastcgi_param SERVER_PROTOCOL $server_protocol;
-        fastcgi_param CONTENT_TYPE $content_type;
-        fastcgi_param CONTENT_LENGTH $content_length;
         fastcgi_pass_header Authorization;
         fastcgi_intercept_error off;
     }

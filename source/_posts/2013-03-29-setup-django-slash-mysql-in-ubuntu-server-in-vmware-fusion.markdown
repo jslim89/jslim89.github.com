@@ -172,7 +172,7 @@ server {
         include /etc/nginx/fastcgi_params;
         fastcgi_param PATH_INFO $fastcgi_script_name;
         fastcgi_pass_header Authorization;
-        fastcgi_intercept_error off;
+        fastcgi_intercept_errors off;
     }
 }
 ```

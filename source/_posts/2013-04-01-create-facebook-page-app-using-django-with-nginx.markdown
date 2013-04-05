@@ -29,7 +29,7 @@ $ openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
 
 # Keep the key and cert to a directory
 $ sudo mv server.key /etc/ssl/private/yoursite.com.key
-$ sudo mv server.crt /etc/ssl/cert/yoursite.com.crt
+$ sudo mv server.crt /etc/ssl/certs/yoursite.com.crt
 ```
 
 Configure Nginx - Edit **/etc/nginx/sites-available/django.conf**
@@ -43,7 +43,7 @@ server {
 server {
     listen 443;
     ssl on;
-    ssl_certificate /etc/ssl/cert/yoursite.com.crt
+    ssl_certificate /etc/ssl/certs/yoursite.com.crt
     ssl_certificate_key /etc/ssl/private/yoursite.com.key
 
     server_name https://test.local.domain;
@@ -66,7 +66,7 @@ server {
         include /etc/nginx/fastcgi_params;
         fastcgi_param PATH_INFO $fastcgi_script_name;
         fastcgi_pass_header Authorization;
-        fastcgi_intercept_error off;
+        fastcgi_intercept_errors off;
     }
 }
 ```

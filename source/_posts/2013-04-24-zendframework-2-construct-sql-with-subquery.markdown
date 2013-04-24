@@ -73,7 +73,7 @@ use Zend\Db\TableGateway\TableGateway;
 use Zend\Db\Sql\Select;
 use Zend\Db\Sql\Sql;
 
-class FooTable
+class TagTable
 {
     protected $table_gateway;
     protected $sql;

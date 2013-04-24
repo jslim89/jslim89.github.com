@@ -29,6 +29,7 @@ Using `<pre>` to wrap it will be more readable, unfortunately you don't want to 
 
 Create a new file **./module/Application/src/Application/View/Helper/God.php** _(Let's call it `God` as this helper can do anything that you want provided you defined it as a function inside)_
 ```php
+<?php
 namespace Application\View\Helper;
 
 use Zend\View\Helper\AbstractHelper;
@@ -52,6 +53,7 @@ class God extends AbstractHelper
 
 Now you have to edit your **./module/Application/Module.php** in order for it to load to view
 ```php
+<?php
 ...
 class Module
 {

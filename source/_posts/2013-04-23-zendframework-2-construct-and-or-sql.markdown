@@ -22,6 +22,7 @@ The **OR** is grouped together with **AND**, I'll show how to construct this que
 
 In your model table, says **./module/Application/src/Application/Model/FooTable.php**
 ```php
+<?php
 namespace Application\Model;
 
 use Zend\Db\TableGateway\TableGateway;
@@ -86,6 +87,7 @@ class FooTable
 In your controller
 
 ```php
+<?php
 ...
 public function searchAction()
 {

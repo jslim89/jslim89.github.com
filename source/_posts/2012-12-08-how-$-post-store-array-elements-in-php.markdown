@@ -19,6 +19,7 @@ But some of that contain key some didn't. What will we actually get in php `$_PO
 
 According to example above,
 ```php
+<?php
 echo '<pre>';
 print_r($_POST['foo']);
 echo '</pre>';

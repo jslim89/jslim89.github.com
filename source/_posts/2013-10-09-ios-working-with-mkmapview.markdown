@@ -9,15 +9,15 @@ categories:
 
 Here I want to discuss about using **map** in iOS application
 
-### First, import `MapKit` in your `ViewController.h`
+### First, import `MapKit`
 
-```obj-c
+```obj-c ViewController.h
 #import <MapKit/MapKit.h>
 ```
 
 ### Then make sure your `ViewController` conform to `MKMapViewDelegate`
 
-```obj-c
+```obj-c ViewController.h
 @interface ViewController : UIViewController <MKMapViewDelegate>
 
 @property (nonatomic, strong) MKMapView *mapView;
@@ -27,7 +27,7 @@ Here I want to discuss about using **map** in iOS application
 
 ### In your `ViewController.m`, create and place the map in `ViewController`
 
-```obj-c
+```obj-c ViewController.m
 // ...
 - (void)viewDidLoad
 {
@@ -43,10 +43,9 @@ Here I want to discuss about using **map** in iOS application
 }
 ```
 
-### Remember to create a custom object the conform to `MKAnnotation`
+### Remember to create a custom object the conform to `MKAnnotation`, lets call it `MyPlace`
 
-**MyPlace.h**
-```obj-c
+```obj-c MyPlace.h
 @interface MyPlace : NSObject <MKAnnotation>
 
 @property (nonatomic, strong) NSString *placeName;
@@ -77,8 +76,7 @@ Here I want to discuss about using **map** in iOS application
 @end
 ```
 
-**MyPlace.m**
-```obj-c
+```obj-c MyPlace.m
 #import "MyPlace.h"
 
 @implementation MyPlace
@@ -99,7 +97,7 @@ Here I want to discuss about using **map** in iOS application
 
 ### Add markers, center the region
 
-```obj-c
+```obj-c ViewController.m
 - (void)loadLocation
 {
     MyPlace *place1 = [[MyPlace alloc] initWithJSON:[NSDictionary dictionaryWithObjectsAndKeys:

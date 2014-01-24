@@ -23,7 +23,7 @@ function generateRandom(lengthOfString, charset) {
         we want the range from 0 - lengthOfString
         */
         rand += charset.charAt(Math.floor(Math.random() * charset.length));
-        lengthOfString++;
+        lengthOfString--;
     }
     return rand;
 }

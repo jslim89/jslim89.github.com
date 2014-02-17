@@ -149,7 +149,7 @@ Then edit the file named **httpd-vhosts.conf**, and it already come with this co
 Remove it and change to
 
 ```apache httpd-vhosts.conf
-<VirtualHost local.foosite.com:80> # remember change * to the ServerName
+<VirtualHost *:80>
     ServerAdmin webmaster@dummy-host.example.com
     ServerName local.foosite.com
     ServerAlias local.foosite.com
@@ -166,7 +166,7 @@ Remove it and change to
     CustomLog "logs/local.foosite.com-access_log" common
 </VirtualHost>
 
-<VirtualHost local.foosite.com:80>
+<VirtualHost *:80>
     ServerAdmin webmaster@dummy-host.example.com
     ServerName local.barsite.com
     ServerAlias local.barsite.com

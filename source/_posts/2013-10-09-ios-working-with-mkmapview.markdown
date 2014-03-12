@@ -135,6 +135,8 @@ Here I want to discuss about using **map** in iOS application
         static NSString *identifier = @"MyLocation";
         // just like UITableViewCell, also using dequeue reusable
         MKPinAnnotationView *annotationView = (MKPinAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+
+        UIButton *rightButton;
         if (annotationView == nil) {
             annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
             // make configuration
@@ -146,14 +148,16 @@ Here I want to discuss about using **map** in iOS application
             annotationView.image = [UIImage imageNamed:@"IconMarker"];
             
             // optional: you can add a button
-            UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+            rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
             [rightButton addTarget:self action:@selector(placeTouched:) forControlEvents:UIControlEventTouchUpInside];
-            // add a tag with a specific offset
-            rightButton.tag = 4000 + ((MyPlace *)annotation).theId;
             annotationView.rightCalloutAccessoryView = rightButton;
         } else {
             annotationView.annotation = annotation;
         }
+        // add a tag with a specific offset
+        // remember to put this outside, the annotation will be reuse everytime,
+        // if this is only set on annotation creation, you may have chances to get the wrong info
+        rightButton.tag = 4000 + ((MyPlace *)annotation).theId;
         
         return annotationView;
     }

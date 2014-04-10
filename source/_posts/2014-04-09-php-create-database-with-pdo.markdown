@@ -37,8 +37,10 @@ try {
     $dbh = new PDO('mysql:host='.DB_HOST.';dbname='.$dbname, DB_ROOT_USER, DB_ROOT_PASS);
 
     // optional: import existing sql file if you have
-    $dbh->exec(file_get_contents('existingdata.sql'))
-        or die(print_r($dbh->errorInfo(), true));
+    $imported = $dbh->exec(file_get_contents('existingdata.sql'));
+    if ($imported === false) { // even if success, it may also return some code
+        die(print_r($dbh->errorInfo(), true));
+    }
 
 } catch (PDOException $e) {
     die("DB ERROR: ". $e->getMessage());
@@ -49,3 +51,4 @@ _References:_
 
 * _[Can I create a database using PDO in PHP](http://stackoverflow.com/questions/2583707/can-i-create-a-database-using-pdo-in-php/6549440#6549440)_
 * _[Troubleshooting “No such file or directory” when running `php app/console doctrine:schema:create`](http://stackoverflow.com/questions/6259424/troubleshooting-no-such-file-or-directory-when-running-php-app-console-doctri/9251924#9251924)_
+* _[PHP PDO. error number '00000' when query is correct](http://stackoverflow.com/questions/11813911/php-pdo-error-number-00000-when-query-is-correct/11813915#11813915)_

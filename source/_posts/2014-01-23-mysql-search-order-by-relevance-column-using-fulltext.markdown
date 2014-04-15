@@ -40,6 +40,16 @@ ALTER TABLE book ADD FULLTEXT(title, keywords, description);
 ALTER TABLE category ADD FULLTEXT(name, description);
 ```
 
+Let's verify that it already in Full Text _(e.g. shows `book` table's column)_
+```sql
+SELECT index_name, group_concat(column_name) as columns
+FROM information_Schema.STATISTICS 
+WHERE table_schema = 'my_db_name' 
+AND table_name = 'book'
+AND index_type = 'FULLTEXT'
+GROUP BY index_name
+```
+
 **Objective: search result must shows the result that match the `title` first, then book's `keywords` & `description`, followed by category's `name` & `description`**
 
 Let see how the sql look like
@@ -68,3 +78,4 @@ So order them descendingly will give the result most important first _(higher th
 _References:_
 
 * _[How can I manipulate MySQL fulltext search relevance to make one field more 'valuable' than another?](http://stackoverflow.com/questions/547542/how-can-i-manipulate-mysql-fulltext-search-relevance-to-make-one-field-more-val/600915#600915)_
+* _[Show a tables FULLTEXT indexed columns](http://stackoverflow.com/questions/4107599/show-a-tables-fulltext-indexed-columns/4107794#4107794)_

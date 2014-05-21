@@ -17,6 +17,8 @@ Download the library, unzip it then drag the **lib** and **include** folders to 
 ### Step 2: Add private key
 Just drag your private key in **pem** format to xcode project.
 
+**If your private key is in binary form, you may [refer here](http://www.herongyang.com/Cryptography/keytool-Export-Key-openssl-enc-Command.html).**
+
 ### Step 3: Create a custom class
 Create a new class (subclass of NSObject), just named it **Crypto**
 

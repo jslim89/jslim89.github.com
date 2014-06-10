@@ -63,8 +63,8 @@ static NSString * const JSONResponseSerializerWithDataKey = @"JSONResponseSerial
             NSError *jsonError;
             // parse to json
             id json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&jsonError];
-            // store the value in userInfo
-            userInfo[JSJSONResponseSerializerWithDataKey] = (jsonError == nil) ? json : nil;
+            // store the value in userInfo if JSON has no error
+            if (jsonError == nil) userInfo[JSONResponseSerializerWithDataKey] = json;
             NSError *newError = [NSError errorWithDomain:(*error).domain code:(*error).code userInfo:userInfo];
             (*error) = newError;
         }
@@ -86,7 +86,7 @@ manager.responseSerializer = [JSONResponseSerializerWithData serializer];
     NSLog(@"success %@", responseObject);
 } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
     // get the json here
-    id json = error.userInfo[JSJSONResponseSerializerWithDataKey];
+    id json = error.userInfo[JSONResponseSerializerWithDataKey];
     NSLog(@"failure %@", json);
 }];
 ```

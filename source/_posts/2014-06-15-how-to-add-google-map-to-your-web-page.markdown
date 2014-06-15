@@ -106,6 +106,7 @@ document.getElementById('address').onkeyup = function(e) {
     }
 }
 
+var geocoder = new google.maps.Geocoder();
 function geocoding(keyword) {
     geocoder.geocode({address: keyword}, function(results, status) {
         if(status == google.maps.GeocoderStatus.OK) { // if got results
@@ -177,7 +178,68 @@ function geocoding(keyword) {
 }
 ```
 
-## 5. You are done
+## 5. You are done. See the result _(for illustration purpose only)_
+
+<style>#map img { max-width: none; }</style>
+
+Lat: <input type="text" id="lat" value="3.1234" class="form-control"/>
+Lng: <input type="text" id="lng" value="101.1234" class="form-control"/>
+
+<div id="map" style="height: 400px;"></div>
+
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+var latlng = new google.maps.LatLng(3.12345, 101.12345);
+var mapOptions = {
+    zoom: 8,
+    center: latlng,
+    disableDefaultUI: true,
+    zoomControl: true,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+};
+var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+var marker = new google.maps.Marker({
+    map: map,
+    position: latlng,
+    draggable: true,
+    icon: 'http://jslim89.github.com/images/posts/2014-06-15-how-to-add-google-map-to-your-web-page/marker-js-mini.png'
+});
+var geocoder = new google.maps.Geocoder();
+
+function SearchControl() {
+    var text = $('<input type="text" class="input-text form-control" placeholder="Search..." style="width:200px;" />');
+
+    $(text).keypress(function(e){
+        if(e.keyCode == 13) {
+            geocoding(text.val());
+            return false;
+        }
+    }).focus(function(){
+        $(this).select();
+    });
+
+    return text.get(0);
+}
+
+function geocoding(keyword) {
+    geocoder.geocode({address: keyword}, function(results, status) {
+        if(status == google.maps.GeocoderStatus.OK) {
+            map.setCenter(results[0].geometry.location);
+            marker.setPosition(results[0].geometry.location);
+            document.getElementById('lat').value = results[0].geometry.location.lat();
+            document.getElementById('lng').value = results[0].geometry.location.lng();
+        } else {
+            alert('Location not found.');
+        }
+    });
+}
+map.controls[google.maps.ControlPosition.TOP_RIGHT].push(new SearchControl());
+google.maps.event.addListener(marker, 'dragend', function() {
+    var position = marker.getPosition();
+    document.getElementById('lat').value = position.lat();
+    document.getElementById('lng').value = position.lng();
+});
+</script>
 
 _References:_
 

@@ -9,10 +9,10 @@ categories:
 
 Final look will be
 
-{% img http://jslim89.github.com/images/posts/2014-05-05-ios-customize-uitabbar-appearance/tabbar-appearance.png New appearance %}
+{% img http://jslim89.github.com/images/posts/2014-05-05-ios-customize-uitabbar-appearance/tabbar-appearance-2.png Desired appearance %}
 
 - The selected tab will be in dimmed background
-- The selected tab icon & text will be in white color
+- The selected/unselected tab icon & text will be in white color
 
 Before that, add a helper function to turn UIColor into UIImage
 
@@ -72,4 +72,29 @@ UIColor *backgroundColor = [UIColor greenColor];
 [[UITabBar appearance] setSelectionIndicatorImage:[AppDelegate imageFromColor:[UIColor colorWithRed:26/255.0 green:163/255.0 blue:133/255.0 alpha:1] forSize:CGSizeMake(64, 49) withCornerRadius:0]];
 ```
 
+**Remark: Those icon images is in white color**
+
+Until this stage, you will get this,
+
+{% img http://jslim89.github.com/images/posts/2014-05-05-ios-customize-uitabbar-appearance/tabbar-appearance-1.png Icon color changed %}
+
+by right it should shows white color, but somehow the icon image has changed.
+
+In order to make it as its original color
+
+```obj-c
+JSSettingsViewController *settingsViewController = [[JSSettingsViewController alloc] init];
+UINavigationController *settingsNavigationController = [[UINavigationController alloc] initWithRootViewController:settingsViewController];
+// LOOK AT THIS
+settingsNavigationController.tabBarItem.image = [[UIImage imageNamed:@"IconSetting"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+```
+
+We have to set the `UIImage`'s `imageWithRenderingMode` to `UIImageRenderingModeAlwaysOriginal` in order for it to always render original image.
+
+**NOTE: `imageWithRenderingMode` is only applicable for iOS7**
+
 Done :)
+
+_References:_
+
+* _[To change the color of unselected UITabBar icon in iOS 7?](https://stackoverflow.com/questions/21596515/to-change-the-color-of-unselected-uitabbar-icon-in-ios-7/21597313#21597313)_

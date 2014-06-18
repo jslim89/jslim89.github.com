@@ -119,5 +119,5 @@ You can [download the souce code](https://github.com/jslim89/ios7-statusbar-exam
 
 _References:_
 
-* [iOS 7 Set status bar style per view controller](http://stackoverflow.com/questions/19013975/ios-7-set-status-bar-style-per-view-controller/19014724#19014724)
-* [UIStatusBarStyle PreferredStatusBarStyle does not work on iOS 7](http://stackoverflow.com/questions/19108513/uistatusbarstyle-preferredstatusbarstyle-does-not-work-on-ios-7/19365160#19365160)
+* _[iOS 7 Set status bar style per view controller](http://stackoverflow.com/questions/19013975/ios-7-set-status-bar-style-per-view-controller/19014724#19014724)_
+* _[UIStatusBarStyle PreferredStatusBarStyle does not work on iOS 7](http://stackoverflow.com/questions/19108513/uistatusbarstyle-preferredstatusbarstyle-does-not-work-on-ios-7/19365160#19365160)_

@@ -118,7 +118,7 @@ static int initialPage = 1; // paging start from 1, depends on your api
 - (void)reloadTableView:(int)startingRow;
 {
     // the last row after added new items
-    int endingRow = [_locations count];
+    int endingRow = [_myList count];
     
     NSMutableArray *indexPaths = [NSMutableArray array];
     for (; startingRow < endingRow; startingRow++) {

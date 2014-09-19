@@ -53,6 +53,8 @@ Nav bar <CustomNavigationBar: 0x1369bad0; baseClass = UINavigationBar; frame = (
    | <_UINavigationBarBackIndicatorView: 0x12a711a0; frame = (8 24; 12.5 20.5); alpha = 0; opaque = NO; userInteractionEnabled = NO; layer = <CALayer: 0x12a71280>> - Back
 ```
 
+**P/S: Please remove this method before you submit the app to AppStore. This is private API, so there is high chances that your app will be rejected if you don't remove this method.**
+
 _References:_
 
 * _[recursiveDescription on p. 361](http://forums.bignerdranch.com/viewtopic.php?f=96&t=3247#p7175)_

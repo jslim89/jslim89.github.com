@@ -65,9 +65,10 @@ void Application::openURL(const char *url)
 {
     JniMethodInfo minfo;
     
-    if (JniMethodInfo::getStaticMethodInfo(minfo, "org/cocos2dx/lib/Cocos2dxActivity", "openURL", "(l.java.lang.String;)V")) {
+    if (JniHelper::getStaticMethodInfo(minfo, "org/cocos2dx/lib/Cocos2dxActivity", "openURL", "(Ljava/lang/String;)V")) {
         jstring StringArg1 = minfo.env->NewStringUTF(url);
         minfo.env->CallStaticVoidMethod(minfo.classID, minfo.methodID, StringArg1);
+        minfo.env->DeleteLocalRef(StringArg1);
         minfo.env->DeleteLocalRef(minfo.classID);
     }
 }

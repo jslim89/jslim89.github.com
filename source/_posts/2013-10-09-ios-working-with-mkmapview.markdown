@@ -49,16 +49,24 @@ Here I want to discuss about using **map** in iOS application
 @interface MyPlace : NSObject <MKAnnotation>
 
 @property (nonatomic, strong) NSString *placeName;
-@property (nonatomic, assign) double latitude;
-@property (nonatomic, assign) double longitude;
 
 - (id)initWithJSON:(id)json;
+
+// must implement this if want to make the Pin draggable
+- (void)setCoordinate:(CLLocationCoordinate2D)coordinate;
 
 @end
 ```
 
 ```obj-c MyPlace.m
 #import "MyPlace.h"
+
+@interface MyPlace ()
+
+@property (nonatomic, assign) double latitude;
+@property (nonatomic, assign) double longitude;
+
+@end
 
 @implementation MyPlace
 
@@ -78,6 +86,12 @@ Here I want to discuss about using **map** in iOS application
 - (CLLocationCoordinate2D)coordinate
 {
     return CLLocationCoordinate2DMake(self.latitude, self.longitude);
+}
+
+- (void)setCoordinate:(CLLocationCoordinate2D)coordinate
+{
+    self.latitude = coordinate.latitude;
+    self.longitude = coordinate.longitude;
 }
 
 // this will be shown as marker title
@@ -146,6 +160,10 @@ Here I want to discuss about using **map** in iOS application
             annotationView.pinColor = MKPinAnnotationColorGreen;
             // provide custom image as marker if you want to
             annotationView.image = [UIImage imageNamed:@"IconMarker"];
+
+            // optional: make it draggable
+            annotationView.animatesDrop = YES;
+            annotationView.draggable = YES;
             
             // optional: you can add a button
             rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
@@ -162,6 +180,16 @@ Here I want to discuss about using **map** in iOS application
         return annotationView;
     }
     return nil;
+}
+
+// dragged annotation
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)annotationView didChangeDragState:(MKAnnotationViewDragState)newState fromOldState:(MKAnnotationViewDragState)oldState
+{
+    if (newState == MKAnnotationViewDragStateEnding)
+    {
+        CLLocationCoordinate2D droppedAt = annotationView.annotation.coordinate;
+        NSLog(@"Pin dropped at %f,%f", droppedAt.latitude, droppedAt.longitude);
+    }
 }
 
 - (MKCoordinateRegion)regionForAnnotations:(NSArray *)annotations
@@ -209,3 +237,4 @@ So just call the `loadLocation` then the markers will shown.
 _References:_
 
 * _[In which case that mapView:viewForAnnotation: will be called?](http://stackoverflow.com/questions/9442830/in-which-case-that-mapviewviewforannotation-will-be-called/9442902#9442902)_
+* _[Drag an annotation pin on a mapview](http://stackoverflow.com/questions/10733564/drag-an-annotation-pin-on-a-mapview/10734653#10734653)_

@@ -160,7 +160,7 @@ Remove it and change to
         AllowOverride All
         Order allow,deny
         allow from all
-        Require all granted # this is required in XAMPP, but not in MAMP
+        Require all granted
     </Directory>
     ErrorLog "logs/local.foosite.com-error_log"
     CustomLog "logs/local.foosite.com-access_log" common

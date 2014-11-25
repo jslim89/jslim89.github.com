@@ -61,7 +61,7 @@ static int initialPage = 1; // paging start from 1, depends on your api
 
     // init table list
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
-    self.tableView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleHeight;
+    self.tableView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin| UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleHeight;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
@@ -160,5 +160,25 @@ static int initialPage = 1; // paging start from 1, depends on your api
 
 @end
 ```
+
+### EDIT:
+
+Remember to set the `autoresizingMask`, e.g.
+
+```obj-c
+self.tableView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin| UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleHeight;
+```
+
+Otherwise the contentSize of `scrollView` will have problem when calling `showsInfiniteScrolling = NO;`
+
+See the images below:
+
+**Not working example**
+
+![content size problem](http://jslim89.github.com/images/posts/2014-04-01-infinite-scroll-using-on-uitableview/contentsize-notwork.gif)
+
+**Working example**
+
+![content size solved](http://jslim89.github.com/images/posts/2014-04-01-infinite-scroll-using-on-uitableview/contentsize-work.gif)
 
 Done :)

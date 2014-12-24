@@ -227,3 +227,7 @@ Refer to my [previous blog](http://jslim.net/blog/2013/01/05/rsa-encryption-in-i
 Crypto *crypto = [[Crypto alloc] init];
 NSString *plainText = [crypto decryptFromCipherText:@"Your base64 encoded cipher text here"];
 ```
+
+## Update Dec 24, 2014
+
+You can use my library [RSA-objc](https://github.com/jslim89/RSA-objc), and the instructions is inside.

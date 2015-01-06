@@ -54,6 +54,33 @@ Don't forget to remove it after the main view deallocated, otherwise the app wil
 
 Once the text changed, it will output the console
 
+### Update Jan 6, 2015
+
+The more proper way would be
+
+```obj-c
+[_titleLabel addObserver:self forKeyPath:@"text" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+```
+
+```obj-c
+- (void)dealloc
+{
+    [_titleLabel removeObserver:self forKeyPath:@"text"];
+}
+```
+
+```obj-c
+#pragma mark - observer
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if (object == _titleLabel) {
+        if ([keyPath isEqualToString:@"text"]) {
+            NSLog(@"the title text has been changed");
+        }
+    }
+}
+```
+
 _References:_
 
 - _[Key-Value Observing](http://nshipster.com/key-value-observing/)_

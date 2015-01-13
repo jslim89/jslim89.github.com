@@ -62,3 +62,32 @@ _(when add in the footerView, the `contentSize` of the tableView is actually inc
 it has more room to scroll and the keyboard won't block the content below)_
 3. When keyboard hide, remove the footerView, the tableView's `contentSize` will then changed back to
 it's original height.
+
+## Update: 13 Jan, 2015
+
+```obj-c
+- (void)keyboardWillShow:(NSNotification *)notification
+{
+    NSDictionary *userInfo = [notification userInfo];
+    CGSize keyboardSize = [[userInfo objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.height, 0.0);
+    _signInTableView.contentInset = contentInsets;
+    _signInTableView.scrollIndicatorInsets = contentInsets;
+    
+    _signUpTableView.contentInset = contentInsets;
+    _signUpTableView.scrollIndicatorInsets = contentInsets;
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification
+{
+    UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+    _signInTableView.contentInset = contentInsets;
+    _signInTableView.scrollIndicatorInsets = contentInsets;
+    
+    _signUpTableView.contentInset = contentInsets;
+    _signUpTableView.scrollIndicatorInsets = contentInsets;
+}
+```
+
+This solution doesn't need to care about the `tableFooterView`, but change it's content inset instead.

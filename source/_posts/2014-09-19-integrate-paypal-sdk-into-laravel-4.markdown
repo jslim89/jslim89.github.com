@@ -541,3 +541,12 @@ Scroll down after the **Add webhook** button, click on the **Show** link
 Then edit **app/config/paypal.php**, replace **client_id** & **secret** with the live credentials, and change the **mode** to `live`
 
 #### Ack: Thanks [waiylgeek](https://disqus.com/by/waiylgeek/) for the info.
+
+## Update Jan 19, 2015. READ ME:
+
+My intention of this post is about to share how to integrate PayPal official SDK to Laravel 4.
+I'm not a PayPal expert here, those PayPal api, PayPal rules, etc question please refer to PayPal official website.
+
+If you have any feedback or improvement, welcome to comment on this post, or drop me an email.
+
+Thank you.

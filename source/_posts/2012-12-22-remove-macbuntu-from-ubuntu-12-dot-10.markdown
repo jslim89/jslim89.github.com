@@ -14,7 +14,7 @@ Unfortunately, I realize that the [Cairo-Dock](http://glx-dock.org/) is damn ann
 
 Thus I decided to remove it.
 
-```sh
+```
 # change the left dock icon back to ubuntu icon
 $ wget -O ubuntu-logo.zip http://goo.gl/mU42p
 

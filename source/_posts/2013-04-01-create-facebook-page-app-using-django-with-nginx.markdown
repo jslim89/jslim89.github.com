@@ -13,7 +13,8 @@ This is continue from [previous post](http://jslim89.github.com/blog/2013/03/29/
 
 ## Enable SSL
 As we know that Facebook app required SSL, so first we must self-sign a certificate
-```sh
+
+```
 # Generate a private key
 $ openssl genrsa -des3 -out server.key 1024
 
@@ -33,7 +34,8 @@ $ sudo mv server.crt /etc/ssl/certs/yoursite.com.crt
 ```
 
 Configure Nginx - Edit **/etc/nginx/sites-available/django.conf**
-```sh
+
+```
 server {
     listen 80;
     ...
@@ -113,6 +115,7 @@ SECURE_REQUIRE_PATHS = (
 ```
 
 ## Create home view
+
 Edit **/home/username/public_html/projectname/newapp/views.py**
 ```py
 from django.template.loader import get_template
@@ -161,14 +164,15 @@ TEMPLATE_DIRS = (
     os.path.join(os.path.dirname(__file__), 'newapp/templates'.replace('\\', '/')),
 )
 ```
+
 Create a directory to keep all templates related to **newapp**
-```sh
+```
 $ mkdir /home/username/public_html/projectname/newapp/templates
 $ touch /home/username/public_html/projectname/newapp/templates/index.html
 ```
 
 In case that you want to keep your **css** or **js** or **image** files, so create a directory for them
-```sh
+```
 $ mkdir /home/username/public_html/projectname/static
 $ mkdir /home/username/public_html/projectname/static/css
 $ mkdir /home/username/public_html/projectname/static/js
@@ -179,6 +183,7 @@ $ touch /home/username/public_html/projectname/static/css/styles.css
 ```
 
 In **/home/username/public_html/projectname/projectname/settings.py**
+
 ```py
 ...
 STATIC_URL = '/static/'
@@ -191,6 +196,7 @@ STATICFILES_DIRS = (
 ```
 
 Edit the **index.html**
+
 ```
 <!DOCTYPE html>
 <html>

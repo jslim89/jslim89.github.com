@@ -11,7 +11,8 @@ categories:
 Let say you want to download from **http://www.domain.com/images/**, and you know that the images name is from **001** to **100**
 
 Lets write a shell script
-```sh
+
+```
 #!/bin/bash
 max=100
 for i in `seq 1 $max`

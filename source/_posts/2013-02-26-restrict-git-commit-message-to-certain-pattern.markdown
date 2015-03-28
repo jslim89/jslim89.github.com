@@ -42,7 +42,7 @@ if match is None:
 ```
 
 Simple right? But don't remember to change it to executable and no `.py` extension
-```sh
+```
 $ chmod 755 /path/to/your/project/.git/hooks/commit-msg
 ```
 

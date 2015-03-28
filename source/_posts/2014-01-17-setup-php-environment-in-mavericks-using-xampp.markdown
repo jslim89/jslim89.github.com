@@ -44,19 +44,19 @@ Hit **Command `⌘`** + **Space** key, type in `terminal` then hit **Enter** key
 
 Create a directory to keep all projects _(e.g. public_html)_
 
-```sh
+```
 $ mkdir ~/public_html
 ```
 
 Create a project to that directory
 
-```sh
+```
 $ mkdir ~/public_html/project_a
 ```
 
 Create a home page for it
 
-```sh
+```
 $ touch ~/public_html/project_a/index.php
 ```
 
@@ -79,7 +79,7 @@ then add the following content
 
 For testing purpose, just duplicate the project A
 
-```sh
+```
 $ cp -r ~/public_html/project_a ~/public_html/project_b
 ```
 
@@ -106,7 +106,7 @@ Now we have 2 projects, so we use virtual host _(setup different domains)_ to di
 
 Navigate to XAMPP directory
 
-```sh
+```
 $ cd /Applications/XAMPP/etc/
 ```
 
@@ -138,7 +138,7 @@ Now will look like
 
 Navigate to deeper directory
 
-```sh
+```
 $ cd extra/
 ```
 
@@ -185,13 +185,13 @@ Remove it and change to
 ```
 
 Restart apache server
-```sh
+```
 $ sudo /Applications/XAMPP/xamppfiles/xampp restart
 ```
 
 Edit the **/etc/hosts** file
 
-```sh
+```
 $ sudo vi /etc/hosts
 ```
 
@@ -236,7 +236,7 @@ Once completed, when you simply click on any link above, error appear.
 
 To solve this, just have to edit the file located in **/Applications/XAMPP/xamppfiles/phpmyadmin/config.inc.php**
 
-```sh
+```
 $ sudo vi /Applications/XAMPP/xamppfiles/phpmyadmin/config.inc.php
 ```
 
@@ -250,7 +250,7 @@ In your browser, refresh the phpmyadmin page. It should work now.
 
 ## 6. (Add on) Auto start XAMPP on machine boot up
 
-```sh
+```
 $ cd /Library/StartupItems
 $ sudo mkdir xampp # create xampp directory
 $ cd xampp/
@@ -262,11 +262,11 @@ Add the content to the files
 
 ### xampp
 
-```sh
+```
 $ sudo vi xampp
 ```
 
-```sh xampp
+```
 #!/bin/bash
 
 /Applications/XAMPP/xamppfiles/xampp start
@@ -276,7 +276,7 @@ _(By default, XAMPP will install in the path above, if yours is different, just 
 
 ### StartupParameters.plist
 
-```sh
+```
 $ sudo vi StartupParameters.plist
 ```
 
@@ -303,7 +303,7 @@ $ sudo vi StartupParameters.plist
 
 Change the ownership
 
-```sh
+```
 $ cd .. # go back 1 level up (directory)
 $ sudo chown -R root xampp # change the owner of `xampp` directory
 $ sudo chgrp -R wheel xampp # change the group of `xampp` directory

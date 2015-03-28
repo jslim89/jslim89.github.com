@@ -9,7 +9,7 @@ categories:
 
 In Cocos2d-x _(I'm using version 3)_, there is no built-in method to open an external URL. However, this can be achieved. Here I'm only showing on iOS & Android platform.
 
-```sh
+```
 $ cd /path/to/game
 $ ls
 cocos2d/       proj.ios_mac/  proj.win32/     res/  CMakeLists.txt

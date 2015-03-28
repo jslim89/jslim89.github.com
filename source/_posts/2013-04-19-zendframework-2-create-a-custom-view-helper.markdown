@@ -14,6 +14,7 @@ For many situations, we need some helper functions to be used in view.
 i.e. When you want to debug, probably you will write
 
 **./module/Application/view/application/index/foo.phtml**
+
 ```php
 <div class="whatever">
     <?php
@@ -28,6 +29,7 @@ i.e. When you want to debug, probably you will write
 Using `<pre>` to wrap it will be more readable, unfortunately you don't want to every time write such a long line. Now, create a helper to be able to use in all views.
 
 Create a new file **./module/Application/src/Application/View/Helper/God.php** _(Let's call it `God` as this helper can do anything that you want provided you defined it as a function inside)_
+
 ```php
 <?php
 namespace Application\View\Helper;
@@ -52,6 +54,7 @@ class God extends AbstractHelper
 ```
 
 Now you have to edit your **./module/Application/Module.php** in order for it to load to view
+
 ```php
 <?php
 ...
@@ -70,11 +73,13 @@ class Module
     ...
 }
 ```
+
 `godHelper` is an alias to be used in your view.
 
 Now you're done, you can use in any view now. i.e.
 
 **./module/Application/view/application/index/foo.phtml**
+
 ```php
 <div class="whatever">
     <?php $this->godHelper()->debug($this->form->get('foo'), 1); ?>

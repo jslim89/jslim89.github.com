@@ -79,7 +79,7 @@ and
 
 Activate the virtual host
 
-```sh
+```
 $ sudo a2ensite foo.com
 $ sudo a2ensite bar.com
 # Reload apache service

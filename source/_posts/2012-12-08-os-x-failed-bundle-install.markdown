@@ -10,7 +10,7 @@ categories:
 ---
 
 When I try to setup octopress in OS X, I run `bundle install`, it always come out an error like:
-```sh
+```
 $ bundle install
 Fetching gem metadata from http://rubygems.org/.......
 Fetching gem metadata from http://rubygems.org/..
@@ -69,12 +69,12 @@ Make sure that `gem install RedCloth -v '4.2.9'` succeeds before bundling.
 ```
 
 First, run
-```sh
+```
 $ sudo xcodebuild -license
 $ sudo rvm reinstall 1.9.3
 ```
 Now you should be able to perform `bundle install`
-```sh
+```
 $ cd /path/to/your/Gemfile
 $ bundle install
 ```

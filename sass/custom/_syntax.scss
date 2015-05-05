@@ -10,7 +10,7 @@ body {
                 white-space: pre;
             }
             .gutter {
-                display: none;
+                // display: none; /* uncomment this line if you want to hide line numbers in code highlight */
             }
         }
     }

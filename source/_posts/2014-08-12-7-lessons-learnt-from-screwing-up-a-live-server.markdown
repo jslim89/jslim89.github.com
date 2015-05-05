@@ -30,7 +30,7 @@ _"Try this! It works like a charm"_
 
 Seen this before? If you visit stackoverflow often, you sure have seen it thousands of times.
 
-```sh
+```
 $ yum erase ...
 ```
 
@@ -60,7 +60,7 @@ Think about it.
 Confirm what? I attempt to start the **httpd** server, but it always failed, no matter how I configure.
 Then I run the following command
 
-```sh
+```
 $ service httpd status
 Stopped
 ```
@@ -69,7 +69,7 @@ It shows that the server is not running. Since it does not running and yet it ca
 I never check carefully whether there are other services using it. I should double check with the following
 command
 
-```sh
+```
 $ netstat -tulpn | less
 ```
 

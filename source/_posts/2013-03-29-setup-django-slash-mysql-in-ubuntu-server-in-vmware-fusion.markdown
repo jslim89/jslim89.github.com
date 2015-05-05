@@ -19,7 +19,7 @@ Basically the goal is **To create a web application that run on VMWare using Pyt
 Assumed that the instance is clean _(which doesn't install anything other than the OS)_
 
 Install all the necessary package
-```sh
+```
 $ sudo apt-get install python-pip mysql-server python-mysqldb nginx
 ```
 
@@ -28,13 +28,13 @@ $ sudo apt-get install python-pip mysql-server python-mysqldb nginx
 * `nginx` is a reverse proxy server that used to redirect the **HTTP Request** from **port 80** _(default port)_ to **port 8000** _(Django default port, you can change to any port number)_
 
 Now install **Django** and **flup**
-```sh
+```
 $ pip install Django==1.5.1
 $ pip install flup
 ```
 
 Create a user for database
-```sh
+```
 $ mysql -u root -p
 Enter password:
 Welcome to the MySQL monitor.  Commands end with ; or \g.
@@ -59,7 +59,7 @@ root@localhost [(none)]> exit
 This basically is create a new database **django_db** and a new user **username** with password **password**. And grant all permissions to **username** on **django_db**.
 
 Start a new project
-```sh
+```
 $ mkdir ~/public_html # This is optional
 $ cd ~/public_html
 $ django-admin.py startproject projectname
@@ -80,7 +80,7 @@ DATABASES = {
 ```
 
 Create an app to this project
-```sh
+```
 $ cd ~/public_html/projectname/
 $ python manage.py startapp newapp
 ```
@@ -96,7 +96,7 @@ class User(models.Model):
     created_date = models.DateTimeField()
 ```
 
-```sh
+```
 $ python manage.py sql newapp
 BEGIN;
 CREATE TABLE `newapp_user` (
@@ -111,12 +111,12 @@ COMMIT;
 ```
 This is just a preview without actually create a table on your database.  
 Thus, you have to run this
-```sh
+```
 $ python manage.py syncdb
 ```
 
 To verify it
-```sh
+```
 $ mysql -u root -p django_db
 Enter password:
 Welcome to the MySQL monitor.  Commands end with ; or \g.
@@ -145,7 +145,7 @@ root@localhost [(none)]> exit
 ```
 
 Now configure Nginx to the django project
-```sh
+```
 $ sudo vi /etc/nginx/sites-available/django.conf # create a new file
 ```
 with this content
@@ -177,17 +177,17 @@ server {
 }
 ```
 Remember to create a **logs** directory in **~/public_html/projectname/**
-```sh
+```
 $ mkdir ~/public_html/projectname/logs
 ```
 
 Start your Nginx server
-```sh
+```
 $ sudo /etc/init.d/nginx start
 ```
 
 Run your project on Nginx
-```sh
+```
 $ cd ~/public_html/projectname
 $ python manage.py runfcgi method=threaded host=127.0.0.1 port=8000
 ```
@@ -201,7 +201,7 @@ Configure your network setting for the instance that run the web application
 **NOTE: This must be in LAN environment, so that the router assign a new ip for your guess OS**
 
 ## To get your Guess OS's ip, have to go back to guess OS
-```sh
+```
 $ ifconfig
 eth0      Link encap:Ethernet  HWaddr 00:11:22:33:44:55
           inet addr:192.168.1.123 Bcast:.......
@@ -212,7 +212,7 @@ Here you want is **192.168.1.123**
 
 Add a host _(local domain)_
 
-```sh
+```
 $ sudo vi /etc/hosts
 ```
 add a new line to the bottom

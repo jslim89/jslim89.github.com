@@ -12,7 +12,7 @@ I got no choice but have to export the ipa on command line.
 
 ### 1. Clearn the project
 
-```sh
+```
 $ xcodebuild clean -project /path/to/project.xcodeproj -configuration Release -alltargets
 ```
 
@@ -20,7 +20,7 @@ $ xcodebuild clean -project /path/to/project.xcodeproj -configuration Release -a
 
 ![Xcode - Scheme](http://jslim89.github.com/images/posts/2014-11-14-ios-export-to-ipa-thru-command-line/scheme.png)
 
-```sh
+```
 $ xcodebuild archive -project /path/to/project.xcodeproj -scheme "Scheme name" -archivePath /path/to/output
 ```
 
@@ -32,7 +32,7 @@ E.g. **Warranty Reminder**
 
 ![Xcode - Build Settings](http://jslim89.github.com/images/posts/2014-11-14-ios-export-to-ipa-thru-command-line/xcode.png)
 
-```sh
+```
 $ xcodebuild -exportArchive -archivePath /path/to/output.xcarchive -exportPath /path/to/output -exportFormat ipa -exportProvisioningProfile "Provisioning Profile Name"
 ```
 
@@ -48,7 +48,7 @@ I have make this into a shell script, you can [download here](http://jslim89.git
 
 Usage: Just edit the file, instruction is inside. Then run in your terminal
 
-```sh
+```
 $ chmod ugo+x export.sh
 $ ./export.sh
 ```

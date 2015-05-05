@@ -17,7 +17,7 @@ Here I would like to use [Sails.js framework](http://sailsjs.org/) _(version 0.9
 
 ## 1. Install node.js on Ubuntu
 
-```sh
+```
 $ sudo apt-get install python-software-properties python g++ make
 $ sudo add-apt-repository ppa:chris-lea/node.js
 $ sudo apt-get update
@@ -27,12 +27,13 @@ $ sudo apt-get install nodejs
 ## 2. Create 2 apps
 
 Install Sails.js globally
-```sh
+
+```
 $ sudo npm -g install sails
 ```
 
 Create projects
-```sh
+```
 $ cd
 $ mkdir public_html && cd public_html
 $ sails new project1
@@ -67,13 +68,13 @@ module.exports = {
 
 In order to make the app run on background, we need [forever](https://github.com/nodejitsu/forever)
 
-```sh
+```
 $ sudo npm install -g forever
 ```
 
 Now start the app using **forever**
 
-```sh
+```
 $ cd ~/public_html/project1
 $ forever start app.js
 warn:    --minUptime not set. Defaulting to: 1000ms
@@ -85,7 +86,7 @@ Let's open up your browser, and type `localhost:8081`... Oops... it doesn't work
 
 Let's check the log
 
-```sh
+```
 $ forever logs
 info:    Logs for running Forever processes
 data:        script logfile                    
@@ -93,7 +94,9 @@ data:    [0] app.js /home/username/.forever/1Vak.log
 ```
 
 See the content of the file
-```sh
+
+```
+
 $ less ~/.forever/1Vak.log
 
 module.js:340
@@ -115,7 +118,7 @@ error: Forever detected script exited with code: 8
 
 Now, the error tell us that we need to install **Sails.js** locally
 
-```sh
+```
 $ forever stopall # stop all process
 $ cd ~/public_html/project1
 $ sudo npm install sails # without -g option
@@ -129,13 +132,13 @@ Now open up the browser, it should show up the content.
 
 First, we need [Nginx](http://nginx.org/)
 
-```sh
+```
 $ sudo apt-get install nginx
 ```
 
 Configure Nginx to listen to port 80 and forword the request to different app based by the port number
 
-```sh
+```
 $ cd /etc/nginx/sites-available/
 $ sudo touch sails1.com.conf
 ```
@@ -163,17 +166,18 @@ This tell the server that forword the request from [sails1.com](http://sails1.co
 Just do the same thing for **project2**
 
 Enable the config. _(In order to make the config file take effect, symlink them to **sites-enabled** directory)_
-```sh
+```
 $ sudo ln -s /etc/nginx/sites-available/sails1.com.conf /etc/nginx/sites-enabled/sails1.com.conf
 $ sudo ln -s /etc/nginx/sites-available/sails2.com.conf /etc/nginx/sites-enabled/sails2.com.conf
 ```
 
 Restart Nginx server
-```sh
+```
 $ sudo service nginx restart
 ```
 
 Since I'm testing on local machine, so we need to edit the **hosts** file, append the content below the hosts file
+
 ```nginx /etc/hosts
 # nginx virtual host
 127.0.0.1    sails1.com

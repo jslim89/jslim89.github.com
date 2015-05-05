@@ -13,13 +13,13 @@ There may have many ways to install Java on Ubuntu. However, in this example I'l
 There are few steps here:
 
 Extract it and move to `/opt` directory.
-```sh
+```
 $ tar -zxvf jdk_<version>.tar.gz
 $ sudo mv jdk_<version> /opt/ # NOTE: /opt is a directory like `Program file` in Windows
 ```
 
 Add **Java** to [Environment Variable](http://en.wikipedia.org/wiki/Environment_variable).
-```sh
+```
 $ vi ~/.bash_profile
 # Append this two lines:
 #   export JAVA_HOME='/opt/jdk_<version>/bin'
@@ -28,12 +28,12 @@ $ vi ~/.bash_profile
 ```
 
 Activate the bash profile for immediate effect.
-```sh
+```
 $ source ~/.bash_profile
 ```
 
 Re-open terminal (i.e. `CTRL + ALT + T` for shortcut)
-```sh
+```
 $ java -showversion
 ```
 

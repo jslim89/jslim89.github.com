@@ -37,7 +37,7 @@ Close the Xcode first.
 
 Then try to search for your project name
 
-```sh
+```
 $ cd /path/to/JsFoo/
 $ grep -R "JsFoo" *
 JsBar.xcodeproj/project.pbxproj:        4B5454051A5E0E0200FD515D /* JsFooTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5454041A5E0E0200FD515D /* JsFooTests.swift */; };
@@ -69,7 +69,7 @@ JsFooTests/JsFooTests.swift:class JsFooTests: XCTestCase {
 
 It seems a lot to change... No worry, there is an easy way to do it
 
-```sh
+```
 $ grep -Rl "JsFoo" * | xargs sed -i "" "s/JsFoo/JsBar/"
 sed: Binary: No such file or directory
 ```
@@ -79,7 +79,7 @@ then only pass the result to `sed` to change "JsFoo" to "JsBar"
 
 Try to search again...
 
-```sh
+```
 $ grep -R "JsFoo" *
 Binary file JsBar.xcodeproj/project.xcworkspace/xcuserdata/js.xcuserdatad/UserInterfaceState.xcuserstate matches
 JsFoo/AppDelegate.swift://  JsFoo
@@ -93,20 +93,20 @@ Oops... Some files haven't change. The reason for this is because one of the fil
 a binary file, up until there the instruction is break. Let's do again and exclude that binary
 file
 
-```sh
+```
 $ grep -Rl "JsFoo" JsFoo*/* | xargs sed -i "" "s/JsFoo/JsBar/"
 ```
 
 Search again?
 
-```sh
+```
 $ grep -R "JsFoo" *
 Binary file JsBar.xcodeproj/project.xcworkspace/xcuserdata/js.xcuserdatad/UserInterfaceState.xcuserstate matches
 ```
 
 Done! Now totally no more "JsFoo". One more thing, rename the folders
 
-```sh
+```
 $ mv JsFoo JsBar
 $ mv JsFooTests JsBarTests
 ```
@@ -123,7 +123,7 @@ Oops... Got error?
 
 One more file that we forgot to rename
 
-```sh
+```
 $ mv JsBarTests/JsFooTests.swift JsBarTests/JsBarTests.swift
 ```
 

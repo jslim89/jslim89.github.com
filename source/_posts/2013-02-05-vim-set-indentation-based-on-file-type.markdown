@@ -10,7 +10,7 @@ categories:
 Let say now you want your **.js** _(JavaScript)_ file to 2 space indent.
 
 Create a file named `javascript.vim` **(NOT `js.vim`)**
-```sh
+```
 $ touch ~/.vim/ftplugin/javascript.vim
 ```
 

@@ -15,7 +15,7 @@ Install [JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html
 **NOTE: Installation of Eclipse is same as [Installation of JDK](http://jslim89.github.com/blog/2012/11/22/jdk-installation-on-ubuntu/). Just have to append `export ECLIPSE_HOME='/opt/eclipse'` after the `export JAVA_HOME` line and append `:${ECLIPSE_HOME}` to the end of `export PATH`.**
 
 To make it on Gnome desktop
-```sh
+```
 $ sudo touch /usr/share/applications/eclipse.desktop
 ```
 Add the content below to the file just created
@@ -38,7 +38,7 @@ Edit `/opt/eclipse/eclipse.ini` add
 right before `-vmargs`
 
 Next is to install [Eclim](http://eclim.org/). ([see more](http://eclim.org/install.html))
-```sh
+```
 $ java -jar eclim_<version>.jar
 ```
 

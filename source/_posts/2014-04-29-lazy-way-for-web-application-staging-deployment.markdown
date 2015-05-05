@@ -16,13 +16,13 @@ Example: I have a PHP web app hosted on [Bitbucket](https://bitbucket.org), let 
 
 ### SSH to the server
 
-```sh
+```
 $ ssh root@123.123.123.123
 ```
 
 ### Assumed the project want to store in **/var/www/mywebapp.com**
 
-```sh
+```
 $ mkdir /var/www/mywebapp.com
 $ cd /var/www/mywebapp.com
 $ git init
@@ -35,7 +35,7 @@ The last command here you can see I put my username, you can put whatever you wa
 
 ### Update the project
 
-```sh
+```
 $ git pull jslim89 master
 # Then type your bitbucket account password, because we are not using private key
 ```
@@ -47,7 +47,7 @@ $ git pull jslim89 master
 
 They also do the same step with you
 
-```sh
+```
 $ git remote add dev1 https://dev1@bitbucket.org/myorganization/my-private-app.git
 $ git pull dev1 master
 # type in their own password

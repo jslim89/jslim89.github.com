@@ -10,24 +10,29 @@ categories:
 ---
 
 ### Install [Apache](http://httpd.apache.org/) server and [subversion](http://subversion.apache.org/)
-```sh
+
+```
 $ sudo apt-get install apache2 subversion libapache2-svn
 ```
 
 ### Create repository to host your projects
-```sh
+
+```
 $ mkdir /path/to/your/repos
 ```
 
 ### Create a project
-```sh
+
+```
 $ svnadmin create project_name
 ```
 
 ### Edit the configuration file
-```sh
+
+```
 $ sudo vi /etc/apache2/mods-enabled/dav_svn.conf
 ```
+
 Uncomment the following lines
 ```
 <Location /svn>
@@ -43,31 +48,39 @@ Uncomment the following lines
 ```
 
 ### Create a user
-```sh
+
+```
 $ sudo htpasswd -cm /etc/apache2/dav_svn.passwd your_username
 ```
+
 **NOTE:  
 `-c` option should only be used on the first time when you create a user as the user doesn't exists.  
 `-m` option is to specify the MD5 encryption on the password.**
 
 ### Restart apache server
-```sh
+
+```
 $ sudo /etc/init.d/apache2 restart
 ```
 
 ### Set user type/group for authorization _(Optional)_
-```sh
+
+```
 $ sudo vi /etc/apache2/mods-enabled/dav_svn.conf
 ```
+
 Uncomment the following lines
 ```
 AuthzSVNAccessFile /etc/apache2/dav_svn.authz
 ```
+
 Create a new file
-```sh
+```
 $ sudo vi /etc/apache2/dav_svn.authz
 ```
+
 Add few user groups and assign them to a project
+
 ```
 # Create user group
 [group]
@@ -80,10 +93,12 @@ group2 = user4, user5, user6
 @group2 = r  # Only have read access, cannot commit the changes
 user7 = rw   # A standalone user who doesn't belongs to any group
 ```
+
 **NOTE: alias (@) is used to indicate it is a group, the alias must put as a prefix**
 
 ### Testing
-```sh
+
+```
 $ svn co http://localhost/svn/project_name project_name
 ```
 

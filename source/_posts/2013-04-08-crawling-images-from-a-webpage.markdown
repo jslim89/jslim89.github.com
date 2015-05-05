@@ -10,6 +10,7 @@ categories:
 
 First extract the url of images  
 **craw.py**
+
 ```py
 import urllib2, re
 req = urllib2.Request('http://yourwebsite.com/path/to/webpage')
@@ -24,13 +25,14 @@ for i in imgs:
 ```
 
 Then output the URLs to a text file
-```sh
+```
 $ python craw.py > content.txt
 ```
 
 Use shell script to download it  
 **craw.sh**
-```sh
+
+```
 #!/bin/bash
 file="./content.txt"
 while IFS= read -r line

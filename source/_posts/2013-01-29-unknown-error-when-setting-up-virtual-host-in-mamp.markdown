@@ -11,6 +11,7 @@ categories:
 I'm struggling for half day just to setup virtual host in MAMP.
 
 **/Applications/MAMP/conf/apache/extra/httpd-vhosts.conf**
+
 ```
 NameVirtualHost *:80
 
@@ -26,18 +27,23 @@ NameVirtualHost *:80
     </Directory>
 </VirtualHost>
 ```
+
 and for the file **/Applications/MAMP/conf/apache/httpd.conf**
 
 Change from
+
 ```
 # Virtual hosts
 #Include /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf
 ```
+
 to
+
 ```
 # Virtual hosts
 Include /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf
 ```
+
 to uncomment the httpd-vhosts.conf
 
 In **/etc/hosts**, add a line below
@@ -56,6 +62,7 @@ At the end, I figured out that the error was occurred in
     allow from all
 </Directory>
 ```
+
 this portion. It look correct and no mistake at all.
 
 After struggling for half day, I re-type that portion of code, finally it works.

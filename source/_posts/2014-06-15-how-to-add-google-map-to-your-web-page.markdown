@@ -56,11 +56,12 @@ var marker = new google.maps.Marker({
     position: latlng, // set the marker position (is based on latitude & longitude)
     draggable: true // allow user to drag the marker
 });
+
 ```
 
 Now, add the block of code after `var map = ...`. Then refresh your browser again, then you will see
 
-{% img http://jslim89.github.com/images/posts/2014-06-15-how-to-add-google-map-to-your-web-page/map.png Google map with marker %}
+![Google map with marker](http://jslim89.github.com/images/posts/2014-06-15-how-to-add-google-map-to-your-web-page/map.png)
 
 You can even customize your marker
 
@@ -72,24 +73,25 @@ var marker = new google.maps.Marker({
     icon: 'https://maps.google.com/mapfiles/kml/shapes/schools_maps.png' // ADD THIS
 });
 ```
-
 Just add one more line, you will see a different marker. Replace the `icon` URL to any URL that you want to show.
 
 ## 3. Add a search function
-
 Add a search input above the map _(or anywhere your prefer)_
 
-```html
+``` html
+
 <!-- ADD THIS -->
 <input type="text" id="address" placeholder="Address" style="width: 100%;"/>
 
 <div id="map"></div>
 ...
+
 ```
 
 Then add an event handler, so that when user hit `<ENTER>` key, it search
 
 ```js
+
 // ...
 var marker = new google.maps.Marker({
     map: map,
@@ -119,6 +121,7 @@ function geocoding(keyword) {
         }
     });
 }
+
 ```
 
 ## 4. What if you want to keep the latitude & longitude?
@@ -126,11 +129,13 @@ function geocoding(keyword) {
 Add 2 more inputs after search box _(or anywhere you prefer)_. In this case use a text box, just for you to see, usually end user don't want to see this kind of data, is better to keep it hidden. _(e.g. `<input type="hidden" id="lat" value="3.1234" />`)_
 
 ```html
+
 <input type="text" id="address" placeholder="Address" style="width: 100%;"/>
 
 <!-- ADD THIS -->
 Lat: <input type="text" id="lat" value="3.1234"/>
 Lng: <input type="text" id="lng" value="101.1234"/>
+
 ```
 
 Now, you want to set the latitude & longitude when:
@@ -143,6 +148,7 @@ Now, you want to set the latitude & longitude when:
 Add an event handler to the marker.
 
 ```js
+
 function geocoding(keyword) {
     // ...
 }
@@ -155,6 +161,7 @@ google.maps.event.addListener(marker, 'dragend', function() {
     document.getElementById('lat').value = position.lat();
     document.getElementById('lng').value = position.lng();
 });
+
 ```
 
 ### User search by address
@@ -162,6 +169,7 @@ google.maps.event.addListener(marker, 'dragend', function() {
 Just now we already add an event handler to search remember? Now just add some code to `geocoding` function
 
 ```js
+
 function geocoding(keyword) {
     geocoder.geocode({address: keyword}, function(results, status) {
         if(status == google.maps.GeocoderStatus.OK) {
@@ -176,6 +184,7 @@ function geocoding(keyword) {
         }
     });
 }
+
 ```
 
 ## 5. You are done. See the result _(for illustration purpose only)_

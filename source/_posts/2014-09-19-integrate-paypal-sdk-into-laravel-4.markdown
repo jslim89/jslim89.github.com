@@ -26,7 +26,7 @@ Edit file **composer.json**
 
 Update the dependencies
 
-```sh
+```
 $ php composer.phar update --no-dev
 ```
 

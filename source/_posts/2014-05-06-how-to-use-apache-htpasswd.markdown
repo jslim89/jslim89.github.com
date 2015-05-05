@@ -31,7 +31,7 @@ The file is using absolute path, if relative path, it will point to **apache** d
 
 Create a .htpasswd with some users
 
-```sh
+```
 $ cd /absolute/path/to/your/project/document_root
 # -c option is used when the .htpasswd file doesn't exists, so it will create a new file
 $ htpasswd -c .htpasswd admin

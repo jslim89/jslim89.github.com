@@ -15,14 +15,14 @@ Now, B request A to push the latest commit to the new repo
 
 First of all, add the new repo URL to the project
 
-```sh
+```
 $ cd /path/to/project
 $ git remote add neworigin git@bitbucket.org:myname/my-new-repo.git
 ```
 
 Then now A can push a specific commit to the new repo
 
-```sh
+```
 $ git push neworigin 7300a6130d9447e18a931e898b64eefedea19544:master
 Counting objects: 25, done.
 Delta compression using up to 4 threads.

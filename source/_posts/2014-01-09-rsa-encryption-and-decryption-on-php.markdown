@@ -16,12 +16,12 @@ The solution is divide the long string into chunks according to the length of th
 Example here shows 512 bits of encryption
 
 Generate private key
-```sh
+```
 $ openssl genrsa -out private_key.pem 512
 ```
 
 Generate public key from private key
-```sh
+```
 $ openssl rsa -in private_key.pem -pubout -out public_key.pem
 ```
 

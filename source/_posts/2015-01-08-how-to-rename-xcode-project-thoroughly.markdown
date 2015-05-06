@@ -130,3 +130,21 @@ $ mv JsBarTests/JsFooTests.swift JsBarTests/JsBarTests.swift
 ![Successful rename](http://jslim89.github.com/images/posts/2015-01-08-how-to-rename-xcode-project-thoroughly/rename-success.png)
 
 Done!!!
+
+## Update: 2015-05-06
+
+Xcode 6.3.1 will crash during the rename. 
+And I found a simpler way on doing that, [refer here](https://stackoverflow.com/questions/29824737/xcode-6-3-1-crashes-while-renaming-project/29830195#29830195)
+
+```
+# install the necessary package
+$ brew install rename ack
+
+# run this for a couple of times
+$ find . -name 'JsFoo*' -print0 | xargs -0 rename -S 'JsFoo' 'JsBar'
+
+$ ack --literal --files-with-matches 'JsFoo' | xargs sed -i '' 's/JsFoo/JsBar/g'
+
+# double confirm, if no output, that means success
+$ ack --literal 'JsFoo'
+```

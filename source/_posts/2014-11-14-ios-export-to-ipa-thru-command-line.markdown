@@ -56,3 +56,4 @@ $ ./export.sh
 _References:_
 
 - _[Using xcodebuild To Export a .ipa From an Archive](http://www.thecave.com/2014/09/16/using-xcodebuild-to-export-a-ipa-from-an-archive/)_
+- _[How to read plist information (bundle id) from a shell script](http://stackoverflow.com/questions/4328501/how-to-read-plist-information-bundle-id-from-a-shell-script/4330902#4330902)_

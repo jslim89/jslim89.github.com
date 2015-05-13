@@ -189,6 +189,7 @@ Create a custom web view to handle payment
 @interface PaymentWebViewController ()
 
 @property (nonatomic, weak) UIWebView *webView;
+@property (nonatomic, strong) UIWebView *popupWebView;
 
 @end
 
@@ -243,6 +244,19 @@ Create a custom web view to handle payment
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
+    // Update: May 12, 2015
+    // a hack to solve the Maybank2u TAC popup window issue
+    if ([request.URL.path containsString:@"m2uTACProcess.do"]) {
+
+        // init a new webview (as a popup)
+        _popupWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 280, 400)];
+        [_popupWebView loadRequest:request];
+        
+        // show it in a popup, I tested with https://github.com/rnystrom/RNBlurModalView
+
+        return NO;
+    }
+
     if ([[request.URL scheme] isEqual:@"com.mysite.myapp"]) {
         NSArray *component = [request.URL.description componentsSeparatedByString:@"://"];
         if ([component[1] isEqual:@"closeClicked"]) { // com.mysite.myapp://closeClicked

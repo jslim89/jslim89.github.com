@@ -147,6 +147,24 @@ function redirect($url) {
 
 The file above will be a POST request, if you don't want to use `$_REQUEST`, you can use `$_POST`
 
+### Bare in mind _(Updated: May 12, 2015)_
+
+Please take note on the **backend.php**
+
+Sometime, there are some weird issue that may caused the **response.php** not working correctly. Thus, **backend.php** is needed here _(I have faced the issue with CIMB click)_.
+
+The **backend.php** will not work if you check for login session. e.g.
+
+```php backend.php
+<?php
+if (is_loggedin()) exit; // will exit here
+
+// code won't execute
+...
+```
+
+That means you cannot deal with any session here _(backend.php)_
+
 ## 4. Create a success & failure page
 
 ```html success.php

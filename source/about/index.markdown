@@ -43,7 +43,8 @@ internship really awesome.
 I started mobile development _(in fact should be iOS app development)_ in year 2012 Dec. I learn the tutorial
 from [this book](http://www.raywenderlich.com/store/ios-apprentice).
 
-Until now...
+Until June 2015, I decided to make a move! Move to **SALES** line _(if you like my blog, I have created a [sales blog](http://sales.jslim.co/))_!
+However, if you need my helps, you can always drop me an email.
 
 ## My development environment
 * **Operating System** - [Mac OS X](http://www.ubuntu.com/)

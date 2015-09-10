@@ -7,7 +7,7 @@ categories:
 - ios
 ---
 
-{% img http://jslim89.github.com/images/posts/2014-06-13-draw-a-shape-using-uibezierpath/shape.png Shape wanted %}
+![Shape wanted](http://jslim89.github.com/images/posts/2014-06-13-draw-a-shape-using-uibezierpath/shape.png)
 
 To draw the shape above by `UIBezierPath`
 

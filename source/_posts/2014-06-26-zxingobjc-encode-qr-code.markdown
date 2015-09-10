@@ -44,7 +44,7 @@ It works now. This is something to do with ARC, [checkout this for more info](ht
 
 ## 2. It has margin
 
-{% img http://jslim89.github.com/images/posts/2014-06-26-zxingobjc-encode-qr-code/margin.png QR code with margin %}
+![QR code with margin](http://jslim89.github.com/images/posts/2014-06-26-zxingobjc-encode-qr-code/margin.png)
 
 You can see the margin took out some space. To remove the margin
 
@@ -66,7 +66,7 @@ ZXBitMatrix* result = [writer encode:text
 
 Run it again, now it utilise the whole image.
 
-{% img http://jslim89.github.com/images/posts/2014-06-26-zxingobjc-encode-qr-code/no-margin.png QR code without margin %}
+![QR code without margin](http://jslim89.github.com/images/posts/2014-06-26-zxingobjc-encode-qr-code/no-margin.png)
 
 _References:_
 

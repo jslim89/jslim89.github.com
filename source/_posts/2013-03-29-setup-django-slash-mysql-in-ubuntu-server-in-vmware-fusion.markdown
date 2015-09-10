@@ -196,7 +196,7 @@ Now your server is run on background.
 ## Go back to your host OS
 Configure your network setting for the instance that run the web application
 
-{% img http://jslim89.github.com/images/posts/2013-03-29-setup-django-slash-mysql-in-ubuntu-server-in-vmware-fusion/guess-os-network.png Network setting %}
+![Network setting](http://jslim89.github.com/images/posts/2013-03-29-setup-django-slash-mysql-in-ubuntu-server-in-vmware-fusion/guess-os-network.png)
 
 **NOTE: This must be in LAN environment, so that the router assign a new ip for your guess OS**
 
@@ -224,7 +224,7 @@ You can just put whatever name you want.
 Open up your favourite browser and type in the URL
 **local.mysite.com** and you should be able to see the page below
 
-{% img http://jslim89.github.com/images/posts/2013-03-29-setup-django-slash-mysql-in-ubuntu-server-in-vmware-fusion/django-welcome-page.png Welcome page %}
+![Welcome page](http://jslim89.github.com/images/posts/2013-03-29-setup-django-slash-mysql-in-ubuntu-server-in-vmware-fusion/django-welcome-page.png)
 
 Enjoy :)
 

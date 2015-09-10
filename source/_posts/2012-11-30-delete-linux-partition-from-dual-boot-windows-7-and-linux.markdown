@@ -22,7 +22,7 @@ Here is the step on how to safely remove the Linux.
 3. Choose the option that you want to repair.
 4. You'll see some thing like this, then select **Command Prompt**.
 
-{% img http://jslim89.github.com/images/posts/2012-11-30-delete-linux-partition-from-dual-boot-windows-7-and-linux/windows_7_repair.jpg Windows 7 Repair %}
+![Windows 7 Repair](http://jslim89.github.com/images/posts/2012-11-30-delete-linux-partition-from-dual-boot-windows-7-and-linux/windows_7_repair.jpg)
 
 ### Type some command in cmd
 ```
@@ -34,24 +34,24 @@ Then reboot your machine. It should auto-boot into Windows 7 without letting you
 ### Delete and extend partition
 Now click on start menu and search for **Computer Management**
 
-{% img http://jslim89.github.com/images/posts/2012-11-30-delete-linux-partition-from-dual-boot-windows-7-and-linux/computer_management.png Computer Management %}
+![Computer Management](http://jslim89.github.com/images/posts/2012-11-30-delete-linux-partition-from-dual-boot-windows-7-and-linux/computer_management.png)
 
 Click on **Disk Management**
 
-{% img http://jslim89.github.com/images/posts/2012-11-30-delete-linux-partition-from-dual-boot-windows-7-and-linux/disk_management.png Disk Management %}
+![Disk Management](http://jslim89.github.com/images/posts/2012-11-30-delete-linux-partition-from-dual-boot-windows-7-and-linux/disk_management.png)
 
 Right-click the partition that you want to delete _(i.e. Linux partition in this case)_. Then select **Delete Volume...**
 
-{% img http://jslim89.github.com/images/posts/2012-11-30-delete-linux-partition-from-dual-boot-windows-7-and-linux/delete_volume.png Delete Volume %}
+![Delete Volume](http://jslim89.github.com/images/posts/2012-11-30-delete-linux-partition-from-dual-boot-windows-7-and-linux/delete_volume.png)
 
 You'll get a **Free Space**. Now right-click the **Free Space** and **Delete Partition...**
 
-{% img http://jslim89.github.com/images/posts/2012-11-30-delete-linux-partition-from-dual-boot-windows-7-and-linux/delete_partition.png Delete Partition %}
+![Delete Partition](http://jslim89.github.com/images/posts/2012-11-30-delete-linux-partition-from-dual-boot-windows-7-and-linux/delete_partition.png)
 
 Now you get an **Unallocated** space. Right-click the drive before the **Unallocated** space _(i.e. D-drive in this case)_. Select **Extend Volume...**
 
-{% img http://jslim89.github.com/images/posts/2012-11-30-delete-linux-partition-from-dual-boot-windows-7-and-linux/extend_volume.png Extend Volume %}
+![Extend Volume](http://jslim89.github.com/images/posts/2012-11-30-delete-linux-partition-from-dual-boot-windows-7-and-linux/extend_volume.png)
 
 Finally, your drive has more space ^^
 
-{% img http://jslim89.github.com/images/posts/2012-11-30-delete-linux-partition-from-dual-boot-windows-7-and-linux/completed.png Extended Successful %}
+![Extended Successful](http://jslim89.github.com/images/posts/2012-11-30-delete-linux-partition-from-dual-boot-windows-7-and-linux/completed.png)

@@ -7,7 +7,7 @@ categories:
 - ios
 ---
 
-{% img http://jslim89.github.com/images/posts/2014-06-13-uiview-fill-with-color-and-leave-a-empty-square-in-center/uiview.png UIView %}
+![UIView](http://jslim89.github.com/images/posts/2014-06-13-uiview-fill-with-color-and-leave-a-empty-square-in-center/uiview.png)
 
 Create a UIView that fill with color, and leave an empty in center.
 

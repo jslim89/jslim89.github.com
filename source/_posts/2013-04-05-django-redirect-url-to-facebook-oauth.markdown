@@ -39,7 +39,7 @@ FACEBOOK_APP_SECRET = '2839fsd9fh29hg897eyr8g'
 
 One more thing, be sure in your facebook app setting **Website with Facebook Login** set to your app URL
 
-{% img http://jslim89.github.com/images/posts/2013-04-05-django-redirect-url-to-facebook-oauth/facebook-login-setting.png facebook setting %}
+![facebook setting](http://jslim89.github.com/images/posts/2013-04-05-django-redirect-url-to-facebook-oauth/facebook-login-setting.png)
 
 Hurray! You've done
 

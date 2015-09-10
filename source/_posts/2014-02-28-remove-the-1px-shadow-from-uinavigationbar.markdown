@@ -9,11 +9,11 @@ categories:
 
 There is a shadow _(only 1 pixel)_ below the UINavigationBar
 
-{% img http://jslim89.github.com/images/posts/2014-02-28-remove-the-1px-shadow-from-uinavigationbar/with-shadow.png With shadow %}
+![With shadow](http://jslim89.github.com/images/posts/2014-02-28-remove-the-1px-shadow-from-uinavigationbar/with-shadow.png)
 
 May be you can't see clearly, zoom it see
 
-{% img http://jslim89.github.com/images/posts/2014-02-28-remove-the-1px-shadow-from-uinavigationbar/shadow-zoom.png Shadow zoom %}
+![Shadow zoom](http://jslim89.github.com/images/posts/2014-02-28-remove-the-1px-shadow-from-uinavigationbar/shadow-zoom.png)
 
 We can see 1 pixel darkness. Where the gray area is what I want, the code is
 
@@ -30,11 +30,11 @@ self.navigationController.navigationBar.layer.shadowPath = path.CGPath;
 
 The desired result will be
 
-{% img http://jslim89.github.com/images/posts/2014-02-28-remove-the-1px-shadow-from-uinavigationbar/without-shadow.png Without shadow %}
+![Without shadow](http://jslim89.github.com/images/posts/2014-02-28-remove-the-1px-shadow-from-uinavigationbar/without-shadow.png)
 
 After zoom
 
-{% img http://jslim89.github.com/images/posts/2014-02-28-remove-the-1px-shadow-from-uinavigationbar/no-shadow-zoom.png "After zoom: Without shadow" %}
+![After zoom: Without shadow](http://jslim89.github.com/images/posts/2014-02-28-remove-the-1px-shadow-from-uinavigationbar/no-shadow-zoom.png)
 
 In order to achieve the result
 

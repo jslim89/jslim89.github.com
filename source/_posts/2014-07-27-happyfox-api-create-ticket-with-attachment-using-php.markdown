@@ -16,25 +16,25 @@ You can [sign up an account](https://www.happyfox.com/help-desk-signup/)
 
 Now you can create api key
 
-{% img http://jslim89.github.com/images/posts/2014-07-27-happyfox-api-create-ticket-with-attachment-using-php/api-1.png Create API key step 1 %}
+![Create API key step 1](http://jslim89.github.com/images/posts/2014-07-27-happyfox-api-create-ticket-with-attachment-using-php/api-1.png)
 
-{% img http://jslim89.github.com/images/posts/2014-07-27-happyfox-api-create-ticket-with-attachment-using-php/api-2.png Create API key step 2 %}
+![Create API key step 2](http://jslim89.github.com/images/posts/2014-07-27-happyfox-api-create-ticket-with-attachment-using-php/api-2.png)
 
-{% img http://jslim89.github.com/images/posts/2014-07-27-happyfox-api-create-ticket-with-attachment-using-php/api-3.png Create API key step 3 %}
+![Create API key step 3](http://jslim89.github.com/images/posts/2014-07-27-happyfox-api-create-ticket-with-attachment-using-php/api-3.png)
 
 Enter **Identification Name** and save it
 
-{% img http://jslim89.github.com/images/posts/2014-07-27-happyfox-api-create-ticket-with-attachment-using-php/api-4.png Create API key step 4 %}
+![Create API key step 4](http://jslim89.github.com/images/posts/2014-07-27-happyfox-api-create-ticket-with-attachment-using-php/api-4.png)
 
 ## 2. Get your `username` & `password`
 
 As the requirement mention that HTTP Basic Authentication is required, thus you need to have a `username` & `password`
 
-{% img http://jslim89.github.com/images/posts/2014-07-27-happyfox-api-create-ticket-with-attachment-using-php/get-credential-1.png Get credential %}
+![Get credential](http://jslim89.github.com/images/posts/2014-07-27-happyfox-api-create-ticket-with-attachment-using-php/get-credential-1.png)
 
 **Note: you must move your mouse over only you can see the link `see auth code`**
 
-{% img http://jslim89.github.com/images/posts/2014-07-27-happyfox-api-create-ticket-with-attachment-using-php/get-credential-2.png See auth code %}
+![See auth code](http://jslim89.github.com/images/posts/2014-07-27-happyfox-api-create-ticket-with-attachment-using-php/get-credential-2.png)
 
 The **API key** served as `username` and **Auth code** served as `password`.
 

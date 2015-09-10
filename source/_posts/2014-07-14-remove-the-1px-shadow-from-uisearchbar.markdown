@@ -9,9 +9,9 @@ categories:
 
 When I added a `UISearchBar` to `UITableView.tableHeaderView`, it shows a border
 
-{% img http://jslim89.github.com/images/posts/2014-07-14-remove-the-1px-shadow-from-uisearchbar/with-shadow.png With shadow %}
+![With shadow](http://jslim89.github.com/images/posts/2014-07-14-remove-the-1px-shadow-from-uisearchbar/with-shadow.png)
 
-{% img http://jslim89.github.com/images/posts/2014-07-14-remove-the-1px-shadow-from-uisearchbar/with-shadow-zoom.png With shadow zoom %}
+![With shadow zoom](http://jslim89.github.com/images/posts/2014-07-14-remove-the-1px-shadow-from-uisearchbar/with-shadow-zoom.png)
 
 So in order to remove the **1px**, just
 
@@ -22,9 +22,9 @@ self.searchBar.layer.borderWidth = 1;
 
 The final result will be
 
-{% img http://jslim89.github.com/images/posts/2014-07-14-remove-the-1px-shadow-from-uisearchbar/without-shadow.png Without shadow %}
+![Without shadow](http://jslim89.github.com/images/posts/2014-07-14-remove-the-1px-shadow-from-uisearchbar/without-shadow.png)
 
-{% img http://jslim89.github.com/images/posts/2014-07-14-remove-the-1px-shadow-from-uisearchbar/without-shadow-zoom.png Without shadow zoom %}
+![Without shadow zoom](http://jslim89.github.com/images/posts/2014-07-14-remove-the-1px-shadow-from-uisearchbar/without-shadow-zoom.png)
 
 _References:_
 

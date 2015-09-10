@@ -18,7 +18,7 @@ _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 320, 300)];
 
 What it will look like
 
-{% img http://jslim89.github.com/images/posts/2014-07-18-use-uiwebview-with-uiscrollview/webview-1.png Normal webview %}
+![Normal webview](http://jslim89.github.com/images/posts/2014-07-18-use-uiwebview-with-uiscrollview/webview-1.png)
 
 **NOTE: the "A button" is just for you to see the difference of different changes of `webview`**
 
@@ -28,7 +28,7 @@ But what if we want it to transparent? Let's try to set the background to `clear
 _webView.backgroundColor = [UIColor clearColor];
 ```
 
-{% img http://jslim89.github.com/images/posts/2014-07-18-use-uiwebview-with-uiscrollview/webview-2.png webview with background transparent %}
+![webview with background transparent](http://jslim89.github.com/images/posts/2014-07-18-use-uiwebview-with-uiscrollview/webview-2.png)
 
 Ooopsss.... Only its background is transparent. Want to make the whole view transparent? Let's do in this way
 
@@ -50,7 +50,7 @@ for (UIView* subView in [_webView subviews])
 
 and see the result
 
-{% img http://jslim89.github.com/images/posts/2014-07-18-use-uiwebview-with-uiscrollview/webview-3.png transparent webview %}
+![transparent webview](http://jslim89.github.com/images/posts/2014-07-18-use-uiwebview-with-uiscrollview/webview-3.png)
 
 Hmm... it looks better. Now let's make it smooth, make the whole thing scroll together _(html content and the "A button")_
 
@@ -90,7 +90,7 @@ Before that, add a `<div>` _(with a unique ID, in this case I use "main-wrapper"
 
 let's run it and see
 
-{% img http://jslim89.github.com/images/posts/2014-07-18-use-uiwebview-with-uiscrollview/webview-4.png full height webview %}
+![full height webview](http://jslim89.github.com/images/posts/2014-07-18-use-uiwebview-with-uiscrollview/webview-4.png)
 
 Now it looks better, but we cannot see the content if too long, and also overlap with the button. To solve this, let's add a `UIScrollView` in between the `webView` and `self.view`
 
@@ -122,7 +122,7 @@ _scrollView.contentSize = CGSizeMake(_scrollView.contentSize.width, CGRectGetMax
 
 _(**15** is margin)_
 
-{% img http://jslim89.github.com/images/posts/2014-07-18-use-uiwebview-with-uiscrollview/webview-5.png scrollable webview %}
+![scrollable webview](http://jslim89.github.com/images/posts/2014-07-18-use-uiwebview-with-uiscrollview/webview-5.png)
 
 See the scroll bar on the right side?
 
@@ -138,6 +138,6 @@ _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 320, 0)]; // <--- i
 
 The result will be
 
-{% img http://jslim89.github.com/images/posts/2014-07-18-use-uiwebview-with-uiscrollview/webview-6.png wrong height webview %}
+![wrong height webview](http://jslim89.github.com/images/posts/2014-07-18-use-uiwebview-with-uiscrollview/webview-6.png)
 
 This is due to `document.getElementById('main-wrapper').offsetHeight;` return a wrong value, and I don't know why _(if you know please comment)_, this took me 1 hours++ to figure out, at lease you must put `1` for the height.

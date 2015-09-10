@@ -13,7 +13,7 @@ Let's have a try.
 
 ### 1. Create a new repo on [Github](https://github.com/)
 
-{% img http://jslim89.github.com/images/posts/2013-02-05-my-practice-git-model/create-repo.png Create Repo %}
+![Create Repo](http://jslim89.github.com/images/posts/2013-02-05-my-practice-git-model/create-repo.png)
 
 Your first commit to **master** branch
 ```
@@ -39,7 +39,7 @@ $ git push origin develop
 
 Now you have 2 branches in your Github
 
-{% img http://jslim89.github.com/images/posts/2013-02-05-my-practice-git-model/2-branches-in-github.png Show 2 branches %}
+![Show 2 branches](http://jslim89.github.com/images/posts/2013-02-05-my-practice-git-model/2-branches-in-github.png)
 
 ### 3. Now add a new module
 ```

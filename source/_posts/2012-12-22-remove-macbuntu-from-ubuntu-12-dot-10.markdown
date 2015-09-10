@@ -37,11 +37,11 @@ $ sudo apt-get purge cairo-dock cairo-dock-plug-ins && sudo apt-get autoremove
 Lastly, change back to Ubuntu original theme.  
 Search for **appearance**
 
-{% img http://jslim89.github.com/images/posts/2012-12-22-remove-macbuntu-from-ubuntu-12-dot-10/search_for_appearance.png Search for appearance %}
+![Search for appearance](http://jslim89.github.com/images/posts/2012-12-22-remove-macbuntu-from-ubuntu-12-dot-10/search_for_appearance.png)
 
 Change the **theme**
 
-{% img http://jslim89.github.com/images/posts/2012-12-22-remove-macbuntu-from-ubuntu-12-dot-10/change_theme.png Change Theme %}
+![Change Theme](http://jslim89.github.com/images/posts/2012-12-22-remove-macbuntu-from-ubuntu-12-dot-10/change_theme.png)
 
 _References:_
 

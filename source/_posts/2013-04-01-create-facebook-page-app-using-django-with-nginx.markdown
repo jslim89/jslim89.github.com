@@ -217,7 +217,7 @@ Edit the **index.html**
 
 Configure the setting
 
-{% img http://jslim89.github.com/images/posts/2013-04-01-create-facebook-page-app-using-django-with-nginx/facebook-app-setting.png facebook setting %}
+![facebook setting](http://jslim89.github.com/images/posts/2013-04-01-create-facebook-page-app-using-django-with-nginx/facebook-app-setting.png)
 
 **Remember to check both _Website with Facebook Login_ and _Page Tab_**
 

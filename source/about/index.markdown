@@ -8,6 +8,14 @@ footer: true
 ---
 Welcome to my technical informative blog.
 
+## _Available for hire_
+
+Let me guess... You click on this link probably you're interested in me.
+I'm currently available for hire _(not a full time job)_, means if you want to outsource certain part of a system or any projects, I'm available for that.
+You can also hire me as a technical consultant.
+
+Drop me an email: [me@jslim.co](me@jslim.co)
+
 ## Acknowledgement
 Previously I was blogging with [WordPress](http://wordpress.com/).
 After that I found github page which allow me to write a static blog using [Octopress](http://octopress.org/) which is using [Jekyll](http://jekyllrb.com/).

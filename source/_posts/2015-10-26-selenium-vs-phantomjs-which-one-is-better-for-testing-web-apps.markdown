@@ -9,7 +9,7 @@ categories:
 - test
 ---
 
-As an mobile app developer and computer programmer of Xicom Technologies Ltd.-Android App Development Services, Amanda Cline explains which is better selenium or phantom JS for testing web apps.  Technology intrigues me and this is why I like to read and write about mobile apps and web development related  topics specially.
+**About the Author** - _As an mobile app developer and computer programmer of Xicom Technologies Ltd.-[Android App Development Services](http://www.xicom.biz/offerings/android-development), Amanda Cline explains which is better selenium or phantom JS for testing web apps.  Technology intrigues me and this is why I like to read and write about mobile apps and web development related  topics specially._
 
 <hr/>
 

@@ -1,0 +1,51 @@
+baseurl: "" # The subpath of your site. Use "" if you're hosting a blog at the root level.
+url: "jslim89.github.io" # the base hostname & protocol for your site.
+title: "Js' Technical Blog"
+
+
+paginate: 5 #articles per page
+paginate_path: /posts/page:num #makes pagination working
+
+markdown: redcarpet
+highlighter: pygments
+kramdown:
+  input: GFM
+source: _source
+
+#contacts
+git: "https://github.com/jslim89"  #Add your github url here.
+stackoverflow: "http://stackoverflow.com/users/898931/js-lim" #Add your stackoverflow url here.
+twitter: "https://twitter.com/jslim89"  #Add your twitter url here.
+
+#disqus comment
+disqus:
+    shortname: "jslim89" #replace with your disqus comment short name
+
+#google analytics
+google:
+    tracking-id: "UA-40118758-1" #paste your tracking id here
+gems:
+  - jekyll-sitemap
+
+# This is used by feed.xml. Uncomment if you want to use it.
+# description: "..."
+
+exclude:
+  - "README.md"
+  - "CHANGELOG.md"
+  - "Gemfile"
+  - "Gemfile.lock"
+permalink: /blog/:year/:month/:day/:title/
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

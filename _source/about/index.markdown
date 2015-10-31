@@ -10,9 +10,11 @@ Welcome to my technical informative blog.
 
 ## Acknowledgement
 Previously I was blogging with [WordPress](http://wordpress.com/).
-After that I found github page which allow me to write a static blog using [Octopress](http://octopress.org/) which is using [Jekyll](http://jekyllrb.com/).
+After that I found github page which allow me to write a static blog using [Octopress](http://octopress.org/) v2 which is using [Jekyll](http://jekyllrb.com/).
 
 Thanks [Octopress](http://octopress.org/), now I can write a blog post with any editor that I like.
+
+**Update 31 October 2015:** I switch to plain Jekyll, due to there is a big change for October v2 & v3.
 
 ## About me
 In year 2004, my mother bought me my very first computer, which is a custom made desktop with Windows XP installed.
@@ -41,13 +43,10 @@ Linux stuffs, Vim editor _(is my favourite editor now)_, server stuffs, GitHub, 
 internship really awesome.
 
 I started mobile development _(in fact should be iOS app development)_ in year 2012 Dec. I learn the tutorial
-from [this book](http://www.raywenderlich.com/store/ios-apprentice).
+from [this book](http://www.raywenderlich.com/store/ios-apprentice). In this period, I switch between PHP &
+iOS development. I get to understand more about HTTP when designing the API.
 
-## My development environment
-* **Operating System** - [Mac OS X](http://www.ubuntu.com/)
-* **Editor** - [Vim](http://www.vim.org/), [XCode](https://developer.apple.com/xcode/)
-* **Development Browser** - [Mozilla Firefox](http://www.mozilla.org/en-US/firefox/new/) with [Firebug](http://getfirebug.com/)
+Until October 2015, I only focus on PHP, at the same time I improve my backend skills. Like I start to use
+Vagrant for the development.
 
-## Social Network
-* **Facebook** - [https://www.facebook.com/rebornjs89](https://www.facebook.com/rebornjs89)
-* **Google+** - [https://plus.google.com/105933285745744838422](https://plus.google.com/105933285745744838422)
+Interested to know more about me? Drop me an email me@jslim.co

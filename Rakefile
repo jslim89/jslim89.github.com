@@ -37,13 +37,5 @@ end
 
 desc "Default deploy task"
 task :deploy do
-  # Check if preview posts exist, which should not be published
-  if File.exists?(".preview-mode")
-    puts "## Found posts in preview mode, regenerating files ..."
-    File.delete(".preview-mode")
-    Rake::Task[:generate].execute
-  end
-
-  Rake::Task[:copydot].invoke(source_dir, public_dir)
-  Rake::Task["#{deploy_default}"].execute
+  system "cd #{public_dir} && git add * && git commit -am 'Updated on #{Time.now.strftime("%Y-%m-%d %H:%M")}' && git push origin master"
 end

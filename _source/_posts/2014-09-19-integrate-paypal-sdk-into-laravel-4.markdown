@@ -13,7 +13,7 @@ PayPal has release an [official SDK](https://github.com/paypal/rest-api-sdk-php)
 
 Edit file **composer.json**
 
-```json composer.json
+```json
 {
     ...
 	"require": {
@@ -34,9 +34,9 @@ You can now use the PayPal package in the project.
 
 ## 2. Configure PayPal
 
-Add a config file for paypal
+Add a config file for paypal: **app/config/paypal.php**
 
-```php app/config/paypal.php
+```php
 <?php
 return array(
     // set your paypal credential
@@ -78,9 +78,9 @@ return array(
 );
 ```
 
-Setup in **IndexController.php**
+Setup in **app/controllers/IndexController.php**
 
-```php app/controllers/IndexController.php
+```php
 <?php
 use PayPal\Rest\ApiContext;
 use PayPal\Auth\OAuthTokenCredential;
@@ -114,9 +114,9 @@ class IndexController extends BaseController
 
 ## 3. Add 2 routes for processing PayPal checkout
 
-Add this to **routes.php**
+Add this to **app/routes.php**
 
-```php app/routes.php
+```php
 <?php
 Route::post('payment', array(
     'as' => 'payment',
@@ -130,9 +130,9 @@ Route::get('payment/status', array(
 ));
 ```
 
-Update the controller, this method is when you submit the form or checkout shopping cart, then post to this route.
+Update the controller, this method is when you submit the form or checkout shopping cart, then post to this route: **app/controllers/IndexController.php**
 
-```php app/controllers/IndexController.php
+```php
 <?php
 public function postPayment()
 {
@@ -237,7 +237,10 @@ Otherwise, ONLY `token` when the customer cancel the payment
 token=EC-05R25178G5276364N
 ```
 
-```php app/controllers/IndexController.php
+**app/controllers/IndexController.php**
+
+```php
+<?php
 public function getPaymentStatus()
 {
     // Get the payment ID before session clear
@@ -276,7 +279,7 @@ public function getPaymentStatus()
 
 See the **DEBUG RESULT** there, if you print it out, the output will be
 
-```php output
+```php
 PayPal\Api\Payment Object
 (
     [_propMap:PayPal\Common\PPModel:private] => Array

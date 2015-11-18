@@ -12,15 +12,19 @@ categories:
 `ls` by default in OS X has no `--group-directories-first`
 
 Open up your terminal
+
 ```
 $ brew install coreutils
 ```
+
 Now you can use `gls` instead of just `ls`
+
 ```
 $ gls --color --group-directories-first -p
 ```
 
 You can append an alias in your `~/.bash_profile`
+
 ```
 alias ls='gls --color --group-directories-first -p'
 ```

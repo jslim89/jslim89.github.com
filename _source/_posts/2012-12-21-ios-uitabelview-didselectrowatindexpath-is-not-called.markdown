@@ -8,6 +8,7 @@ categories:
 ---
 
 I had come across a problem which didSelectRowAtIndexPath doesn't execute when I tap the cell.
+
 ```obj-c
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -24,10 +25,12 @@ No matter how I tap, it doesn't show the **log**.
 As shown in the attribute inspector, the **Selection** is not `none`, **User Interaction Enabled** is also `checked`.
 
 Finally, I found the problem...
+
 ```obj-c
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return nil;
 }
 ```
+
 I forgot to remove `willSelectRowAtIndexPath` in **ViewController**.

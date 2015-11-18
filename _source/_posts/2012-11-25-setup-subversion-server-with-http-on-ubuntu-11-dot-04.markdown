@@ -34,6 +34,7 @@ $ sudo vi /etc/apache2/mods-enabled/dav_svn.conf
 ```
 
 Uncomment the following lines
+
 ```
 <Location /svn>
     DAV svn
@@ -75,6 +76,7 @@ AuthzSVNAccessFile /etc/apache2/dav_svn.authz
 ```
 
 Create a new file
+
 ```
 $ sudo vi /etc/apache2/dav_svn.authz
 ```

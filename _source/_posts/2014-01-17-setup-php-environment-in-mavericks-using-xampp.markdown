@@ -283,7 +283,7 @@ _(By default, XAMPP will install in the path above, if yours is different, just 
 $ sudo vi StartupParameters.plist
 ```
 
-```xml StartupParameters.plist
+```xml
 <?xml version=”1.0″ encoding=”UTF-8″?>
 <!DOCTYPE plist SYSTEM “file://localhost/System/Library/DTDs/PropertyList.dtd”>
 <plist version=”0.9″>

@@ -16,6 +16,7 @@ Let's have a try.
 ![Create Repo](http://jslim89.github.com/images/posts/2013-02-05-my-practice-git-model/create-repo.png)
 
 Your first commit to **master** branch
+
 ```
 $ git clone <your-project>
 $ touch README.md
@@ -25,6 +26,7 @@ $ git push origin master
 ```
 
 ### 2. Create a `develop` branch
+
 ```
 # Branch out `develop` from `master`
 $ git checkout -b develop master
@@ -42,6 +44,7 @@ Now you have 2 branches in your Github
 ![Show 2 branches](http://jslim89.github.com/images/posts/2013-02-05-my-practice-git-model/2-branches-in-github.png)
 
 ### 3. Now add a new module
+
 ```
 # Branch out `module1` from `develop`
 $ git checkout -b module1 develop
@@ -73,6 +76,7 @@ $ git push origin develop
 ```
 
 ### 4. Everything tested fine, merge to `master` branch
+
 ```
 # Switch to `master`
 $ git checkout master

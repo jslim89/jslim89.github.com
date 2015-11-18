@@ -21,6 +21,7 @@ AND (bar.attr_1 LIKE '%xyz%' OR bar.attr_2 LIKE '%xyz%')
 The **OR** is grouped together with **AND**, I'll show how to construct this query in ZF2
 
 In your model table, says **./module/Application/src/Application/Model/FooTable.php**
+
 ```php
 <?php
 namespace Application\Model;

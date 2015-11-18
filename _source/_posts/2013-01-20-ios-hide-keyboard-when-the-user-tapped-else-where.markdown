@@ -11,6 +11,7 @@ categories:
 In certain circumstances (i.e. The table row to edit.), we do want the keyboard to be hide in order to improve user experience
 
 In **YourViewController.m**
+
 ```obj-c
 - (void)viewDidLoad
 {

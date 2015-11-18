@@ -12,6 +12,7 @@ Think of a scenario here:
 You have a class **LoginViewController**, while Facebook login api call is keep on **AppDelegate.m**, and you want to perform some action after success login via Facebook.
 
 In **AppDelegate.m**
+
 ```obj-c
 - (void)sessionStateChanged:(FBSession *)session state:(FBSessionState)state error:(NSError *)error
 {
@@ -65,6 +66,7 @@ In **AppDelegate.m**
 ```
 
 In **LoginViewController.m**
+
 ```obj-c
 - (void)viewDidLoad
 {

@@ -10,6 +10,7 @@ categories:
 ## Source
 
 For example, we have array like this
+
 ```php
 <?php
 array(

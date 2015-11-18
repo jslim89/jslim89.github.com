@@ -16,6 +16,7 @@ A **Q & A** website that allow user to ask question and put several **tags** to 
 Database tables:
 
 **tag**  
+
 ```
 +--------------+-------------+------+-----+---------+----------------+
 | Field        | Type        | Null | Key | Default | Extra          |
@@ -27,6 +28,7 @@ Database tables:
 ```
 
 **tag_rel**  
+
 ```
 +--------------+-------------+------+-----+---------+----------------+
 | Field        | Type        | Null | Key | Default | Extra          |
@@ -38,6 +40,7 @@ Database tables:
 ```
 
 **question**  
+
 ```
 +--------------+-------------+------+-----+---------+----------------+
 | Field        | Type        | Null | Key | Default | Extra          |
@@ -48,6 +51,7 @@ Database tables:
 ```
 
 Now want to get those tags related to a tag with ID **100**, the query could be
+
 ```sql
 SELECT tag.*
 FROM tag
@@ -65,6 +69,7 @@ AND tag_rel.question_id IN
 Now want to construct this query in Zend Frameword 2
 
 In your model table, says **./module/Application/src/Application/Model/TagTable.php**
+
 ```php
 <?php
 namespace Application\Model;
@@ -130,6 +135,7 @@ class TagTable
 ```
 
 The performance may be sux, in order to solve this, just index `tag_rel.tag_id` and `tag_rel.question_id`.
+
 ```sql
 mysql > ALTER TABLE `tag_rel` ADD INDEX (`tag_id`);
 mysql > ALTER TABLE `tag_rel` ADD INDEX (`question_id`);

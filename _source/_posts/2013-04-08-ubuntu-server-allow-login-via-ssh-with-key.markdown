@@ -15,12 +15,15 @@ The environment:
 
 ### In your ubuntu server
 Install ssh server
+
 ```
 $ sudo apt-get install openssh-server
 ```
 
 ### In OS X
+
 Generate a key-pair
+
 ```
 $ mkdir ~/.ssh
 $ chmod 700 ~/.ssh
@@ -35,11 +38,13 @@ Your public key has been saved in /home/b/.ssh/id_rsa.pub.
 ```
 
 Copy the public key **id_rsa.pub** to Ubuntu server
+
 ```
 $ scp ~/.ssh/id_rsa.pub user@192.168.1.101:/home/user/.ssh/authorized_keys
 ```
 
 If everything OK, now you can access via SSH without password
+
 ```
 $ ssh user@192.168.1.101
 ```

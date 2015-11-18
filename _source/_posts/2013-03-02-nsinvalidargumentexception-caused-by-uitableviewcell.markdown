@@ -9,6 +9,7 @@ categories:
 ---
 
 I keep hitting an error like this
+
 ```
 2013-03-02 18:34:52.488 StoreSearch[84541:c07] -[UITableViewCell nameLabel]: unrecognized selector sent to instance 0x6a7d880
 2013-03-02 18:34:52.489 StoreSearch[84541:c07] *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[UITableViewCell nameLabel]: unrecognized selector sent to instance 0x6a7d880'
@@ -22,11 +23,14 @@ terminate called throwing an exception(lldb)
 This took me few hours to figure out the problem. The problem is just make use of wrong **cell identifier**.
 
 Finally I change this
+
 ```obj-c
 static NSString *const SearchResultCellIdentifier = @"NothingFoundCell";
 static NSString *const NothingFoundCellIdentifier = @"NothingFoundCell";
 ```
+
 to this
+
 ```obj-c
 static NSString *const SearchResultCellIdentifier = @"SearchResultCell";
 static NSString *const NothingFoundCellIdentifier = @"NothingFoundCell";

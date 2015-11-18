@@ -15,6 +15,7 @@ printf("Result chunk: %s\nChunk length: %d\n", result_chunk, result_length);
 ```
 
 Output
+
 ```
 Result chunk: 33-9998-123-123408101123451250-PARADM01_00023054-CY00\240Z
 Chunk length: 53
@@ -32,6 +33,7 @@ printf("New chunk: %s\n", tmp_result);
 ```
 
 Output
+
 ```
 New chunk: 33-9998-123-123408101123451250-PARADM01_00023054-CY00
 ```

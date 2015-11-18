@@ -9,6 +9,7 @@ categories:
 ---
 
 In your **views.py**
+
 ```py
 from django.http import HttpResponse
 from projectname import settings
@@ -31,6 +32,7 @@ def index(request):
 ```
 
 Make sure you add Facebook details to **projectname/settings.py**
+
 ```py
 ...
 FACEBOOK_APP_ID = '12332358235'

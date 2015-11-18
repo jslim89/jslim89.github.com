@@ -12,6 +12,7 @@ Some time we might have too much locations want to show to user, unfortunately, 
 One of the solution is lazy loading, only load the visible location in map. Thus, in order to achieve this, we need **Center Coordinate** and **"Radius"** _(actually it is not radius, but just call it radius)_
 
 To get center coordinate
+
 ```obj-c
 - (CLLocationCoordinate2D)getCenterCoordinate
 {
@@ -21,6 +22,7 @@ To get center coordinate
 ```
 
 For getting radius, depends on where you want to get the 2nd point. Lets take the **Top Center**
+
 ```obj-c
 - (CLLocationCoordinate2D)getTopCenterCoordinate
 {
@@ -31,6 +33,7 @@ For getting radius, depends on where you want to get the 2nd point. Lets take th
 ```
 
 To get the radius in **meter**
+
 ```obj-c
 - (CLLocationDistance)getRadius
 {

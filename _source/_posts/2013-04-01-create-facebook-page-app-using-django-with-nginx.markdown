@@ -72,10 +72,12 @@ server {
     }
 }
 ```
+
 This basically listen to 1 more port, otherwise if you access via **https** will not found.
 
 Add those path that you want it to use **https**  
 Add a file in **/home/username/public_html/projectname/middleware.py**
+
 ```py
 from django.http import HttpResponsePermanentRedirect
 from django.conf import settings
@@ -96,6 +98,7 @@ class SecureRequiredMiddleware(object):
 ```
 
 In **/home/username/public_html/projectname/projectname/settings.py**
+
 ```py
 MIDDLEWARE_CLASSES = (
     ...
@@ -117,6 +120,7 @@ SECURE_REQUIRE_PATHS = (
 ## Create home view
 
 Edit **/home/username/public_html/projectname/newapp/views.py**
+
 ```py
 from django.template.loader import get_template
 from django.template import Context
@@ -132,6 +136,7 @@ def index(request):
 ```
 
 In **/home/username/public_html/projectname/newapp/urls.py**
+
 ```py
 from django.conf.urls import patterns, url
 from newapp import views
@@ -143,6 +148,7 @@ urlpatterns = patterns('newapp',
 
 In **/home/username/public_html/projectname/projectname/urls.py**, this is the main URL setting
 which will load the URLs in **newapp**
+
 ```py
 ...
 urlpatterns = patterns('',
@@ -155,6 +161,7 @@ urlpatterns = patterns('',
 ### Create a template for home page
 
 First, add the template dir to **/home/username/public_html/projectname/projectname/settings.py**
+
 ```py
 import os.path
 ...
@@ -166,12 +173,14 @@ TEMPLATE_DIRS = (
 ```
 
 Create a directory to keep all templates related to **newapp**
+
 ```
 $ mkdir /home/username/public_html/projectname/newapp/templates
 $ touch /home/username/public_html/projectname/newapp/templates/index.html
 ```
 
 In case that you want to keep your **css** or **js** or **image** files, so create a directory for them
+
 ```
 $ mkdir /home/username/public_html/projectname/static
 $ mkdir /home/username/public_html/projectname/static/css

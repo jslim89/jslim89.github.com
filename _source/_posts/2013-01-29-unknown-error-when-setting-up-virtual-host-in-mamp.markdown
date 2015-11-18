@@ -47,6 +47,7 @@ Include /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf
 to uncomment the httpd-vhosts.conf
 
 In **/etc/hosts**, add a line below
+
 ```
 127.0.0.1	www-yourproject.com
 ```
@@ -54,6 +55,7 @@ In **/etc/hosts**, add a line below
 I've done all these setting, but the MAMP still not able to start.
 
 At the end, I figured out that the error was occurred in
+
 ```
 <Directory "/path/to/project">
     Options All

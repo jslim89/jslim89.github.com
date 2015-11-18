@@ -11,9 +11,11 @@ categories:
 I've been suffer for few weeks on RSA encryption in iOS. Now I would like to share the way of doing this.
 
 First, generate a key-pair using SSL.
+
 ```
-openssl req -x509 -out public_key.der -outform der -new -newkey rsa:1024 -keyout private_key.pem -days 3650
+$ openssl req -x509 -out public_key.der -outform der -new -newkey rsa:1024 -keyout private_key.pem -days 3650
 ```
+
 There are few points have to mention:
 
 - `public_key.der` is an output based on x509 certificate. Note that in iOS must be `.der` format but not `.pem`
@@ -24,6 +26,7 @@ There are few points have to mention:
 Now, drag `public_key.der` to your iOS project and create 2 files: **RSA.h** and **RSA.m**
 
 **RSA.h**
+
 ```obj-c
 #import <Foundation/Foundation.h>
 
@@ -42,6 +45,7 @@ Now, drag `public_key.der` to your iOS project and create 2 files: **RSA.h** and
 ```
 
 **RSA.m**
+
 ```obj-c
 #import "RSA.h"
 
@@ -177,6 +181,7 @@ Now, drag `public_key.der` to your iOS project and create 2 files: **RSA.h** and
 ```
 
 **Usage**
+
 ```obj-c
 #import "RSA.h"
 
@@ -188,7 +193,9 @@ if (rsa != nil) {
     NSLog(@"Error");
 }
 ```
+
 The iOS part is done. Now let's decrypt in PHP. Before that, let's download [phpseclib](http://phpseclib.sourceforge.net/) for decryption.
+
 ```php
 <?php
 set_include_path(get_include_path() . PATH_SEPARATOR . 'phpseclib');

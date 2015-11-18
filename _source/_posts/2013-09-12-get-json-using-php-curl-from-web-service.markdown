@@ -10,6 +10,7 @@ categories:
 This example is to show how to detect user's country
 
 For **GET** request
+
 ```php
 <?php
 
@@ -62,6 +63,7 @@ print_r($result_arr);
 ```
 
 For **POST** request
+
 ```php 
 <?php
 

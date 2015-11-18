@@ -14,7 +14,9 @@ For example
 
 ## Check user authentication before access to certain page.
 
-```php AccountController.php
+**AccountController.php**
+
+```php
 <?php
 class AccountController extends BaseController
 {
@@ -32,7 +34,9 @@ class AccountController extends BaseController
 
 The filter function is in
 
-```php app/filters.php
+**app/filters.php**
+
+```php
 <?php
 ...
 Route::filter('auth', function()

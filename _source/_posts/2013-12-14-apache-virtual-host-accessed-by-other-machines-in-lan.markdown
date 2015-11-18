@@ -27,7 +27,9 @@ Later a software tester will need to test the project on his own machine.
 ### In `Machine A` (server machine that hosts all projects)
 i.e. Add files to `/etc/apache2/sites-available/`
 
-```apache foo.com
+**foo.com**
+
+```apache
 <VirtualHost *:80>
     ServerAdmin webmaster@localhost
     ServerName local.foo.com
@@ -53,7 +55,9 @@ i.e. Add files to `/etc/apache2/sites-available/`
 
 and
 
-```apache bar.com
+**bar.com**
+
+```apache
 <VirtualHost *:80>
     ServerAdmin webmaster@localhost
     ServerName local.bar.com
@@ -88,7 +92,7 @@ $ sudo service apache2 reload
 
 Edit the hosts file `/etc/hosts`, add the following lines
 
-```text hosts
+```text
 127.0.0.1 local.foo.com
 127.0.0.1 local.bar.com
 ```
@@ -97,7 +101,7 @@ Edit the hosts file `/etc/hosts`, add the following lines
 
 Edit the hosts file `/etc/hosts`, add the following lines
 
-```text hosts
+```text
 192.168.1.12 local.foo.com
 192.168.1.12 local.bar.com
 ```

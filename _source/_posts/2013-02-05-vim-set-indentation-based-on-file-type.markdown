@@ -10,11 +10,13 @@ categories:
 Let say now you want your **.js** _(JavaScript)_ file to 2 space indent.
 
 Create a file named `javascript.vim` **(NOT `js.vim`)**
+
 ```
 $ touch ~/.vim/ftplugin/javascript.vim
 ```
 
 Add the content below to `~/.vim/ftplugin/javascript.vim`
+
 ```vim
 " Auto expand tabs to spaces (use space rather than tab)
 setlocal expandtab

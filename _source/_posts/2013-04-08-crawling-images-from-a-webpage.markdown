@@ -25,6 +25,7 @@ for i in imgs:
 ```
 
 Then output the URLs to a text file
+
 ```
 $ python craw.py > content.txt
 ```

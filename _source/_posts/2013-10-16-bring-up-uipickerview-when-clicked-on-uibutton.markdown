@@ -12,7 +12,9 @@ We don't add UIPickerView as subview. There is a trick to achieve this.
 ### Create a dummy UITextField
 This text field is not visible to user, is a hidden field
 
-```obj-c ViewController.m
+**ViewController.m**
+
+```obj-c
 #import "ViewController.h"
 
 @interface ViewController ()
@@ -58,7 +60,9 @@ This text field is not visible to user, is a hidden field
 
 ### Trigger the picker view when click on UIButton
 
-```obj-c ViewController.m
+**ViewController.m**
+
+```obj-c
 ...
 - (IBAction)someButtonTouched:(UIButton *)sender
 {
@@ -68,7 +72,9 @@ This text field is not visible to user, is a hidden field
 
 ### Add methods for bar buttons
 
-```obj-c ViewController.m
+**ViewController.m**
+
+```obj-c
 - (void)cancelTouched:(UIBarButtonItem *)sender
 {
     // hide the picker view
@@ -86,7 +92,9 @@ This text field is not visible to user, is a hidden field
 
 ### Add dataSource & delegate for UIPickerView
 
-```obj-c ViewController.m
+**ViewController.m**
+
+```obj-c
 #pragma mark - UIPickerViewDataSource
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
@@ -114,7 +122,9 @@ This text field is not visible to user, is a hidden field
 
 Don't forget to make your `ViewController` conform to the protocols
 
-```obj-c ViewController.h
+**ViewController.h**
+
+```obj-c
 @interface ViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 ```
 

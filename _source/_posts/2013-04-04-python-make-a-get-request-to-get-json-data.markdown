@@ -10,6 +10,7 @@ categories:
 Make a HTTP request to get JSON content from website.
 
 Create a file **json_helper.py**
+
 ```py
 import urllib2
 import json
@@ -23,6 +24,7 @@ def get_json_by_user_id(user_id):
 ```
 
 Usage:
+
 ```py
 from json_helper import get_json_by_user_id
 

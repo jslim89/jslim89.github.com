@@ -38,7 +38,9 @@ After zoom
 
 In order to achieve the result
 
-```obj-c MyRootViewController.m
+**MyRootViewController.m**
+
+```obj-c
 ...
 @implementation ViewController {
     UIImageView *navBarHairlineImageView;

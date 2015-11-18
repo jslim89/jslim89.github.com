@@ -28,7 +28,9 @@ URL** is the page that you submit to iPay88 site, you will know later.
 
 Create a page like below _(just an example)_.
 
-```html payment.php
+**payment.php**
+
+```html
 <!DOCTYPE html>
 <html>
     <head>
@@ -63,6 +65,7 @@ Create a page like below _(just an example)_.
 The **Signature** has a formula to generate, will be provided from iPay88
 
 ```php
+<?php
 function iPay88_signature($ref_no, $amount) {
     $key = 'apple';
     $code = 'M00001';
@@ -125,7 +128,10 @@ I have tried using cURL as well, in fact it need to be a POST request in a webpa
 
 ## 3. Create a response handler
 
-```php response.php
+**response.php**
+
+```php
+<?php
 if (isset($_REQUEST['ErrDesc'])) {
     redirect('failure.php');
 }
@@ -155,7 +161,7 @@ Sometime, there are some weird issue that may caused the **response.php** not wo
 
 The **backend.php** will not work if you check for login session. e.g.
 
-```php backend.php
+```php
 <?php
 if (is_loggedin()) exit; // will exit here
 
@@ -167,11 +173,15 @@ That means you cannot deal with any session here _(backend.php)_
 
 ## 4. Create a success & failure page
 
-```html success.php
+**success.php**
+
+```html
 <button type="button" onclick="window.location.href='com.mysite.myapp://successClicked';">Done</button>
 ```
 
-```php failure.php
+**failure.php**
+
+```php
 <button type="button" onclick="window.location.href='com.mysite.myapp://closeClicked';">Close</button>
 ```
 
@@ -183,7 +193,9 @@ use in Waze app. Same to this, `com.mysite.myapp://` is only use in this app
 
 Create a custom web view to handle payment
 
-```obj-c PaymentWebViewController.m
+**PaymentWebViewController.m**
+
+```obj-c
 #import "PaymentWebViewController.h"
 
 @interface PaymentWebViewController ()

@@ -62,7 +62,9 @@ $ touch ~/public_html/project_a/index.php
 
 then add the following content
 
-```php index.php
+**index.php**
+
+```php
 <!DOCTYPE html>
 <html>
 <body>
@@ -85,7 +87,7 @@ $ cp -r ~/public_html/project_a ~/public_html/project_b
 
 Edit the file **~/public_html/project_b/index.php**
 
-```php index.php
+```php
 <!DOCTYPE html>
 <html>
 <body>
@@ -112,7 +114,7 @@ $ cd /Applications/XAMPP/etc/
 
 Edit the file named **httpd.conf**, search for `httpd-vhosts`, you will see the line
 
-```apache httpd.conf
+```apache
 ...
 
 # Virtual hosts
@@ -123,7 +125,7 @@ Edit the file named **httpd.conf**, search for `httpd-vhosts`, you will see the 
 
 uncomment the line, i.e.
 
-```apache httpd.conf
+```apache
 ...
 
 # Virtual hosts
@@ -148,7 +150,7 @@ Then edit the file named **httpd-vhosts.conf**, and it already come with this co
 
 Remove it and change to
 
-```apache httpd-vhosts.conf
+```apache
 <VirtualHost *:80>
     ServerAdmin webmaster@dummy-host.example.com
     ServerName local.foosite.com
@@ -185,6 +187,7 @@ Remove it and change to
 ```
 
 Restart apache server
+
 ```
 $ sudo /Applications/XAMPP/xamppfiles/xampp restart
 ```

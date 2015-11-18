@@ -31,6 +31,7 @@ Example
 There is **no need** to conform to UIAlertViewDelegate protocol, without the statement below will also work.
 
 e.g.
+
 ```obj-c
 @interface ViewController : UIViewController <UIAlertViewDelegate>
 ```

@@ -32,7 +32,9 @@ if(<correct credential>) {
 
 What about in client side?
 
-```obj-c AppDelegate.m
+**AppDelegate.m**
+
+```obj-c
 // 1.
 static NSString *kServerSessionCookie = @"PHPSESSID";
 static NSString *kLocalCookieName = @"MyProjectCookie";

@@ -62,7 +62,7 @@ We want to know all topics `total_users`, `unique_users`, i.e.
 +-------------------+------------------+--------------+----------------+
 ```
 
-```sql query.sql
+```sql
 SELECT topic.name AS topic_name
     , COUNT(reply.user_id) AS total_users
     , (SELECT COUNT(DISTINCT user_id) FROM reply WHERE topic_id = topic.id) AS unique_users

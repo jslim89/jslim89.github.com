@@ -22,7 +22,7 @@ Now create the very first (root) view controller with the following content
 
 In `JSAppDelegate.m` _(I'm using my own prefix `JS`)_, add the lines below
 
-```obj-c JSAppDelegate.m
+```obj-c
 JSMainViewController *mainViewController = [[JSMainViewController alloc] init];
 UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainViewController];
 self.window.rootViewController = navigationController;
@@ -30,14 +30,14 @@ self.window.rootViewController = navigationController;
 
 In `JSMainViewController.m`, add this to `viewDidLoad`
 
-```obj-c JSMainViewController.m
+```obj-c
 self.title = @"Light Content";
 [self setNeedsStatusBarAppearanceUpdate];
 ```
 
 and add this function
 
-```obj-c JSMainViewController.m
+```obj-c
 - (UIStatusBarStyle) preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent; // light content means white text color
@@ -67,7 +67,9 @@ Now create another `UIViewController`, just name it `JSTransparentBgViewControll
 
 So add a function, before the view actually appear, hide the navigation bar
 
-```obj-c JSTransparentBgViewController.m
+**JSTransparentBgViewController.m**
+
+```obj-c
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -77,7 +79,7 @@ So add a function, before the view actually appear, hide the navigation bar
 
 Then in `viewDidLoad`, add this
 
-```obj-c JSTransparentBgViewController.m
+```obj-c
 // set a light gray color so that you can see the text on status bar
 self.view.backgroundColor = [UIColor colorWithRed:235/255.0 green:235/255.0 blue:235/255.0 alpha:1];
 
@@ -103,7 +105,7 @@ so now you see that the status bar is not covered up
 
 To fix this, just.... hack it
 
-```obj-c JSTransparentBgViewController.m
+```obj-c
 UIImageView *coverImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, -20, CGRectGetWidth(scrollView.frame), 300)];
 ```
 

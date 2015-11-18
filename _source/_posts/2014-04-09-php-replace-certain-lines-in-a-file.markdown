@@ -11,7 +11,9 @@ I've come across such a scenario, to duplicate a project when a new user sign up
 
 Example file content:
 
-```php config.php
+**config.php**
+
+```php
 <?php
 define('DATABASE_NAME', 'my_db');
 

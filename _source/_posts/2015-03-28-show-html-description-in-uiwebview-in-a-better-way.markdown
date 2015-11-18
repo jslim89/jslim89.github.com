@@ -27,7 +27,9 @@ Now add 4 or 5 constraints to `UIWebView`, make sure the _Height_ constraint is 
 
 ## Set `UIWebViewDelegate` to self
 
-```swift ViewController.swift
+**ViewController.swift**
+
+```swift
 class ViewController: UIViewController, UIWebViewDelegate {
     // ...
 }
@@ -42,7 +44,9 @@ Go back the storyboard, hold the right-click and drag it over to the controller
 Here to disable the scroll, hide the scroll indicator, disable bounces,
 clear the `UIWebView` background
 
-```swift ViewController.swift
+**ViewController.swift**
+
+```swift
 self.descriptionWebView.scrollView.scrollEnabled = false
 self.descriptionWebView.scrollView.bounces = false
 self.descriptionWebView.scrollView.showsHorizontalScrollIndicator = false
@@ -62,13 +66,15 @@ for subview in self.descriptionWebView.subviews {
 
 Add a wrapper to the content _(use `main-wrapper` here)_
 
-```swift ViewController.swift
+**ViewController.swift**
+
+```swift
 self.descriptionWebView.loadHTMLString("<div id='main-wrapper'>\(html)</div>", baseURL: nil)
 ```
 
 Implement the `UIWebViewDelegate`
 
-```swift ViewController.swift
+```swift
 func webViewDidFinishLoad(webView: UIWebView) {
     if let output = webView.stringByEvaluatingJavaScriptFromString("document.getElementById(\"main-wrapper\").offsetHeight;") {
         

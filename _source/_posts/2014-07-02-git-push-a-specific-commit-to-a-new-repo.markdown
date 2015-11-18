@@ -29,7 +29,7 @@ Delta compression using up to 4 threads.
 Compressing objects: 100% (13/13), done.
 Writing objects: 100% (13/13), 1.12 KiB | 0 bytes/s, done.
 Total 13 (delta 7), reused 0 (delta 0)
-To git@bitbucket.org:janeyee/lpt-malaysia.git
+To git@bitbucket.org:others/new-repo.git
    2a94403..7300a61  7300a6130d9447e18a931e898b64eefedea19544 -> master
 ```
 

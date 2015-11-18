@@ -15,7 +15,9 @@ thus we may need to customize the share text for Twitter.
 One of the way is to subclass the `UIActivityItemProvider`. Here is
 how you can do it:
 
-```obj-c MyActivityItemProvider.h
+**MyActivityItemProvider.h**
+
+```obj-c
 #import <UIKit/UIKit.h>
 
 @interface MyActivityItemProvider : UIActivityItemProvider
@@ -23,7 +25,9 @@ how you can do it:
 @end
 ```
 
-```obj-c MyActivityItemProvider.m
+**MyActivityItemProvider.m**
+
+```obj-c
 #import "MyActivityItemProvider.h"
 
 @implementation MyActivityItemProvider
@@ -44,7 +48,9 @@ how you can do it:
 @end
 ```
 
-```obj-c MyViewController.m
+**MyViewController.m**
+
+```obj-c
 // 3.
 MyActivityItemProvider *message = [[MyActivityItemProvider alloc] init];
 

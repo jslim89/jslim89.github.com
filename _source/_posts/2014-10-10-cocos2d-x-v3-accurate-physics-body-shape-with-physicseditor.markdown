@@ -51,7 +51,7 @@ It will looks like this.
 
 Before actually use the physics file, let's try with the default API. Edit **HelloWorldScene.cpp**
 
-```cpp HelloWorldScene.cpp
+```cpp
 auto spriteBody = PhysicsBody::createBox(sprite->getContentSize());
 sprite->setPhysicsBody(spriteBody);
 ```
@@ -64,7 +64,7 @@ Now, add [PEShapeCache_X3_0.h](https://raw.githubusercontent.com/jslim89/Cocos2d
 
 Update **AppDelegate.cpp**, add the physics file you generated just now to cache
 
-```cpp AppDelegate.cpp
+```cpp
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
 #include "PEShapeCache_X3_0.h" // Make sure you include it
@@ -83,7 +83,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
 Then in **HelloWorldScene.cpp**
 
-```cpp HelloWorldScene.cpp
+```cpp
 #include "HelloWorldScene.h"
 #include "PEShapeCache_X3_0.h"
 

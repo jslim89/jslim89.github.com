@@ -11,7 +11,9 @@ categories:
 I believe that most of you had face this kind of problem. [Bootstrap 3 dropdown menu](http://getbootstrap.com/components/#btn-dropdowns)
 is clickable on desktop browser, but when comes to mobile, then it has no effect at all.
 
-```html index.html
+**index.html**
+
+```html
 <div id="main-wrapper">
     <div id="bg-holder">
         <div class="navbar" role="navigation">
@@ -64,11 +66,13 @@ I've googled for hours, even try to modify the **bootstrap.min.js** file, it sti
 Then I try to bind a "click" event on that button
 
 i.e.
+
 ```js
 $('.dropdown-toggle').click(function() {
     alert('dropdown clicked');
 });
 ```
+
 The alert works on desktop, but has no effect on mobile browser.
 
 Then I try to move the whole chunk of html to the top
@@ -135,6 +139,7 @@ was set to _1000_. i.e.
 ```
 
 Now, I move the dropdown menu to the original place, then change the css
+
 ```css
 .pole-content-holder > #pole-heading {
     z-index: 1001;

@@ -11,7 +11,9 @@ When we want to display a bunch of description, `UIWebView` is the choice.
 
 Usually we do it in this way
 
-```obj-c ViewController.m
+**ViewController.m**
+
+```obj-c
 _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 320, 300)];
 [self.view addSubview:_webView];
 ```
@@ -24,7 +26,9 @@ What it will look like
 
 But what if we want it to transparent? Let's try to set the background to `clearColor`
 
-```obj-c ViewController.m
+**ViewController.m**
+
+```obj-c
 _webView.backgroundColor = [UIColor clearColor];
 ```
 
@@ -32,7 +36,9 @@ _webView.backgroundColor = [UIColor clearColor];
 
 Ooopsss.... Only its background is transparent. Want to make the whole view transparent? Let's do in this way
 
-```obj-c ViewController.m
+**ViewController.m**
+
+```obj-c
 _webView.opaque = NO;
 _webView.backgroundColor = [UIColor clearColor];
 for (UIView* subView in [_webView subviews])
@@ -58,17 +64,21 @@ Now, the problem is we need to know how much space _(the height of the webView)_
 
 First, add `delegate` to the `webView`
 
-```obj-c ViewController.h
+**ViewController.h**
+
+```obj-c
 @interface ViewController : UIViewController <UIWebViewDelegate>
 ```
 
-```obj-c ViewController.m
+**ViewController.m**
+
+```obj-c
 _webView.delegate = self;
 ```
 
 Then implement `webViewDidFinishLoad:`
 
-```obj-c ViewController.m
+```obj-c
 #pragma mark - UIWebViewDelegate
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
@@ -84,7 +94,7 @@ Then implement `webViewDidFinishLoad:`
 
 Before that, add a `<div>` _(with a unique ID, in this case I use "main-wrapper")_ to wrap the html content, e.g.
 
-```obj-c ViewController.m
+```obj-c
 [_webView loadHTMLString:[NSString stringWithFormat:@"<div id=\"main-wrapper\">%@</div>div>", html] baseURL:nil];
 ```
 
@@ -94,7 +104,9 @@ let's run it and see
 
 Now it looks better, but we cannot see the content if too long, and also overlap with the button. To solve this, let's add a `UIScrollView` in between the `webView` and `self.view`
 
-```obj-c ViewController.m
+**ViewController.m**
+
+```obj-c
 _scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
 _scrollView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleTopMargin;
 [self.view addSubview:_scrollView];
@@ -110,7 +122,7 @@ _scrollView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAu
 
 Add these lines to bottom of `webViewDidFinishLoad:`
 
-```obj-c ViewController.m
+```obj-c
 // adjust the position of the button
 frame = _button.frame;
 frame.origin.y = CGRectGetMaxY(webView.frame) + 15;
@@ -132,7 +144,9 @@ We're done here. Now we have a smooth scrollable content view
 
 The initial height of `UIWebView` must not be `0`, e.g.
 
-```obj-c ViewController.m
+**ViewController.m**
+
+```obj-c
 _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 320, 0)]; // <--- if height is 0
 ```
 

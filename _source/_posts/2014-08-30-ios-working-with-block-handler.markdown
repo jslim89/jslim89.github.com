@@ -14,7 +14,9 @@ A typically example will be `ListViewController` & `DetailViewController`.
 
 ## In delegate way:
 
-```obj-c ListViewController.m
+**ListViewController.m**
+
+```obj-c
 DetailViewController *controller = [[DetailViewController alloc] init];
 controller.delegate = self;
 [self presentViewController:controller animated:YES completion:nil];
@@ -26,7 +28,9 @@ controller.delegate = self;
 }
 ```
 
-```obj-c DetailViewController.h
+**DetailViewController.h**
+
+```obj-c
 ...
 @protocol DetailViewControllerDelegate <NSObject>
 - (void)detailDelegate:(DetailViewController *)controller;
@@ -39,7 +43,9 @@ controller.delegate = self;
 
 So when user do anything with this `DetailViewController`
 
-```obj-c DetailViewController.m
+**DetailViewController.m**
+
+```obj-c
 - (void)actionTouched:(UIButton *)sender
 {
     [_delegate detailDelegate:self];
@@ -51,13 +57,17 @@ let say touched a button, then invoke the delegate method, so that the
 
 ## Alternative: Using block
 
-```obj-c DetailViewController.h
+**DetailViewController.h**
+
+```obj-c
 - (void)doneSomething:(void (^)(void))actionHandler;
 ```
 
 Create a method signature with an empty block handler.
 
-```obj-c DetailViewController.m
+**DetailViewController.m**
+
+```obj-c
 @interface DetailViewController ()
 @property (nonatomic, copy) void (^done)(void); // a property for the block
 @end
@@ -76,7 +86,9 @@ Create a method signature with an empty block handler.
 
 When user touched on the button, then it invoke the `done` block, the `doneSomething:` is called by `ListViewController`
 
-```obj-c ListViewController.m
+**ListViewController.m**
+
+```obj-c
 DetailViewController *controller = [[DetailViewController alloc] init];
 [controller doneSomething:^{
     // your actions will be invoked when user touch the button on DetailViewController

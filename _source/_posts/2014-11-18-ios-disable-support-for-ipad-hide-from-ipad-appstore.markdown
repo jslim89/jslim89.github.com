@@ -12,7 +12,9 @@ To achieve this, change **Info.plist** file, right-click -> Open as -> Source Co
 
 Then search for `UIRequiredDeviceCapabilities`, most probably you will see
 
-```xml Info.plist
+**Info.plist**
+
+```xml
 <key>UIRequiredDeviceCapabilities</key>
 <array>
     <string>armv7</string>

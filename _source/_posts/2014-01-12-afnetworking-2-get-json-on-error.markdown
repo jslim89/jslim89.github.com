@@ -11,7 +11,9 @@ I've just switched from **AFNetworking 1.x** to **2.x**.
 
 In **AFNetworking 1.x**, I make a request using `JSONRequestOperationWithRequest` method. i.e.
 
-```obj-c ViewController.m
+**ViewController.m**
+
+```obj-c
 NSURL *url = [NSURL URLWithString:@"/login" relativeToURL:@"http://api.example.com"];
 AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
 [httpClient setParameterEncoding:AFFormURLParameterEncoding];
@@ -36,7 +38,9 @@ However, in **AFNetworking 2.x**, I dig for quite some time only found the solut
 
 ### Create a subclass of `AFJSONResponseSerializer`
 
-```obj-c JSONResponseSerializerWithData.h
+**JSONResponseSerializerWithData.h**
+
+```obj-c
 #import "AFURLResponseSerialization.h"
 
 /// NSError userInfo key that will contain response data
@@ -47,7 +51,9 @@ static NSString * const JSONResponseSerializerWithDataKey = @"JSONResponseSerial
 @end
 ```
 
-```obj-c JSONResponseSerializerWithData.m
+**JSONResponseSerializerWithData.m**
+
+```obj-c
 #import "JSONResponseSerializerWithData.h"
 
 @implementation JSONResponseSerializerWithData
@@ -78,7 +84,9 @@ static NSString * const JSONResponseSerializerWithDataKey = @"JSONResponseSerial
 
 ### Usage
 
-```obj-c ViewController.m
+**ViewController.m**
+
+```obj-c
 AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
 // LOOK AT THIS LINE, change to the serializer you've just created
 manager.responseSerializer = [JSONResponseSerializerWithData serializer];

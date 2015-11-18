@@ -16,7 +16,7 @@ But, in certain situations, we need to extends `UIViewController` and handle the
 
 The **ViewController.m** is subclass of `UIViewController`
 
-```obj-c ViewController.m
+```obj-c
 ...
 @property (nonatomic) UITableView *tableView;
 

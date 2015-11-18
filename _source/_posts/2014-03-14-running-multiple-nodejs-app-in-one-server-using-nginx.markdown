@@ -33,6 +33,7 @@ $ sudo npm -g install sails
 ```
 
 Create projects
+
 ```
 $ cd
 $ mkdir public_html && cd public_html
@@ -42,24 +43,32 @@ $ sails new project2
 
 Edit the home page for both projects _(to differentiate them)_
 
-```html project1/views/home/index.ejs
+**project1/views/home/index.ejs**
+
+```html
 <h1>This is project 1</h1>
 ```
 
-```html project2/views/home/index.ejs
+**project2/views/home/index.ejs**
+
+```html
 <h1>This is second project</h1>
 ```
 
 ## 3. Change the environment to production
 
-```js project1/config/local.js
+**project1/config/local.js**
+
+```js
 module.exports = {
     port: 8081, // change the port to 8081
     environment: 'production'
 };
 ```
 
-```js project2/config/local.js
+**project2/config/local.js**
+
+```js
 module.exports = {
     port: 8082, // change the port to 8082
     environment: 'production'
@@ -145,7 +154,7 @@ $ sudo touch sails1.com.conf
 
 Put the content to `sails1.com.conf`
 
-```nginx sails1.com.conf
+```nginx
 server {
   listen 80;
 
@@ -161,24 +170,29 @@ server {
   }
 }
 ```
+
 This tell the server that forword the request from [sails1.com](http://sails1.com) to http://localhost:8081 _(which is the project1)_
 
 Just do the same thing for **project2**
 
 Enable the config. _(In order to make the config file take effect, symlink them to **sites-enabled** directory)_
+
 ```
 $ sudo ln -s /etc/nginx/sites-available/sails1.com.conf /etc/nginx/sites-enabled/sails1.com.conf
 $ sudo ln -s /etc/nginx/sites-available/sails2.com.conf /etc/nginx/sites-enabled/sails2.com.conf
 ```
 
 Restart Nginx server
+
 ```
 $ sudo service nginx restart
 ```
 
 Since I'm testing on local machine, so we need to edit the **hosts** file, append the content below the hosts file
 
-```nginx /etc/hosts
+**/etc/hosts**
+
+```nginx
 # nginx virtual host
 127.0.0.1    sails1.com
 127.0.0.1    sails2.com

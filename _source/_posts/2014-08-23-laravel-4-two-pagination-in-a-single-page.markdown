@@ -10,9 +10,9 @@ categories:
 
 Alright, if you're existing [Laravel](http://laravel.com) user, you know that Laravel has make pagination easy. If you're new, I will show you how.
 
-First of all, in your **routes.php**
+First of all, in your **app/routes.php**
 
-```php app/routes.php
+```php
 <?php
 Route::get('items', array(
     'as' => 'items', 
@@ -23,7 +23,9 @@ Route::get('items', array(
 
 When user enter `http://<your url>.com/items`, it will matched and call the `getIndex` method in `ItemController` class
 
-```php app/controllers/ItemController.php
+**app/controllers/ItemController.php**
+
+```php
 <?php
 ...
 public function getIndex()
@@ -40,7 +42,9 @@ public function getIndex()
 }
 ```
 
-```php app/models/Item.php
+**app/models/Item.php**
+
+```php
 <?php
 // 4
 class Item extends Eloquent
@@ -78,7 +82,9 @@ One of the solution that I found out is implement by using AJAX.
 
 ### 1. Add in an extra routes
 
-```php app/routes.php
+**app/routes.php**
+
+```php
 <?php
 // ADD THIS
 Route::get('items/ajax/{type}', array(
@@ -98,7 +104,9 @@ you must put it above the `items`. Always put the more precise route to above.
 
 ### 2. Implement the ajax method in `ItemController`
 
-```php app/controllers/ItemController.php
+**app/controllers/ItemController.php**
+
+```php
 <?php
 ...
 public function getItemType($type)
@@ -125,7 +133,9 @@ what you did for **Item.php** just now.
 
 ### 3. Create a new view file that keep only the particular section of code
 
-```php app/views/item_type.php
+**app/views/item_type.php**
+
+```php
 <table class="table">
   <thead>
     <tr>
@@ -153,7 +163,9 @@ what you did for **Item.php** just now.
 
 add the section to bottom right before `</body>`
 
-```js app/views/items.php
+**app/views/items.php**
+
+```js
 $(function() {
     // 1.
     function getPaginationSelectedPage(url) {

@@ -41,6 +41,7 @@ ALTER TABLE category ADD FULLTEXT(name, description);
 ```
 
 Let's verify that it already in Full Text _(e.g. shows `book` table's column)_
+
 ```sql
 SELECT index_name, group_concat(column_name) as columns
 FROM information_Schema.STATISTICS 

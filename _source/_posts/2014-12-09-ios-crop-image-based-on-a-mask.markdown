@@ -14,7 +14,9 @@ I have a mask here _(the Sun Goku hair)_, and I want to put a face to this mask.
 
 ## Setup the base view
 
-```obj-c ViewController.m
+**ViewController.m**
+
+```obj-c
 #import "ViewController.h"
 
 @interface ViewController () <UIActionSheetDelegate>
@@ -100,7 +102,9 @@ Now I got the `CGRect` value
 
 ## Crop image controller
 
-```obj-c CropViewController.h
+**CropViewController.h**
+
+```obj-c
 import <UIKit/UIKit.h>
 
 // 1.
@@ -123,7 +127,9 @@ import <UIKit/UIKit.h>
 1. Delegate method after cropping the image
 2. Accept the raw image from parent viewController
 
-```obj-c CropViewController.m
+**CropViewController.m**
+
+```obj-c
 #import "CropViewController.h"
 
 @interface CropViewController ()
@@ -237,7 +243,9 @@ import <UIKit/UIKit.h>
 7. Crop the image base on the rectangle we got just now
 8. For zooming purpose, is a delegate method from `UIScrollView`
 
-```obj-c ViewController.m
+**ViewController.m**
+
+```obj-c
 #import "CropViewController.h"
 
 ...

@@ -17,6 +17,7 @@ Final look will be
 Before that, add a helper function to turn UIColor into UIImage
 
 You may put this code to **AppDelegate** or anywhere else
+
 ```obj-c
 + (UIImage *)imageFromColor:(UIColor *)color forSize:(CGSize)size withCornerRadius:(CGFloat)radius
 {

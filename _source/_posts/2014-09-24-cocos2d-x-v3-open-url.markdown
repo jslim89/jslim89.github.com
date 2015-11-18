@@ -22,7 +22,7 @@ Now, this has to change the **cocos2d**'s core files.
 
 Edit the **./cocos2d/cocos/platform/ios/CCApplication.h**
 
-```cpp CCApplication.h
+```cpp
 ...
     void openURL(const char *url); // ADD THIS LINE
 
@@ -32,7 +32,7 @@ protected:
 
 Then edit **./cocos2d/cocos/platform/ios/CCApplication.mm**, add the implementation for that method `openURL`
 
-```obj-c CCApplication.mm
+```obj-c
 ...
 void Application::openURL(const char *url)
 {
@@ -49,7 +49,7 @@ NS_CC_END
 
 Edit the **./cocos2d/cocos/platform/android/CCApplication.h**
 
-```cpp CCApplication.h
+```cpp
 ...
     void openURL(const char *url); // ADD THIS LINE
 
@@ -59,7 +59,7 @@ protected:
 
 Then edit **./cocos2d/cocos/platform/android/CCApplication.cpp**, add the implementation for that method `openURL`. This will invoke the native Java method.
 
-```cpp CCApplication.cpp
+```cpp
 ...
 void Application::openURL(const char *url)
 {
@@ -78,7 +78,7 @@ NS_CC_END
 
 Lastly edit **./cocos2d/cocos/platform/android/java/src/org/cocos2dx/lib/Cocos2dxActivity.java**
 
-```java Cocos2dxActivity.java
+```java
 ...
 // import this 2 classes
 import android.content.Intent;
@@ -118,7 +118,9 @@ You have done.
 
 You can invoke `Application::getInstance()->openURL("your url")`. e.g.
 
-```cpp MyScene.cpp
+**MyScene.cpp**
+
+```cpp
 switch (Application::getInstance()->getTargetPlatform()) {
     case Application::Platform::OS_IPAD:
     case Application::Platform::OS_IPHONE:

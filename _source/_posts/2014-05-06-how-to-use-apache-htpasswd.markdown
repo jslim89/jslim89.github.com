@@ -16,7 +16,9 @@ To achieve this, [Apache .htpasswd](http://httpd.apache.org/docs/2.0/en/programs
 
 Before that, create a **.htaccess** to project's document root _(e.g. if the document root is in project/public, then it should located project/public/.htaccess)_ contains the following content
 
-```apache .htaccess
+**.htaccess**
+
+```apache
 AuthUserFile /absolute/path/to/your/project/document_root/.htpasswd
 AuthGroupFile /dev/null
 AuthName "Js's protected files"

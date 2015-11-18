@@ -23,7 +23,9 @@ The existing method in `UIImageView` simply won't work.
 
 To get the result like this
 
-```obj-c MyViewController.m
+**MyViewController.m**
+
+```obj-c
 - (void)viewDidLoad
 {
     [super viewDidLoad];

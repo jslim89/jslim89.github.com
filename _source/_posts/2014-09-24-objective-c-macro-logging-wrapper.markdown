@@ -19,7 +19,7 @@ Thus I choose to use macro.
 
 Let's add the macro in **Prefix.pch**
 
-```obj-c Prefix.pch
+```obj-c
 ...
 
 // 1. the debug flag

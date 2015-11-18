@@ -31,6 +31,7 @@ Thanks
 **Failed example** 
 
 ```php
+<?php
 if (empty($obj->method())) {
     // do something
 }
@@ -39,6 +40,7 @@ if (empty($obj->method())) {
 **Correct way**
 
 ```php
+<?php
 $result = $obj->method();
 
 if (empty($result)) {

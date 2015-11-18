@@ -18,13 +18,17 @@ Thus, here I shows an example on implement lazy loading on iOS app, as well as p
 
 ## Create a `UIViewController`
 
-```obj-c MyListViewController.h
+**MyListViewController.h**
+
+```obj-c
 @interface MyListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end
 ```
 
-```obj-c MyListViewController.m
+**MyListViewController.m**
+
+```obj-c
 #import <QuartzCore/QuartzCore.h>
 #import "MyListViewController.h"
 #import "AFNetworking.h"

@@ -6,7 +6,7 @@ comments: true
 categories: 
 ---
 
-**Author Signature:** _Addison Cohen is a mobile app developer working with Appsted Ltd. You can contact him if you want to hire iPhone app developer for the development of the most comprehensive mobile application solutions. He loves sharing latest information on mobile technologies like iOS, Android development processes._
+**Author Signature:** _Addison Cohen is a mobile app developer working with Appsted Ltd. You can contact him if you want to [hire iPhone app developer](http://www.appsted.com/hire-iphone-developers) for the development of the most comprehensive mobile application solutions. He loves sharing latest information on mobile technologies like iOS, Android development processes._
 
 --------------------------------
 

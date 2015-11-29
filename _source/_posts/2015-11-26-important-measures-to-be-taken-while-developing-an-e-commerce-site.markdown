@@ -10,7 +10,7 @@ categories:
 
 **Author Biography:**
 
-_This post is just arrived through the hard work of Samuel Dawson who is a expert HTML to WordPress service provider. Samuel has refined here so many things on how you can build a impressive website just to start E Commerce business._
+_This post is just arrived through the hard work of Samuel Dawson who is a expert [HTML to WordPress](http://www.designs2html.com/services/html-to-wordpress) service provider. Samuel has refined here so many things on how you can build a impressive website just to start E Commerce business._
 
 --------------------------------------
 

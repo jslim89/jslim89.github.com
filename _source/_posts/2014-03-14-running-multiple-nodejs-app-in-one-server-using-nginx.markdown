@@ -173,7 +173,25 @@ server {
 
 This tell the server that forword the request from [sails1.com](http://sails1.com) to http://localhost:8081 _(which is the project1)_
 
+
 Just do the same thing for **project2**
+
+```nginx
+server {
+  listen 80;
+
+  server_name sails2.com;
+
+  location / {
+      proxy_pass http://localhost:8082;
+      proxy_http_version 1.1;
+      proxy_set_header Upgrade $http_upgrade;
+      proxy_set_header Connection 'upgrade';
+      proxy_set_header Host $host;
+      proxy_cache_bypass $http_upgrade;
+  }
+}
+```
 
 Enable the config. _(In order to make the config file take effect, symlink them to **sites-enabled** directory)_
 

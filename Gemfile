@@ -6,6 +6,7 @@ versions = JSON.parse(open('https://pages.github.com/versions.json').read)
 
 group :development do
   gem 'stringex', '~> 1.4.0'
+  gem 'pygments.rb'
 end
 
 gem 'github-pages', versions['github-pages']

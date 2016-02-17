@@ -67,5 +67,5 @@ end
 
 desc "Default deploy task"
 task :deploy do
-  system "cd #{public_dir} && git add * && git commit -am 'Updated on #{Time.now.strftime("%Y-%m-%d %H:%M")}' && git push origin master"
+  system "cd #{public_dir} && git add * && git commit -am 'Updated on #{Time.now.strftime("%Y-%m-%d %H:%M")}' && git push -f origin master"
 end

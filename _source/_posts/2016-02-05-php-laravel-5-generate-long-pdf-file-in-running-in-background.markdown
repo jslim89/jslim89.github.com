@@ -83,6 +83,7 @@ Bare in mind that Laravel has it's own [scheduler](https://laravel.com/docs/mast
 Now create a file in **/path/to/project/app/Console/Command/GeneratePDF.php**
 
 ```php
+<?php
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;

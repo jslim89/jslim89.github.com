@@ -14,6 +14,6 @@ But then, most _(or I can say **all**)_ articles are non-technical stuffs. I'm w
 2. Don't send me Microsoft Word file
 3. Attach the images _(if you have)_ in the email
 4. I would be happy if you say _"Hi JS,"_ in the first line. Because I can see almost all guest post requests are _"Hi there"_, I hope that you're not simply blast out the same email to all bloggers
-5. I would like to request USD10 for each guest post which is non-technical stuffs _(I would send you my PayPal email when you send the guest post request for me)_
+5. Posts with non-technical stuff will be ignored.
 
 Thanks all.

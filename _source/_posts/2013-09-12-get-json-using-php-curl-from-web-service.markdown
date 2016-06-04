@@ -100,3 +100,31 @@ curl_close($ch);
 $result_arr = json_decode($result, true);
 ?>
 ```
+
+For **POST** request with binary body _(e.g. an audio wav file)_
+
+```
+$params = [
+    'qs1' => 'foo',
+];
+$file = '/path/to/file.wav';
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $url . '?' . http_build_query($params));
+curl_setopt($ch, CURLOPT_PUT, 1);
+curl_setopt($ch, CURLOPT_INFILESIZE, filesize($file));
+curl_setopt($ch, CURLOPT_INFILE, ($in = fopen($file, 'r')));
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+ob_start();
+if (curl_exec($ch) === false) {
+    throw new \Exception('Curl error: '. curl_error($ch));
+}
+$content = ob_get_contents();
+ob_end_clean();
+curl_close($ch);
+fclose($in);
+
+$result = json_decode($content, 1);
+```

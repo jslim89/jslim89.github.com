@@ -1,0 +1,1 @@
+* * * * * . /opt/elasticbeanstalk/support/envvars && php /var/app/current/artisan schedule:run > /var/app/current/storage/logs/crontab.log

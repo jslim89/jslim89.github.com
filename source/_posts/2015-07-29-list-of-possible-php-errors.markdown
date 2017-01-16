@@ -20,7 +20,7 @@ This usually caused us hours & hours to figure it out.
 
 Thus, I wrote this post.
 
-Please comment on below OR drop me an email at [me@jslim.co](mailto:me@jslim.co), if you want to contribute to this post.
+Please comment on below OR drop me an email at me@jsl.im, if you want to contribute to this post.
 
 Thanks
 

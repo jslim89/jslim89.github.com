@@ -50,4 +50,4 @@ iOS development. I get to understand more about HTTP when designing the API.
 Until October 2015, I only focus on PHP, at the same time I improve my backend skills. Like I start to use
 Vagrant for the development.
 
-Interested to know more about me? Drop me an email me@jslim.co
+Interested to know more about me? Drop me an email me@jsl.im

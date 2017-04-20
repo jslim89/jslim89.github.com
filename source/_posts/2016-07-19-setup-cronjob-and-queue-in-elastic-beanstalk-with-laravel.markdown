@@ -83,7 +83,7 @@ container_commands:
 Where the cron.sh you can [download here](/attachments/posts/2016-07-19-setup-cronjob-and-queue-in-elastic-beanstalk-with-laravel/cron.sh)
 and also [download the crontab](/attachments/posts/2016-07-19-setup-cronjob-and-queue-in-elastic-beanstalk-with-laravel/crontab) _(you may modify if you need)_
 
-Place this 2 files in **.ebextensions**. Again, same as supervise, you need to add `INS_CRONTAB` environment variable in worker tier.
+Place this 2 files in **.ebextensions**. Again, same as supervise, you need to add `INS_CRONTAB` environment variable in worker tier, and set the value to `enable`.
 
 **One thing to take note**, whenever the environment scale up to multiple server, your crontab may run multiple times, thus, I suggest that
 create a table _(e.g. `cronjob`)_ in database, and add 2 attributes: `executed_at` and `completed_at`.

@@ -7,47 +7,26 @@ comments: false
 sharing: true
 footer: true
 ---
-Welcome to my technical informative blog.
-
-## Acknowledgement
-Previously I was blogging with [WordPress](http://wordpress.com/).
-After that I found github page which allow me to write a static blog using [Octopress](http://octopress.org/) v2 which is using [Jekyll](http://jekyllrb.com/).
-
-Thanks [Octopress](http://octopress.org/), now I can write a blog post with any editor that I like.
-
-**Update 31 October 2015:** I switch to plain Jekyll, due to there is a big change for October v2 & v3.
+Welcome to my technical blog.
 
 ## About me
-In year 2004, my mother bought me my very first computer, which is a custom made desktop with Windows XP installed.
-At that moment, what I use the computer is just about playing games.
 
-After some time, I was thinking to become a computer technician _(repairing computer)_ in future.
-My family member & I thought that this line has a bright future, since computer has become so
-common that time. I met a person who is a computer teacher _(more precise, he is computer technician)_
-who can teach Microsoft Office and repair computer. But the prerequisite skill is typing without looking
-on keyboard. Damn! My typing was so slow at that time, but I decided to practice it. It tooks me about
-2 to 3 months time to get familiar with it. At the end I never learn _(how to repair computer)_ from him.
+I learn my first programming language _(C language)_ in year 2008 in my first semester. Followed by Java, C#, Prolog.
 
-After high school, I'm getting to college soon. I decided to pick a computer related course _(I totally have
-no idea what is programming, I thought is about repair computers)_ which is Computer Science.
-
-I learn my first programming language _(C language)_ in year 2008 in my first semester. As usual, the
-first program is to print **Hello World!**. I follow exactly what lecturer type int the editor _(Visual
-C++)_, then run it, it shows me 2 words **Hello World!** in a black screen. I was... "What the hell?
-What is the purpose here?" totally have no idea what is this about. But after I did my assignment _(with help
-from my friend)_, I'm able to score A in that semester as well as understand the basic logic.
-
-Until year 2011, I started my internship training. Linux, Apache, PHP, MySQL (**LAMP stack**) are all new
+In 2011, I started my internship training. Linux, Apache, PHP, MySQL (**LAMP stack**) are all new
 to me, but I'm so excited to learn all these. I'm so lucky to meet my Linux guru _(my supervisor
-[Kian-Meng, Ang](https://github.com/kianmeng))_, he had inspire me about open source stuffs, teach me
-Linux stuffs, Vim editor _(is my favourite editor now)_, server stuffs, GitHub, etc. The 6 months
-internship really awesome.
+[Kian-Meng, Ang](https://github.com/kianmeng))_, he had inspire me about open source stuffs, shared me lots of
+Linux stuffs, Vim editor _(is my favourite editor now)_, server stuffs, GitHub, etc.
 
-I started mobile development _(in fact should be iOS app development)_ in year 2012 Dec. I learn the tutorial
-from [this book](http://www.raywenderlich.com/store/ios-apprentice). In this period, I switch between PHP &
-iOS development. I get to understand more about HTTP when designing the API.
+I started iOS app development in year 2012 Dec. I learn the tutorial
+from [this book](http://www.raywenderlich.com/store/ios-apprentice). In this period, I switch between PHP _(REST API)_ & iOS development.
 
-Until October 2015, I only focus on PHP, at the same time I improve my backend skills. Like I start to use
-Vagrant for the development.
+In 2015, I worked as a backend developer. Use some DevOps tools like Vagrant. Also, write some mini shell script to automate some small tasks.
+One of the project involved hardware. Thus, I write a C# wrapper to wrap up the web app _(written in PHP Laravel 5)_, in order for the web app to be able to interact with hardware.
+Besides, Node.js also added to this project, due to broadcast notification feature is needed.
+
+I started an Angular _(version 5)_ project in late 2016, the stack of this project is Angular, MongoDB, MySQL, PHP _(middle-end)_, Python _(backend analysis)_. It's a digital marketing tools, using Facebook & Instagram API. I'm involving in front & middle-end here, thus is a new challenge to me.
+
+To-be update...
 
 Interested to know more about me? Drop me an email me@jsl.im

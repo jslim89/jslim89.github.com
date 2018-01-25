@@ -134,7 +134,7 @@ class PayPalController extends Controller
     public function __construct()
     {
         $this->_api_context = new ApiContext(
-            new OAuthTokenCredential(config('paypal.client_id'), config('paypal.client_secret'))
+            new OAuthTokenCredential(config('paypal.client_id'), config('paypal.secret'))
         );
         $this->_api_context->setConfig(config('paypal'));
     }
@@ -326,6 +326,76 @@ Now you run your Angular app, you should see a PayPal button there.
 ![PayPal payment popup](/images/posts/2018-01-22-PayPal-Rest-API-with-Laravel-5-and-Angular/paypal-payment-popup.png)
 
 Once you make the payment, the webhook will be triggered.
+
+## Update: 2018-01-25
+
+Let say you don't want the payment processing part by webhooks, you can do it in the JavaScript success block.
+
+### Angular part
+
+Edit **pricing.component.ts**
+
+```ts
+...
+onAuthorize: function(data, actions) {
+  // Make a call to the REST api to execute the payment
+  return actions.payment.execute().then(function() {
+    that.http
+      .post(
+        'https://www.yoursite.com/api/paypal/checkout',
+        data
+      )
+      .toPromise()
+      .then(res => {
+        // success submit
+        console.log(res.json());
+      })
+      .catch(res => {
+        // POST error
+        console.log(res);
+      });
+  });
+}
+...
+```
+
+### Laravel part
+
+Add a new route
+
+Edit the **routes/api.php**
+
+```php
+<?php
+Route::post('paypal/checkout', ['uses' => 'PayPalController@checkout']);
+```
+
+Then edit **app/Http/Controllers/PayPalController.php**
+
+```php
+<?php
+...
+use PayPal\Exception\PayPalConnectionException;
+...
+
+public function checkout(Request $request)
+{
+    ...
+    // validate input
+
+    // get payment detail and verify
+    try {
+        $payment = Payment::get($request->get('paymentID'), $this->_api_context);
+    } catch (PayPalConnectionException $e) {
+        $error_json = json_decode($e->getData(), 1);
+        print_r($error_json);
+        exit(1);
+    }
+
+    // generate and email pdf
+    ...
+}
+```
 
 References:
 

@@ -33,12 +33,19 @@ public void InitBrowser()
 ...
 public static void OnJavascriptEventArrived(string eventName, object eventData)
 {
+    var jsonString = eventData.ToString();
+    var serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
+    var dataDict = serializer.Deserialize<Dictionary<string, object>>(jsonString);
+
+    Console.WriteLine("Event arrived: {0}", eventName); // output 'click'
+
     switch (eventName)
     {
         case "click":
         {
-            var dataDictionary = eventData as Dictionary<string, object>;
             // do whatever you want here
+            Console.WriteLine(dataDict["data1"]); // output 'foo'
+            Console.WriteLine(dataDict["data2"]); // output 'bar'
             break;
         }
     }
@@ -53,9 +60,9 @@ $('a').click(function(e) {
     console.log('window.boundEvent does not exist.');
     return;
   }   
-  window.boundEvent.raiseEvent('click', {
+  window.boundEvent.raiseEvent('click', JSON.stringify({
     data1: 'foo',
     data2: 'bar'
-  }); 
+  }));
 });
 ```

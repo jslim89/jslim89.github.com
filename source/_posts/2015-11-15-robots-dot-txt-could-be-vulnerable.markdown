@@ -214,3 +214,7 @@ Route::get('foo/bar', function () {
 ```
 
 When hacker try to look for _www.yoursite.com/foo_, he/she won't get anything here. So becareful when you design your web application.
+
+## Update: 4 Apr 2018
+
+You may [check your robots.txt here](https://www.websiteplanet.com/webtools/robots-txt).

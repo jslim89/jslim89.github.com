@@ -49,6 +49,20 @@ function add_file_update_task(&$tasks, $relative_path = '', $abs_file) {
     $file_checksum_cond->addAttribute('checksum', hash_file('sha256', $abs_file));
 }
 
+function add_file_update_task_in_depth(&$tasks, $relative_path = '', $files) {
+    foreach ($files as $abs_file) {
+        if (is_dir($abs_file)) {
+            $chunks = explode('/', ltrim($abs_file, PUBLISH_OUTPUT_ROOT));
+            array_shift($chunks);
+            $relative_path = implode('/', $chunks);
+            $directory = rtrim($abs_file, '/');
+            add_file_update_task_in_depth($tasks, $relative_path, glob($directory . '/*'));
+            continue;
+        }
+        add_file_update_task($tasks, $relative_path, $abs_file);
+    }
+}
+
 /******* script start here *******/
 
 $input_folders = glob(PUBLISH_INPUT_ROOT . DIRECTORY_SEPARATOR . WINFORM_PREFIX . '*');
@@ -71,22 +85,13 @@ mkdir($latest_output_folder_abs_path);
 copy_recursive($latest_folder_abs_path, $latest_output_folder_abs_path);
 
 $base_url = BASE_URL . '/releases/' . $latest_output_folder;
-$files = glob($latest_output_folder_abs_path . DIRECTORY_SEPARATOR . '*');
 
 $xml = new SimpleXMLElement('<Feed/>');
 $xml->addAttribute('BaseUrl', $base_url);
 $tasks = $xml->addChild('Tasks');
 
-foreach ($files as $abs_file) {
-    if (is_dir($abs_file)) {
-        $directory = rtrim($abs_file, '/');
-        foreach (glob($directory . '/*') as $sub_file) {
-            add_file_update_task($tasks, basename($directory), $sub_file);
-        }
-        continue;
-    }
-    add_file_update_task($tasks, '', $abs_file);
-}
+$files = glob($latest_output_folder_abs_path . DIRECTORY_SEPARATOR . '*');
+add_file_update_task_in_depth($tasks, '', $files);
 
 $dom = dom_import_simplexml($xml);
 $dom->xmlEndoding = 'UTF-8';

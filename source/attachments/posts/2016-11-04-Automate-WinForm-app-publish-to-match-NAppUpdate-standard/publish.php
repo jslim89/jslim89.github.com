@@ -29,9 +29,8 @@ function copy_recursive($source, $dest){
     }
 }
 
-function add_file_update_task(&$tasks, $relative_path = '', $abs_file) {
-    $file = basename($abs_file);
-    if ($relative_path) $file = rtrim($relative_path, '/') . '/' . $file;
+function add_file_update_task(&$tasks, $abs_root, $abs_file) {
+    $file = str_replace($abs_root . DIRECTORY_SEPARATOR, '',$abs_file);
 
     $file_update = $tasks->addChild('FileUpdateTask');
     $file_update->addAttribute('localPath', $file);
@@ -49,17 +48,13 @@ function add_file_update_task(&$tasks, $relative_path = '', $abs_file) {
     $file_checksum_cond->addAttribute('checksum', hash_file('sha256', $abs_file));
 }
 
-function add_file_update_task_in_depth(&$tasks, $relative_path = '', $files) {
+function add_file_update_task_in_depth(&$tasks, $abs_root_path, $files) {
     foreach ($files as $abs_file) {
         if (is_dir($abs_file)) {
-            $chunks = explode('/', ltrim($abs_file, PUBLISH_OUTPUT_ROOT));
-            array_shift($chunks);
-            $relative_path = implode('/', $chunks);
-            $directory = rtrim($abs_file, '/');
-            add_file_update_task_in_depth($tasks, $relative_path, glob($directory . '/*'));
+            add_file_update_task_in_depth($tasks, $abs_root_path, glob($abs_file . DIRECTORY_SEPARATOR . '*'));
             continue;
         }
-        add_file_update_task($tasks, $relative_path, $abs_file);
+        add_file_update_task($tasks, $abs_root_path, $abs_file);
     }
 }
 
@@ -91,7 +86,7 @@ $xml->addAttribute('BaseUrl', $base_url);
 $tasks = $xml->addChild('Tasks');
 
 $files = glob($latest_output_folder_abs_path . DIRECTORY_SEPARATOR . '*');
-add_file_update_task_in_depth($tasks, '', $files);
+add_file_update_task_in_depth($tasks, $latest_output_folder_abs_path, $files);
 
 $dom = dom_import_simplexml($xml);
 $dom->xmlEndoding = 'UTF-8';

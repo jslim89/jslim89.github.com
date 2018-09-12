@@ -7,26 +7,54 @@ comments: false
 sharing: true
 footer: true
 ---
-Welcome to my technical blog.
 
-## About me
+I'm a PHP web developer. You can reach me on me [at] jsl [dot] im.
 
-I learn my first programming language _(C language)_ in year 2008 in my first semester. Followed by Java, C#, Prolog.
+## Experience
 
-In 2011, I started my internship training. Linux, Apache, PHP, MySQL (**LAMP stack**) are all new
-to me, but I'm so excited to learn all these. I'm so lucky to meet my Linux guru _(my supervisor
-[Kian-Meng, Ang](https://github.com/kianmeng))_, he had inspire me about open source stuffs, shared me lots of
-Linux stuffs, Vim editor _(is my favourite editor now)_, server stuffs, GitHub, etc.
+### Involve Asia Sdn Bhd (Jun 18 - present)
 
-I started iOS app development in year 2012 Dec. I learn the tutorial
-from [this book](http://www.raywenderlich.com/store/ios-apprentice). In this period, I switch between PHP _(REST API)_ & iOS development.
+- Develop web application in Laravel 5
+- Practice to submit pull request to superior on every feature/bug fix
 
-In 2015, I worked as a backend developer. Use some DevOps tools like Vagrant. Also, write some mini shell script to automate some small tasks.
-One of the project involved hardware. Thus, I write a C# wrapper to wrap up the web app _(written in PHP Laravel 5)_, in order for the web app to be able to interact with hardware.
-Besides, Node.js also added to this project, due to broadcast notification feature is needed.
+### Alphacloud Sdn Bhd (Oct 15 - May 18)
 
-I started an Angular _(version 5)_ project in late 2016, the stack of this project is Angular, MongoDB, MySQL, PHP _(middle-end)_, Python _(backend analysis)_. It's a digital marketing tools, using Facebook & Instagram API. I'm involving in front & middle-end here, thus is a new challenge to me.
+- Develop web application in Laravel 5
+- Setup & configure web application in AWS (ElasticBeanstalk, EC2, S3, SQS, RDS)
+- Involve in python backend development, to crawl Facebook & Instagram API
+- Develop [Adqlo](https://jsl.im/2x5MBxH) project front end in Angular 5
+- Working on JWT authentication
+- Develop Windows desktop app in C#, and connect with printer, MyKad reader, fingerprint device
 
-To-be update...
+### Werebits Sdn Bhd (Dec 12 - Jul 15)
 
-Interested to know more about me? Drop me an email me@jsl.im
+- iOS development in Objective-C
+- PHP web development in Zend Framework (1 & 2)
+- Mock to HTML
+- Manage source code with Git
+- Rewrite existing project using Laravel 4
+- Develop simple Facebook app with Python (Django)
+- Develop simple Android widget
+- Setup & configure web application in [DigitalOcean VPS](https://m.do.co/c/abb622813f68)
+
+### iKonxept Sdn Bhd (Apr 11 - Sep 15)
+ 
+- Web development in PHP (CodeIgniter & in-house framework)
+- Manage source code with Subversion
+- Code in Linux environment (LAMP stack)
+- Learn about refactoring
+- Write code with Vim editor
+
+## Education
+
+### Tunku Abdul Rahman College (May 08 - May 12)
+
+- Bachelor Degree in Computer Science
+- Learn C as my first programming language
+- Learn OOP & data structure in Java
+
+## Interest
+
+### Sport
+
+If you're from Kuala Lumpur, Malaysia, feel free to join me to go hiking/running :)

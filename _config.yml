@@ -71,3 +71,5 @@ deploy:
   type: git
   repo: git@github.com:jslim89/jslim89.github.com.git
   branch: master
+  name: Js Lim
+  email: jslim89@gmail.com

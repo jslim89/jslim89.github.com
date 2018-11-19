@@ -67,11 +67,18 @@ if theme.google_tag_manager
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','#{theme.google_tag_manager}');
     if ($('.tags > a').length > 0) {
-      var tags = [];
       $('.tags > a').each(function (i) {
-        tags.push($(this).text());
+        dataLayer.push({
+          'event': 'gaEvent',
+          'gaEventCategory': 'Custom Dimension Event',
+          'gaEventAction': 'Post tag',
+          'gaEventLabel': $(this).text(),
+          'gaEventValue': 0,
+          'gaNonInteraction': 1,
+          'gaDimensionsTag': $(this).text(),
+          'gaMetricsTag': 1,
+        });
       });
-      dataLayer.push({postTags: tags});
     }
 
 if theme.baidu_analytics

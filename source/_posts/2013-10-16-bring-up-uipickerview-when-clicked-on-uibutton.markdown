@@ -3,7 +3,7 @@ layout: post
 title: "Bring up UIPickerView when clicked on UIButton"
 date: 2013-10-16 13:51
 comments: true
-categories: 
+tags: 
 - ios
 ---
 

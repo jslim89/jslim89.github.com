@@ -3,7 +3,7 @@ layout: post
 title: "AWS extend disk volume on an EC2 instance"
 date: 2016-06-15 15:25:36 +0800
 comments: true
-categories: 
+tags: 
 - aws
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: "iOS - Change QR code color in UIImage"
 date: 2014-05-28 08:52:21 +0800
 comments: true
-categories: 
+tags: 
 - ios
 ---
 

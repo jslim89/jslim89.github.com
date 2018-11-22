@@ -3,7 +3,7 @@ layout: post
 title: "Infinite scroll using on UITableView"
 date: 2014-04-01 21:38:01 +0800
 comments: true
-categories: 
+tags: 
 - ios
 ---
 

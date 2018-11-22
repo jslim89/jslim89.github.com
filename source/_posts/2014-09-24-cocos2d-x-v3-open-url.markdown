@@ -3,7 +3,7 @@ layout: post
 title: "Cocos2d-x v3 open URL"
 date: 2014-09-24 08:13:34 +0800
 comments: true
-categories: 
+tags: 
 - cocos2d-x
 ---
 

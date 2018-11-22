@@ -3,7 +3,7 @@ layout: post
 title: "RSA encryption in iOS and decrypt it using PHP"
 date: 2013-01-05 13:20
 comments: true
-categories: 
+tags: 
 - ios
 - php
 ---

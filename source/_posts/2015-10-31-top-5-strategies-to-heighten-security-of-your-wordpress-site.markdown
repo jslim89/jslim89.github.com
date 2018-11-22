@@ -3,7 +3,7 @@ layout: post
 title: "Top 5 Strategies to Heighten Security of Your WordPress Site"
 date: 2015-10-31 00:01:09 +0800
 comments: true
-categories: 
+tags: 
 - wordpress
 - security
 ---

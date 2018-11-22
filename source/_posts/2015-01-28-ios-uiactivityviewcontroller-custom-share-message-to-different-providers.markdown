@@ -3,7 +3,7 @@ layout: post
 title: "iOS - UIActivityViewController custom share message to different providers"
 date: 2015-01-28 13:17:43 +0800
 comments: true
-categories: 
+tags: 
 - ios
 - objective-c
 ---

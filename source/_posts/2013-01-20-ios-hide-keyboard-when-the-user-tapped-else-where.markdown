@@ -3,7 +3,7 @@ layout: post
 title: "iOS: Hide keyboard when the user tapped else where"
 date: 2013-01-20 18:00
 comments: true
-categories: 
+tags: 
 - ios
 - programming
 ---

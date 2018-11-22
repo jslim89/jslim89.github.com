@@ -3,7 +3,7 @@ layout: post
 title: "Vim - Set indentation based on file type"
 date: 2013-02-05 17:13
 comments: true
-categories: 
+tags: 
 - vim
 ---
 

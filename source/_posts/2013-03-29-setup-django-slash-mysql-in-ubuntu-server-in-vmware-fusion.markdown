@@ -3,7 +3,7 @@ layout: post
 title: "Setup Django/mysql in Ubuntu server in VMWare Fusion"
 date: 2013-03-29 17:00
 comments: true
-categories: 
+tags: 
 - setup-configuration
 - python
 - django

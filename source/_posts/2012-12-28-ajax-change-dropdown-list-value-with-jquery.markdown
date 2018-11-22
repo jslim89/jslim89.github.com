@@ -3,7 +3,7 @@ layout: post
 title: "Ajax change dropdown list value with jQuery"
 date: 2012-12-28 12:29
 comments: true
-categories: 
+tags: 
 - javascript
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: "OS X Mavericks - left click not working"
 date: 2014-06-10 08:27:25 +0800
 comments: true
-categories: 
+tags: 
 - mac
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: "MySQL count with subquery"
 date: 2014-06-10 08:35:30 +0800
 comments: true
-categories: 
+tags: 
 - mysql
 ---
 

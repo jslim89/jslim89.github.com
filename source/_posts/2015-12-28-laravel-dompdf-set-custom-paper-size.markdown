@@ -3,7 +3,7 @@ layout: post
 title: "Laravel-dompdf set custom paper size"
 date: 2015-12-28 16:56:10 +0800
 comments: true
-categories: 
+tags: 
 - php
 - laravel
 ---

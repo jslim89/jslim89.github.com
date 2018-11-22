@@ -3,7 +3,7 @@ layout: post
 title: "Git - push a specific commit to a new repo"
 date: 2014-07-02 17:10:21 +0800
 comments: true
-categories: 
+tags: 
 - git
 ---
 

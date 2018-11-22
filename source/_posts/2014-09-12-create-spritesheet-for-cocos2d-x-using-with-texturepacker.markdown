@@ -3,7 +3,7 @@ layout: post
 title: "Create spritesheet for Cocos2d-x using with TexturePacker"
 date: 2014-09-12 08:17:17 +0800
 comments: true
-categories: 
+tags: 
 - cocos2d-x
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: "UIScrollView with auto-layout solution for UITextField (keyboard)"
 date: 2014-11-10 21:26:32 +0800
 comments: true
-categories: 
+tags: 
 - ios
 - objective-c
 ---

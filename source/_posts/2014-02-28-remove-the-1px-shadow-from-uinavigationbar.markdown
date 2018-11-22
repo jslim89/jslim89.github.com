@@ -3,7 +3,7 @@ layout: post
 title: "Remove the 1px shadow from UINavigationBar"
 date: 2014-02-28 21:25:15 +0800
 comments: true
-categories: 
+tags: 
 - ios
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: "iOS - Customize UITabBar appearance"
 date: 2014-05-05 09:12:19 +0800
 comments: true
-categories: 
+tags: 
 - ios
 ---
 

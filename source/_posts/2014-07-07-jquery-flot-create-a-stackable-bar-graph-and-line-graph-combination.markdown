@@ -3,7 +3,7 @@ layout: post
 title: "jQuery Flot - Create a stackable bar graph and line graph combination"
 date: 2014-07-07 21:34:47 +0800
 comments: true
-categories: 
+tags: 
 - javascript
 - flot
 - graph

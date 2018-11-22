@@ -3,7 +3,7 @@ layout: post
 title: "Important Measures To Be Taken While Developing An E-commerce Site"
 date: 2015-11-26 21:36:59 +0800
 comments: true
-categories: 
+tags: 
 - wordpress
 - e-commerce
 ---

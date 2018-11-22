@@ -3,7 +3,7 @@ layout: post
 title: "Use custom font in iOS application"
 date: 2013-10-08 11:04
 comments: true
-categories: 
+tags: 
 - ios
 ---
 

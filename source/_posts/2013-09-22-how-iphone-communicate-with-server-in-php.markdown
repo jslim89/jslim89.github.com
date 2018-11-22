@@ -3,7 +3,7 @@ layout: post
 title: "How iPhone communicate with server in PHP"
 date: 2013-09-22 15:16
 comments: true
-categories: 
+tags: 
 - ios
 - php
 ---

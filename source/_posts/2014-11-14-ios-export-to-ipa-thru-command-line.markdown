@@ -3,7 +3,7 @@ layout: post
 title: "iOS - export to ipa thru command line"
 date: 2014-11-14 12:01:08 +0800
 comments: true
-categories: 
+tags: 
 - ios
 ---
 

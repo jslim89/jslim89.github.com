@@ -3,7 +3,7 @@ layout: post
 title: "Adsterra make my site traffic drop &amp; get banned by Chrome"
 date: 2016-05-17 15:21:15 +0800
 comments: true
-categories: 
+tags: 
 - banned
 - scam
 ---

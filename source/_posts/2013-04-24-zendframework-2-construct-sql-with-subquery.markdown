@@ -3,7 +3,7 @@ layout: post
 title: "ZendFramework 2 - Construct SQL with subquery"
 date: 2013-04-24 15:22
 comments: true
-categories: 
+tags: 
 - php
 - zend
 - programming

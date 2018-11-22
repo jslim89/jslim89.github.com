@@ -3,7 +3,7 @@ layout: post
 title: "SQL - SELECT SUM joined with another table"
 date: 2013-02-06 15:44
 comments: true
-categories: 
+tags: 
 - sql
 ---
 

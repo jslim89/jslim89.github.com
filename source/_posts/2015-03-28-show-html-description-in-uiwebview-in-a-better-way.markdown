@@ -3,7 +3,7 @@ layout: post
 title: "Show html description in UIWebView in a better way"
 date: 2015-03-28 12:28:50 +0800
 comments: true
-categories: 
+tags: 
 - swift
 - ios
 ---

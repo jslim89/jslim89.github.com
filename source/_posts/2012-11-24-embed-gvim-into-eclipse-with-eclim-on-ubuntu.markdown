@@ -3,7 +3,7 @@ layout: post
 title: "Embed GVIM into Eclipse with Eclim on Ubuntu"
 date: 2012-11-24 15:55
 comments: true
-categories:
+tags:
 - linux
 - setup-configuration
 - vim

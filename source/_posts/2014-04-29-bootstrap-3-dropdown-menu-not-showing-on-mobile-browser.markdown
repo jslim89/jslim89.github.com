@@ -3,7 +3,7 @@ layout: post
 title: "Bootstrap 3 dropdown menu not showing on mobile browser"
 date: 2014-04-29 08:46:15 +0800
 comments: true
-categories: 
+tags: 
 - css
 - bootstrap3
 ---

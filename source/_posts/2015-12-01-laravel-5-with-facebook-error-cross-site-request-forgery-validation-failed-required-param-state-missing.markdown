@@ -3,7 +3,7 @@ layout: post
 title: 'Laravel 5 with Facebook error - Cross-site request forgery validation failed. Required param "state" missing'
 date: 2015-12-01 20:41:10 +0800
 comments: true
-categories: 
+tags: 
 - laravel
 - facebook-php-sdk
 ---

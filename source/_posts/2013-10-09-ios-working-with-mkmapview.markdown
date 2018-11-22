@@ -3,7 +3,7 @@ layout: post
 title: "iOS - Working with MKMapView"
 date: 2013-10-09 11:45
 comments: true
-categories: 
+tags: 
 - ios
 ---
 

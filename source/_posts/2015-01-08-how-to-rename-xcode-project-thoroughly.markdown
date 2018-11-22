@@ -3,7 +3,7 @@ layout: post
 title: "How to rename Xcode project thoroughly"
 date: 2015-01-08 09:21:39 +0800
 comments: true
-categories: 
+tags: 
 - xcode
 ---
 

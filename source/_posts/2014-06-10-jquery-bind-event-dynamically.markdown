@@ -3,7 +3,7 @@ layout: post
 title: "jQuery bind event dynamically"
 date: 2014-06-10 08:55:23 +0800
 comments: true
-categories: 
+tags: 
 - jquery
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: "Session hijacking: facebook.com example"
 date: 2016-03-29 10:55:13 +0800
 comments: true
-categories: 
+tags: 
 - hacking
 - session-hijacking
 ---

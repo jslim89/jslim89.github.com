@@ -3,7 +3,7 @@ layout: post
 title: "Ubuntu server allow login via ssh with key"
 date: 2013-04-08 17:47
 comments: true
-categories: 
+tags: 
 - setup-configuration
 - linux
 ---

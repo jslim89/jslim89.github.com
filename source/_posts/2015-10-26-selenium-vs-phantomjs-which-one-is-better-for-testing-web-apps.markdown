@@ -3,7 +3,7 @@ layout: post
 title: "Selenium vs PhantomJS - Which One is Better For Testing Web Apps"
 date: 2015-10-26 20:02:46 +0800
 comments: true
-categories: 
+tags: 
 - selenium
 - phantomjs
 - test

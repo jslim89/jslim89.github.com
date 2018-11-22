@@ -3,7 +3,7 @@ layout: post
 title: "My practice Git Model"
 date: 2013-02-05 15:57
 comments: true
-categories: 
+tags: 
 - git
 ---
 

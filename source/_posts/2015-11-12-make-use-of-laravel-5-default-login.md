@@ -3,7 +3,7 @@ layout: post
 title: "Make use of Laravel 5 default login"
 date: 2015-11-12 22:02:46 +0800
 comments: true
-categories: 
+tags: 
 - laravel
 ---
 

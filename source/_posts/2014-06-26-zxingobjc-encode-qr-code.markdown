@@ -3,7 +3,7 @@ layout: post
 title: "ZXingObjc encode QR code"
 date: 2014-06-26 11:47:39 +0800
 comments: true
-categories: 
+tags: 
 - ios
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: "Running multiple nodejs app in ONE server using Nginx"
 date: 2014-03-14 07:47:19 +0800
 comments: true
-categories: 
+tags: 
 - nodejs
 - sails.js
 - nginx

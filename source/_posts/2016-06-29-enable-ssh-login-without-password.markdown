@@ -3,7 +3,7 @@ layout: post
 title: "Enable ssh login without password"
 date: 2016-06-29 16:52:25 +0800
 comments: true
-categories: 
+tags: 
 - linux
 - ssh
 ---

@@ -3,7 +3,7 @@ layout: post
 title: "Integrate iPay88 to iOS mobile platform"
 date: 2015-03-31 13:36:44 +0800
 comments: true
-categories: 
+tags: 
 - ios
 - php
 - swift

@@ -3,7 +3,7 @@ layout: post
 title: "Setup PHP environment in Mavericks using XAMPP"
 date: 2014-01-17 05:38
 comments: true
-categories: 
+tags: 
 - mac
 ---
 

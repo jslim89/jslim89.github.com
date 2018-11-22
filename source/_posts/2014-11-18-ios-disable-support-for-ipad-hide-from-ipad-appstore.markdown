@@ -3,7 +3,7 @@ layout: post
 title: "iOS disable support for iPad - hide from iPad AppStore"
 date: 2014-11-18 18:38:41 +0800
 comments: true
-categories: 
+tags: 
 - ios
 ---
 

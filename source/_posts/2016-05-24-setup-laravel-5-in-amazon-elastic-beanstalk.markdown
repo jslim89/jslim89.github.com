@@ -3,7 +3,7 @@ layout: post
 title: "Setup Laravel 5 in Amazon Elastic Beanstalk"
 date: 2016-05-24 15:42:55 +0800
 comments: true
-categories: 
+tags: 
 - laravel
 - aws
 ---

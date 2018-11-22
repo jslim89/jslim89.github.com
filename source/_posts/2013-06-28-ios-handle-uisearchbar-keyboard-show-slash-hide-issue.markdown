@@ -3,7 +3,7 @@ layout: post
 title: "iOS - Handle UISearchBar keyboard show/hide issue"
 date: 2013-06-28 13:10
 comments: true
-categories: 
+tags: 
 - ios
 ---
 

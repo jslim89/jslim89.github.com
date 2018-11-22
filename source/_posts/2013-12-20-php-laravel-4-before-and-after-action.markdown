@@ -3,7 +3,7 @@ layout: post
 title: "PHP Laravel 4 - before &amp; after action"
 date: 2013-12-20 09:07
 comments: true
-categories: 
+tags: 
 - php
 - laravel
 ---

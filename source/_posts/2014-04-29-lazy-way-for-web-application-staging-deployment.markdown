@@ -3,7 +3,7 @@ layout: post
 title: "Lazy way for web application staging deployment"
 date: 2014-04-29 21:19:55 +0800
 comments: true
-categories: 
+tags: 
 - php
 - deployment
 ---

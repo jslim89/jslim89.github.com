@@ -3,7 +3,7 @@ layout: post
 title: "NSInvalidArgumentException caused by UITableViewCell"
 date: 2013-03-02 18:36
 comments: true
-categories: 
+tags: 
 - ios
 - programming
 ---

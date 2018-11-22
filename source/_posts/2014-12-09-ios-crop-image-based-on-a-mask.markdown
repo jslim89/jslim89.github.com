@@ -3,7 +3,7 @@ layout: post
 title: "iOS - crop image based on a mask"
 date: 2014-12-09 09:08:22 +0800
 comments: true
-categories: 
+tags: 
 - objective-c
 - ios
 ---

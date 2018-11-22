@@ -3,7 +3,7 @@ layout: post
 title: "Python script to simulate multiple concurrent requests to web application"
 date: 2016-06-29 17:03:14 +0800
 comments: true
-categories: 
+tags: 
 - python
 - webapp
 ---

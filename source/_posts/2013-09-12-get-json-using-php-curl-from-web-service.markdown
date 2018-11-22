@@ -3,7 +3,7 @@ layout: post
 title: "Get JSON using PHP cURL from web service"
 date: 2013-09-12 16:41
 comments: true
-categories: 
+tags: 
 - php
 ---
 

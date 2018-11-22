@@ -3,7 +3,7 @@ layout: post
 title: "iOS: UITabelView - didSelectRowAtIndexPath is not called"
 date: 2012-12-21 15:03
 comments: true
-categories: 
+tags: 
 - ios
 ---
 

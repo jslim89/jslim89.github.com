@@ -3,7 +3,7 @@ layout: post
 title: "Objective-C switch statement inside a loop"
 date: 2014-06-30 20:52:22 +0800
 comments: true
-categories: 
+tags: 
 - ios
 ---
 

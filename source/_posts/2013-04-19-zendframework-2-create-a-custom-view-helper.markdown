@@ -3,7 +3,7 @@ layout: post
 title: "ZendFramework 2 - Create a custom view helper"
 date: 2013-04-19 19:02
 comments: true
-categories: 
+tags: 
 - php
 - zend
 - programming

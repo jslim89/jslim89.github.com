@@ -3,7 +3,7 @@ layout: post
 title: "Dealing iOS 7 UIStatusBar"
 date: 2014-06-16 21:19:18 +0800
 comments: true
-categories: 
+tags: 
 - ios
 ---
 

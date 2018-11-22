@@ -3,7 +3,7 @@ layout: post
 title: "Python: Make a GET request to get JSON data"
 date: 2013-04-04 16:04
 comments: true
-categories: 
+tags: 
 - python
 ---
 

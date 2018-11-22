@@ -3,7 +3,7 @@ layout: post
 title: "UIImageView animation fade in &amp; out between images"
 date: 2014-03-12 07:06:46 +0800
 comments: true
-categories: 
+tags: 
 - ios
 ---
 

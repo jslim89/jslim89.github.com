@@ -3,7 +3,7 @@ layout: post
 title: "Integrate GoogleAds API to Laravel 5"
 date: 2015-11-05 20:02:46 +0800
 comments: true
-categories: 
+tags: 
 - laravel
 - google-api
 ---

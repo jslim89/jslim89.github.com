@@ -3,7 +3,7 @@ layout: post
 title: "Distribute iOS app via website"
 date: 2014-03-31 21:50:44 +0800
 comments: true
-categories: 
+tags: 
 - ios
 ---
 

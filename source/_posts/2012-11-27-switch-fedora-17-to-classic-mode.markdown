@@ -3,7 +3,7 @@ layout: post
 title: "Switch Fedora 17 to classic mode"
 date: 2012-11-27 19:31
 comments: true
-categories:
+tags:
 - linux
 - fedora
 - gnome 

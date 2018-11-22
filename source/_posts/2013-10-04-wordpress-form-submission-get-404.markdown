@@ -3,7 +3,7 @@ layout: post
 title: "Wordpress form submission get 404"
 date: 2013-10-04 15:59
 comments: true
-categories: 
+tags: 
 - php
 - wordpress
 ---

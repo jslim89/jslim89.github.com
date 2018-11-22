@@ -3,7 +3,7 @@ layout: post
 title: "Remove the 1px Shadow From UISearchBar"
 date: 2014-07-14 11:56:04 +0800
 comments: true
-categories: 
+tags: 
 - ios
 ---
 

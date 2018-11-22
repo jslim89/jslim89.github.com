@@ -3,7 +3,7 @@ layout: post
 title: "Apache Virtual Host accessed by other machines in LAN"
 date: 2013-12-14 20:29
 comments: true
-categories: 
+tags: 
 - linux
 - configuration
 - apache

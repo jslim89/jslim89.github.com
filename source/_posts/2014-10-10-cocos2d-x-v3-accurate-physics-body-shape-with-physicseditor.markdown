@@ -3,7 +3,7 @@ layout: post
 title: "Cocos2d-x V3 accurate physics body shape with PhysicsEditor"
 date: 2014-10-10 07:56:36 +0800
 comments: true
-categories: 
+tags: 
 - cocos2d-x
 ---
 

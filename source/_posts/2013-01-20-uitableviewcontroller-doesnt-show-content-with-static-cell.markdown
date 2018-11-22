@@ -3,7 +3,7 @@ layout: post
 title: "UITableViewController doesn't show content with static cell"
 date: 2013-01-20 16:32
 comments: true
-categories: 
+tags: 
 - ios
 - programming
 ---

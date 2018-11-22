@@ -3,7 +3,7 @@ layout: post
 title: "ls command in OS X"
 date: 2012-12-08 10:06
 comments: true
-categories: 
+tags: 
 - os-x
 - mac
 - command-line

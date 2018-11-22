@@ -3,7 +3,7 @@ layout: post
 title: "Vagrant for PHP development environment"
 date: 2015-10-31 20:02:46 +0800
 comments: true
-categories: 
+tags: 
 - php
 - vagrant
 ---

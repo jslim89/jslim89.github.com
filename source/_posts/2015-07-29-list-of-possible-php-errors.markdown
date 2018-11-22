@@ -3,7 +3,7 @@ layout: post
 title: "List of possible PHP errors"
 date: 2015-07-29 15:51:39 +0800
 comments: true
-categories: 
+tags: 
 - php
 ---
 

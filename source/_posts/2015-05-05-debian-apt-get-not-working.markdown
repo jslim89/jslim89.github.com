@@ -3,7 +3,7 @@ layout: post
 title: "Debian apt-get not working"
 date: 2015-05-05 22:47:19 +0800
 comments: true
-categories: 
+tags: 
 - linux
 - debian
 ---

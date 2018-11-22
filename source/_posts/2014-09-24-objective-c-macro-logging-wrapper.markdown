@@ -3,7 +3,7 @@ layout: post
 title: "Objective C macro - logging wrapper"
 date: 2014-09-24 13:28:31 +0800
 comments: true
-categories: 
+tags: 
 - ios
 ---
 

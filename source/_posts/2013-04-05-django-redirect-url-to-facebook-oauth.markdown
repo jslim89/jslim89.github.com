@@ -3,7 +3,7 @@ layout: post
 title: "Django - Redirect URL to facebook oAuth"
 date: 2013-04-05 12:11
 comments: true
-categories: 
+tags: 
 - python
 - django
 ---

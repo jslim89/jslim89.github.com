@@ -3,7 +3,7 @@ layout: post
 title: "7 lessons learnt from screwing up a live server"
 date: 2014-08-12 22:21:48 +0800
 comments: true
-categories: 
+tags: 
 - server
 ---
 

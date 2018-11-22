@@ -3,7 +3,7 @@ layout: post
 title: "Invoke a method call from AppDelegate via Notification"
 date: 2013-09-16 12:12
 comments: true
-categories: 
+tags: 
 - ios
 ---
 

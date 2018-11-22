@@ -3,7 +3,7 @@ layout: post
 title: "AFNetworking 2 - get JSON on error"
 date: 2014-01-12 13:07
 comments: true
-categories: 
+tags: 
 - ios
 ---
 

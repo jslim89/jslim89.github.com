@@ -3,7 +3,7 @@ layout: post
 title: "Laravel 4 - two pagination in a single page"
 date: 2014-08-23 06:27:19 +0800
 comments: true
-categories: 
+tags: 
 - php
 - laravel4
 ---

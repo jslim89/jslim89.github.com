@@ -3,7 +3,7 @@ layout: post
 title: "Restrict Git commit message to certain pattern"
 date: 2013-02-26 19:21
 comments: true
-categories: 
+tags: 
 - python
 - git
 ---

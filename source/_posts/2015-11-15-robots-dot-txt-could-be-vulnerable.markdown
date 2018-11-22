@@ -3,7 +3,7 @@ layout: post
 title: "robots.txt could be vulnerable"
 date: 2015-11-15 11:26:20 +0800
 comments: true
-categories: 
+tags: 
 - security
 ---
 

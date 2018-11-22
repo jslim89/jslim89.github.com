@@ -3,7 +3,7 @@ layout: post
 title: "Setup wildcard subdomain in Laravel Homestead"
 date: 2015-12-01 20:36:50 +0800
 comments: true
-categories: 
+tags: 
 - vagrant
 - setup
 ---

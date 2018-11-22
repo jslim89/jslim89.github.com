@@ -3,7 +3,7 @@ layout: post
 title: "Change document root in DirectAdmin"
 date: 2016-02-24 11:46:03 +0800
 comments: true
-categories: 
+tags: 
 - DirectAdmin
 - apache
 ---

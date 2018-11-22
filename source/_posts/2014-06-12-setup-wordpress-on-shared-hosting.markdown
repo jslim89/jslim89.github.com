@@ -3,7 +3,7 @@ layout: post
 title: "Setup Wordpress on shared hosting"
 date: 2014-06-12 21:38:06 +0800
 comments: true
-categories: 
+tags: 
 - php
 - wordpress
 ---

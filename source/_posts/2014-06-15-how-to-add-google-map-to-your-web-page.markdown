@@ -3,7 +3,7 @@ layout: post
 title: "How to add Google Map to your web page"
 date: 2014-06-15 14:27:11 +0800
 comments: true
-categories: 
+tags: 
 - javascript
 - google-map
 ---

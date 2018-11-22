@@ -3,7 +3,7 @@ layout: post
 title: "iOS - Create UITableView with custom cell programmatically"
 date: 2013-03-22 18:59
 comments: true
-categories: 
+tags: 
 - ios
 - programming
 ---

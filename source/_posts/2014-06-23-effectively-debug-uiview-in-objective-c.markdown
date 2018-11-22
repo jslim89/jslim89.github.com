@@ -3,7 +3,7 @@ layout: post
 title: "Effectively debug UIView in Objective-C"
 date: 2014-06-23 07:55:06 +0800
 comments: true
-categories: 
+tags: 
 - ios
 ---
 

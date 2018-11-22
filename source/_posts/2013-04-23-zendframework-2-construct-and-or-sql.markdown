@@ -3,7 +3,7 @@ layout: post
 title: "ZendFramework 2 - Construct AND OR SQL"
 date: 2013-04-23 18:32
 comments: true
-categories: 
+tags: 
 - php
 - programming
 - zend

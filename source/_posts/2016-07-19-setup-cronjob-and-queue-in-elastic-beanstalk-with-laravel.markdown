@@ -3,7 +3,7 @@ layout: post
 title: "Setup cronjob &amp; queue in Elastic Beanstalk with Laravel"
 date: 2016-07-19 10:39:16 +0800
 comments: true
-categories: 
+tags: 
 - aws
 - laravel
 - php

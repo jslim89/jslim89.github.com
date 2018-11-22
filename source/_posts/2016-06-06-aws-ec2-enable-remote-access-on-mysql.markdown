@@ -3,7 +3,7 @@ layout: post
 title: "AWS EC2 - Enable remote access on mysql"
 date: 2016-06-06 12:33:00 +0800
 comments: true
-categories: 
+tags: 
 - aws
 - mysql
 ---

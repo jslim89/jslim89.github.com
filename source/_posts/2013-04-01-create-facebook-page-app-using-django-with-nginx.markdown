@@ -3,7 +3,7 @@ layout: post
 title: "Create Facebook page app using Django with Nginx"
 date: 2013-04-01 21:31
 comments: true
-categories: 
+tags: 
 - setup-configuration
 - python
 - django

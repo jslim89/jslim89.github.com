@@ -3,7 +3,7 @@ layout: post
 title: "JDK installation on Ubuntu"
 date: 2012-11-22 22:25
 comments: true
-categories:
+tags:
 - linux
 - setup-configuration
 ---

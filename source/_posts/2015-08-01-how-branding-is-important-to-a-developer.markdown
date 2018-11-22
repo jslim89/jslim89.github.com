@@ -3,7 +3,7 @@ layout: post
 title: "How branding is important to a developer?"
 date: 2015-08-01 16:53:25 +0800
 comments: true
-categories: 
+tags: 
 - branding
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: "Generate a random string with JavaScript"
 date: 2012-12-26 19:24
 comments: true
-categories: 
+tags: 
 - programming
 - javascript
 ---

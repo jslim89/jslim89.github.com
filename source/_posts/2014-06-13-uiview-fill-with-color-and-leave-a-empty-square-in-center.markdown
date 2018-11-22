@@ -3,7 +3,7 @@ layout: post
 title: "UIView fill with color and leave a empty square in center"
 date: 2014-06-13 22:37:38 +0800
 comments: true
-categories: 
+tags: 
 - ios
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: "Enable display_errors in MAMP"
 date: 2013-01-30 16:50
 comments: true
-categories: 
+tags: 
 - php
 - mac
 - setup-configuration

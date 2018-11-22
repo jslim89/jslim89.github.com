@@ -3,7 +3,7 @@ layout: post
 title: "Integrate PayPal SDK into Laravel 4"
 date: 2014-09-19 21:45:03 +0800
 comments: true
-categories: 
+tags: 
 - php
 ---
 

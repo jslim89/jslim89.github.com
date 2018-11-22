@@ -3,7 +3,7 @@ layout: post
 title: "PHP - Restructure multi-dimentional array into single dimention"
 date: 2013-12-13 17:08
 comments: true
-categories: 
+tags: 
 - php
 ---
 

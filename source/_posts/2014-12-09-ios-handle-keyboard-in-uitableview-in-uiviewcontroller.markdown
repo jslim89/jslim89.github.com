@@ -3,7 +3,7 @@ layout: post
 title: "iOS - handle keyboard in UITableView in UIViewController"
 date: 2014-12-09 22:16:37 +0800
 comments: true
-categories: 
+tags: 
 - ios
 - objective-c
 ---

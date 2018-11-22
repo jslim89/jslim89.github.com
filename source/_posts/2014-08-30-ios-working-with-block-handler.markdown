@@ -3,7 +3,7 @@ layout: post
 title: "iOS - Working with block handler"
 date: 2014-08-30 14:36:12 +0800
 comments: true
-categories: 
+tags: 
 - ios
 - objective-c
 ---

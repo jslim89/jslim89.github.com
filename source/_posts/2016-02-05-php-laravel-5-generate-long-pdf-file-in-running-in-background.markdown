@@ -3,7 +3,7 @@ layout: post
 title: "PHP Laravel 5 generate long PDF file in running in background"
 date: 2016-02-05 11:44:45 +0800
 comments: true
-categories: 
+tags: 
 - laravel
 - php
 - cronjob

@@ -3,7 +3,7 @@ layout: post
 title: "How to use Apache .htpasswd"
 date: 2014-05-06 08:52:18 +0800
 comments: true
-categories: 
+tags: 
 - setup-configuration
 - apache
 ---

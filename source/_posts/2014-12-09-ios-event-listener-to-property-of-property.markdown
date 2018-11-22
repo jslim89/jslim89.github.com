@@ -3,7 +3,7 @@ layout: post
 title: "iOS - event listener to property of property"
 date: 2014-12-09 22:00:38 +0800
 comments: true
-categories: 
+tags: 
 - ios
 - objective-c
 ---

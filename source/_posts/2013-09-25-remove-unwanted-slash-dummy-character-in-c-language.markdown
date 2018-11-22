@@ -3,7 +3,7 @@ layout: post
 title: "Remove unwanted/dummy character in C language"
 date: 2013-09-25 19:22
 comments: true
-categories: 
+tags: 
 - c language
 ---
 

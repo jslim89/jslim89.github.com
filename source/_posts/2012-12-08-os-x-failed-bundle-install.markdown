@@ -3,7 +3,7 @@ layout: post
 title: "OS X failed bundle install"
 date: 2012-12-08 10:10
 comments: true
-categories: 
+tags: 
 - os-x
 - ruby
 - octopress

@@ -3,7 +3,7 @@ layout: post
 title: "MySQL search order by relevance column using FULLTEXT"
 date: 2014-01-23 10:39:03 +0800
 comments: true
-categories: 
+tags: 
 - mysql
 ---
 

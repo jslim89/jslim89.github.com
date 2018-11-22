@@ -3,7 +3,7 @@ layout: post
 title: "Setup Ruby on Rails in Debian 7"
 date: 2015-10-12 22:46:27 +0800
 comments: true
-categories: 
+tags: 
 - ruby-on-rails
 - debian
 ---

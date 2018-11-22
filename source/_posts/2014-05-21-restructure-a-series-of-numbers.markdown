@@ -3,7 +3,7 @@ layout: post
 title: "Restructure a series of numbers"
 date: 2014-05-21 20:40:16 +0800
 comments: true
-categories: 
+tags: 
 - php
 ---
 

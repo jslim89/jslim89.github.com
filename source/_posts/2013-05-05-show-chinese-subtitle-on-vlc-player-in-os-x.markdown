@@ -3,7 +3,7 @@ layout: post
 title: "Show chinese subtitle on VLC player in OS X"
 date: 2013-05-05 14:32
 comments: true
-categories: 
+tags: 
 - setup-configuration
 ---
 

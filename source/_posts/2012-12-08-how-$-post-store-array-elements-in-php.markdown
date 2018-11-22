@@ -3,7 +3,7 @@ layout: post
 title: "How $_POST store array elements in PHP"
 date: 2012-12-08 10:17
 comments: true
-categories: 
+tags: 
 - php
 - programming
 ---

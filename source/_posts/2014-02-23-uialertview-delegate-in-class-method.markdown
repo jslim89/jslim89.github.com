@@ -3,7 +3,7 @@ layout: post
 title: "UIAlertView delegate in class method"
 date: 2014-02-23 12:29:58 +0800
 comments: true
-categories: 
+tags: 
 - ios
 ---
 

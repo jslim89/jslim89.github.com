@@ -3,7 +3,7 @@ layout: post
 title: "Remove Macbuntu from Ubuntu 12.10"
 date: 2012-12-22 08:23
 comments: true
-categories: 
+tags: 
 - linux
 - uninstallation
 ---

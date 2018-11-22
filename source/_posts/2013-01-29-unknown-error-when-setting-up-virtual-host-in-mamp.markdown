@@ -3,7 +3,7 @@ layout: post
 title: "Unknown error when setting up virtual host in MAMP"
 date: 2013-01-29 15:49
 comments: true
-categories: 
+tags: 
 - setup-configuration
 - mac
 ---

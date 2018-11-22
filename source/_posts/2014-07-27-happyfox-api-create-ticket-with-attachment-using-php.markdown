@@ -3,7 +3,7 @@ layout: post
 title: "Happyfox API - Create ticket with attachment using PHP"
 date: 2014-07-27 14:43:12 +0800
 comments: true
-categories: 
+tags: 
 - happyfox
 - php
 ---

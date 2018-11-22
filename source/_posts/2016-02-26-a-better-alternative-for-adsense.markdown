@@ -3,7 +3,7 @@ layout: post
 title: "A better alternative for AdSense"
 date: 2016-02-26 12:14:31 +0800
 comments: true
-categories: 
+tags: 
 - ads-platform
 ---
 

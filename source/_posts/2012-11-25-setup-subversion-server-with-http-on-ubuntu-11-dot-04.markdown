@@ -3,7 +3,7 @@ layout: post
 title: "Setup Subversion server with HTTP on Ubuntu 11.04"
 date: 2012-11-25 19:43
 comments: true
-categories:
+tags:
 - linux
 - setup-configuration
 - subversion

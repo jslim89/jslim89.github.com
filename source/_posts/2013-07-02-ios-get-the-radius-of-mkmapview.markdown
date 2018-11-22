@@ -3,7 +3,7 @@ layout: post
 title: "iOS - Get the radius of MKMapView"
 date: 2013-07-02 14:27
 comments: true
-categories: 
+tags: 
 - ios
 ---
 

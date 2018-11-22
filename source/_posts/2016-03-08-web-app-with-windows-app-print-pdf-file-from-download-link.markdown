@@ -3,7 +3,7 @@ layout: post
 title: "Web app with Windows app print pdf file from download link"
 date: 2016-03-08 15:16:53 +0800
 comments: true
-categories: 
+tags: 
 - windows-form-application
 - javascript
 ---

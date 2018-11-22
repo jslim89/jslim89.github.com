@@ -3,7 +3,7 @@ layout: post
 title: "Problem with AFImageRequestOperation block not executed"
 date: 2013-11-15 11:59
 comments: true
-categories: 
+tags: 
 - ios
 ---
 

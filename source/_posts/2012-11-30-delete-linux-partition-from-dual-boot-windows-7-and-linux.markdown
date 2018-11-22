@@ -3,7 +3,7 @@ layout: post
 title: "Delete Linux partition from dual-boot (Windows 7 &amp; Linux)"
 date: 2012-11-30 20:35
 comments: true
-categories: 
+tags: 
 - linux
 - setup-configuration
 - windows

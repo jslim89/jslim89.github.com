@@ -3,7 +3,7 @@ layout: post
 title: "Crawling images from a webpage"
 date: 2013-04-08 15:26
 comments: true
-categories: 
+tags: 
 - shell-script
 - python
 ---

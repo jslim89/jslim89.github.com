@@ -3,7 +3,7 @@ layout: post
 title: "Draw a shape using UIBezierPath"
 date: 2014-06-13 22:59:27 +0800
 comments: true
-categories: 
+tags: 
 - ios
 ---
 

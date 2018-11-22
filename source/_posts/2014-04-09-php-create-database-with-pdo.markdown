@@ -3,7 +3,7 @@ layout: post
 title: "PHP - create database with PDO"
 date: 2014-04-09 21:17:33 +0800
 comments: true
-categories: 
+tags: 
 - php
 ---
 

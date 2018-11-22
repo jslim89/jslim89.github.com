@@ -3,7 +3,7 @@ layout: post
 title: "RSA encryption &amp; decryption on PHP"
 date: 2014-01-09 06:59
 comments: true
-categories: 
+tags: 
 - php
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: "Handling login session in iOS &amp; server"
 date: 2015-01-28 09:54:55 +0800
 comments: true
-categories: 
+tags: 
 - ios
 - php
 ---

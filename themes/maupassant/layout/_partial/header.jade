@@ -1,0 +1,31 @@
+script(type='text/javascript', src='//app.involve.asia/magic/14324/auto.js')
+
+if theme.google_adsense
+  script(type='text/javascript', src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js', async)
+  script.
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: '#{theme.google_adsense}',
+      enable_page_level_ads: true
+    });
+
+if theme.google_tag_manager
+  script.
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','#{theme.google_tag_manager}');
+    if ($('.tags > a').length > 0) {
+      $('.tags > a').each(function (i) {
+        dataLayer.push({
+          'event': 'gaEvent',
+          'gaEventCategory': 'Custom Dimension Event',
+          'gaEventAction': 'Post tag',
+          'gaEventLabel': $(this).text(),
+          'gaEventValue': 0,
+          'gaNonInteraction': 1,
+          'gaDimensionsTag': $(this).text(),
+          'gaMetricsTag': 1,
+        });
+      });
+    }

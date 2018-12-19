@@ -30,6 +30,7 @@ html(lang='#{config.language}')
     link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/grids-responsive-min.css' + '?v=' + theme.version)
     link(rel='stylesheet', href='https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css')
     script(type='text/javascript', src=url_for(theme.js) + '/jquery.min.js' + '?v=' + theme.version)
+    include _partial/header
     link(rel='Shortcut Icon', type='image/x-icon', href=url_for('favicon.ico'))
     link(rel='apple-touch-icon', href=url_for('apple-touch-icon.png'))
     link(rel='apple-touch-icon-precomposed', href=url_for('apple-touch-icon.png'))

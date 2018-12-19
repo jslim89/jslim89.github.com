@@ -29,7 +29,7 @@ html(lang='#{config.language}')
     link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/style.css' + '?v=' + theme.version)
     link(rel='stylesheet', href='//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css')
     script(type='text/javascript', src='//cdn.bootcss.com/jquery/3.0.0/jquery.min.js')
-    script(type='text/javascript', src='//app.involve.asia/magic/14324/auto.js')
+    include _partial/header
     link(rel='Shortcut Icon', type='image/x-icon', href=url_for('favicon.ico'))
     link(rel='apple-touch-icon', href=url_for('apple-touch-icon.png'))
     link(rel='apple-touch-icon-precomposed', href=url_for('apple-touch-icon.png'))

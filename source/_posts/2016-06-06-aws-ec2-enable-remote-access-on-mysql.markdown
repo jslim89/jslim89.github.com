@@ -30,6 +30,9 @@ Make sure you add a rule in the **In bound** there, for MySQL, and set the IP to
 
 Edit the file `/etc/mysql/my.cnf`, and change the binding address to `0.0.0.0`
 
+_(EDIT: 2019-04-04, you may also update the file `/etc/mysql/conf.d/mysql.cnf`
+, for newer version of MySQL. Thanks for Dawood pointing out.)_
+
 ```
 bind-address = 0.0.0.0
 ```

@@ -34,7 +34,7 @@ You can leave the default options and just press enter if you are ok with them.
 
 First, provide the IPv4 address of the network interface you want OpenVPN
 listening to.
-IP address: 172.xxx-xxx-xxx
+IP address: 172.xxx.xxx.xxx
 
 This server is behind NAT. What is the public IPv4 address or hostname?
 Public IP address / hostname: 54.yyy.yyy.yyy

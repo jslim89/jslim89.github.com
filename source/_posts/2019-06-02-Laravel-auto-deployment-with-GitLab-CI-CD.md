@@ -5,6 +5,7 @@ tags:
 - laravel
 - gitlab
 - deployment
+- nginx
 ---
 
 I've been heard of continuous integration long ago, thus I decide to give it a try.
@@ -164,5 +165,28 @@ Finally, I solve it by restarting fpm
 ```
 $ sudo service php7.3-fpm restart
 ```
+
+### 6. After deployed, server still serve the old revision
+
+Update your nginx config
+
+```
+location ~ .php$ {
+    try_files $uri =404;
+    fastcgi_split_path_info ^(.+.php)(/.+)$;
+    fastcgi_pass   unix:/var/run/php/php7.3-fpm.sock;
+    fastcgi_index  index.php;
+    include        fastcgi_params;
+
+    # add this 2 line after `include`
+    fastcgi_param  SCRIPT_FILENAME  $realpath_root$fastcgi_script_name;
+    fastcgi_param  DOCUMENT_ROOT $realpath_root;
+    ...
+}
+```
+
+Then restart nginx
+
+[See the explaination here](https://serverfault.com/questions/848503/nginx-caching-symlinks/848526#848526)
 
 Hope this article help :)

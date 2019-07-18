@@ -1,4 +1,4 @@
-fancybox: true ## If you want to use fancybox please set the value to true.
+fancybox: false ## If you want to use fancybox please set the value to true.
 duoshuo: ## Your duoshuo_shortname, e.g. username
 disqus: jslim89 ## Your disqus_shortname, e.g. username
 google_search: true ## Use Google search, true/false.
@@ -36,6 +36,7 @@ widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts
   - recent_posts
   - recent_comments
   - links
+  - affiliates
 
 links:
   - title: Js' Sport Diary

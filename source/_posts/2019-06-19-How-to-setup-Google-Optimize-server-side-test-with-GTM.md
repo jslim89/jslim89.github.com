@@ -51,8 +51,17 @@ In server side _(I use PHP here)_, randomly choose a variant, and select the alg
 
 ```php
 <?php
-$exp_var = rand(0, 1);
 $exp_id = 'xxxxxxxxxx';
+
+// get the cookie value form GA, to make sure the experiment result always consistent
+$ga_cookie = $_COOKIE['_ga'];
+$sess_key  = 'exp-' . $ga_cookie;
+$exp_var   = $_SESSION[$sess_key];
+if ($exp_var === null) {
+    $exp_var = rand(0, 1);
+    $_SESSION[$sess_key] = $exp_var;
+}
+
 if ($exp_var == 1) {
     // if variant 1, which algorithm to use
 } else {

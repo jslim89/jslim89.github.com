@@ -10,12 +10,31 @@ footer: true
 
 I'm a PHP web developer. You can reach me on me [at] jsl [dot] im.
 
+## Little about myself
+
+- Comfortably work in Linux environment, edit code & some basic linux commands
+- Work on PHP since 2011, Laravel since 2013
+- Ever develop iOS app _(Objective-C)_ from 2012 - 2015
+- Vim as my favourite text editor
+- Ever write some basic Node.js & python scripts
+- Basic knowledge on manage Linux server
+- Basic experience in AWS
+- Basic knowledge on Elasticsearch
+
 ## Experience
 
-### Involve Asia Sdn Bhd (Jun 18 - present)
+### Involve Asia (Jun 18 - present)
 
-- Develop web application in Laravel 5
-- Practice to submit pull request to superior on every feature/bug fix
+- Develop web application in Laravel 5/6
+- Use Jira & Bitbucket for project management
+- Migrate Wordpress to Laravel, restructure DB
+- Implement Elasticsearch to Laravel project
+- Perform A/B test with Google Optimize
+- Write a micro-service _(docker)_ web app to crawl 3rd party website content (Node.js & Python)
+- Track user interaction with Google Analytics event (with Google Tag Manager)
+- Partly use Vue.js for with Laravel project
+- Create mini tools with AWS lambda (screenshot web page, resize image)
+- Working with billions of records
 
 ### Alphacloud Sdn Bhd (Oct 15 - May 18)
 

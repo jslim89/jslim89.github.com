@@ -9,6 +9,7 @@ footer: true
 ---
 
 I'm a PHP web developer. You can reach me on me [at] jsl [dot] im.
+Hire me 😉
 
 ## Little about myself
 
@@ -21,6 +22,11 @@ I'm a PHP web developer. You can reach me on me [at] jsl [dot] im.
 - Basic experience in AWS
 - Basic knowledge on Elasticsearch
 
+### What I'm NOT
+
+- not experience in unit test
+- not much of leading experience
+
 ## Experience
 
 ### Involve Asia (Jun 18 - present)
@@ -31,10 +37,13 @@ I'm a PHP web developer. You can reach me on me [at] jsl [dot] im.
 - Implement Elasticsearch to Laravel project
 - Perform A/B test with Google Optimize
 - Write a micro-service _(docker)_ web app to crawl 3rd party website content (Node.js & Python)
+- Write crawler to crawl variety of marketplace product price
 - Track user interaction with Google Analytics event (with Google Tag Manager)
 - Partly use Vue.js for with Laravel project
 - Create mini tools with AWS lambda (screenshot web page, resize image)
 - Working with billions of records
+- Write composer package for internal use
+- Scrum _(daily stand up, biweekly sprint planning)_
 
 ### Alphacloud Sdn Bhd (Oct 15 - May 18)
 

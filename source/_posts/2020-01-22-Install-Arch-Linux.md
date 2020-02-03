@@ -180,6 +180,14 @@ $ sudo systemctl start gdm.service
 $ sudo systemctl enable gdm.service
 ```
 
+Reboot it.
+
+```
+$ sudo reboot
+```
+
+DONE
+
 ## References:
 
 - [How To Install Arch Linux Latest Version](https://www.ostechnix.com/install-arch-linux-latest-version/)

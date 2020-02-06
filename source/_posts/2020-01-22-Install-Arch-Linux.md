@@ -96,6 +96,14 @@ $ grub-install /dev/sda
 $ grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
+_(For UEFI mode, refer [this post](https://www.tecmint.com/arch-linux-installation-and-configuration-guide/))_
+
+### Setup WiFi
+
+If reboot the system now, you won't be able to connect to internet.
+
+To setup WiFi connection, refer to [this post](https://forum.manjaro.org/t/how-to-use-systemd-networkd-to-manage-your-wifi/1557)
+
 ## Reboot
 
 Now let's exit from the system
@@ -194,3 +202,8 @@ DONE
 - [Arch Linux 2016 post installation](https://www.ostechnix.com/arch-linux-2016-post-installation/)
 - [How To Install GNOME Desktop Environment In Arch Linux](https://www.ostechnix.com/how-to-install-gnome-desktop-environment-in-arch-linux/)
 - [Arch Installation guide](https://wiki.archlinux.org/index.php/Installation_guide)
+- [Remove GPT - Default back to MBR](https://unix.stackexchange.com/questions/61142/remove-gpt-default-back-to-mbr)
+- [Arch Linux Installation and Configuration on UEFI Machines](https://www.tecmint.com/arch-linux-installation-and-configuration-guide/)
+- [Arch Linux Installation Guide](https://gist.github.com/eltonvs/d8977de93466552a3448d9822e265e38#set-up-wi-fi)
+- [How to use systemd-networkd to manage your wifi](https://forum.manjaro.org/t/how-to-use-systemd-networkd-to-manage-your-wifi/1557)
+- [wpa_supplicant](https://wiki.archlinux.org/index.php/Wpa_supplicant)

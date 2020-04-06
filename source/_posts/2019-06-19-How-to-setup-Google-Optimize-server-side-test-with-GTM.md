@@ -94,6 +94,11 @@ Note that the `dataLayer.push` must before the GTM script.
 
 If you have any questions, [please ask here](https://support.google.com/optimize/community).
 
+---
+
+**P/S: If you're looking for other way of do A/B testing, this article might be for you**
+[Flexible A/B Testing with AWS Lambda@Edge](https://www.toptal.com/aws/ab-testing-with-aws-lambda-at-edge)
+
 ## References:
 
 - [Optimize - Server-side Experiments](https://developers.google.com/optimize/devguides/experiments)

@@ -20,16 +20,23 @@ Hire me 😉
 - Ever write some basic Node.js & python scripts
 - Basic knowledge on manage Linux server
 - Basic experience in AWS
+- PHPUnit
 - Basic knowledge on Elasticsearch
 
 ### What I'm NOT
 
-- not experience in unit test
 - not much of leading experience
 
 ## Experience
 
-### Involve Asia (Jun 18 - present)
+### iPrice Group (Apr 20 - present)
+
+- Agile Development
+- PHPUnit test
+- Jira for project management
+- ElasticSearch
+
+### Involve Asia (Jun 18 - Apr 20)
 
 - Develop web application in Laravel 5/6
 - Use Jira & Bitbucket for project management

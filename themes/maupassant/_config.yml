@@ -22,6 +22,9 @@ menu:
   - page: archive
     directory: archives/
     icon: fa-archive
+  - page: Short-Notes
+    directory: short-notes/
+    icon: fa-graduation-cap
   - page: about
     directory: about/
     icon: fa-user

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: ffmpeg
+title: Git
 permalink: /short-notes/git/
 date: 2020-05-22 21:13:51
 comments: false

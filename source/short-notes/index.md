@@ -9,9 +9,27 @@ footer: true
 
 This section is my personal short note about my learning
 
+## Coding
+
+- Testing
+    - [Appium](appium)
+- Others
+    - [Regular Expression](regex)
+
 ## Storage
 
 - [Elasticsearch](elasticsearch)
+- [MySQL / MariaDB](mysql)
+- [MongoDB](mongodb)
+
+## Server
+
+- [Linux](linux)
+    - [Ubuntu](ubuntu)
+- [Mac](mac)
+- [Nginx](nginx)
+- [Apache](apache)
+- [OpenSSL](openssl)
 
 ## Version Control
 

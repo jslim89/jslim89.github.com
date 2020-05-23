@@ -52,6 +52,8 @@ WHERE field1 = 'foo'
 LIMIT 20 OFFSET 0;
 ```
 
+---
+
 ### Update
 
 #### Bulk update
@@ -111,6 +113,8 @@ GET /index/type/_flush
 
 - [Update By Query API](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-update-by-query.html)
 - [How to add a json object to multiple documents in a Elastic index using _update_by_query?](https://stackoverflow.com/questions/46927871/how-to-add-a-json-object-to-multiple-documents-in-a-elastic-index-using-update/46930821#46930821)
+
+---
 
 #### Add new field
 

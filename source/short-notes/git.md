@@ -20,6 +20,8 @@ $ git remote show origin
 
 - [How to tell which local branch is tracking which remote branch in Git?](http://serverfault.com/questions/175052/how-to-tell-which-local-branch-is-tracking-which-remote-branch-in-git#answers)
 
+---
+
 #### Change origin
 
 ```sh
@@ -39,6 +41,8 @@ $ git remote set-url origin git@github.com:jslim89/dotfiles.git
 - [Install Jekyll-Bootstrap](http://jekyllbootstrap.com/#2__install_jekyllbootstrap)
 
 
+---
+
 #### Merge with other's github repo
 
 ##### Setup
@@ -56,6 +60,8 @@ $ git remote set-url origin git@github.com:jslim89/dotfiles.git
 - [Syncing a fork](https://help.github.com/articles/syncing-a-fork)
 
 
+---
+
 #### Add / Update / Delete submodule
 
 ```sh
@@ -71,6 +77,8 @@ $ git rm --cached /path/to/repo # remove submodule
 
 - [Git Submodules: Adding, Using, Removing, Updating](http://chrisjean.com/2009/04/20/git-submodules-adding-using-removing-and-updating/)
 
+
+---
 
 #### Keep the source from branch and content to master (Octopress)
 
@@ -97,6 +105,8 @@ Actually during the octopress setup, they push the source to another branch rath
 - [Octopress: Setting up a Blog and Contributing to an Existing One](http://code.dblock.org/octopress-setting-up-a-blog-and-contributing-to-an-existing-one)
 
 
+---
+
 #### un-add a file before commit
 
 ```sh
@@ -108,6 +118,8 @@ $ git reset
 - [Undo git add before commit](http://stackoverflow.com/questions/348170/undo-git-add-before-commit#answers)
 
 
+---
+
 #### un-delete before commit
 
 ```sh
@@ -118,6 +130,8 @@ $ git checkout <filename>
 
 - [git un-remove before commit?](http://stackoverflow.com/questions/5587183/git-un-remove-before-commit#answers)
 
+
+---
 
 #### Accidentally pushing sensitive date to octopress blog on github repo
 
@@ -131,6 +145,8 @@ $ git push origin master --force
 - [Remove sensitive data](https://help.github.com/articles/remove-sensitive-data)
 
 
+---
+
 #### Un-modify a file before commit
 
 ```sh
@@ -141,6 +157,8 @@ $ git checkout -- filename
 
 - [Unmodifying a Modified File](http://git-scm.com/book/en/Git-Basics-Undoing-Things#Unmodifying-a-Modified-File)
 
+
+---
 
 #### Problem with no HEAD branch
 
@@ -197,6 +215,8 @@ $ git remote show origin
 ```
 
 
+---
+
 #### Checkout specific revision
 
 ```sh
@@ -223,6 +243,8 @@ HEAD is now at 49869ae... Your commit message here
 - [How to clone git repository with specific revision/changeset?](http://stackoverflow.com/questions/3489173/how-to-clone-git-repository-with-specific-revision-changeset)
 
 
+---
+
 #### Change last commit message
 
 ```sh
@@ -233,6 +255,8 @@ $ git commit --amend -m "New commit message"
 
 - [How do I edit an incorrect commit message in Git?](http://stackoverflow.com/questions/179123/how-do-i-edit-an-incorrect-commit-message-in-git/179147#179147)
 
+
+---
 
 #### Show commited files on a specific revision
 
@@ -246,6 +270,8 @@ model/UserModel.php
 
 - [List all the files for a commit in Git](http://stackoverflow.com/questions/424071/list-all-the-files-for-a-commit-in-git/424142#424142)
 
+
+---
 
 #### Update all EXCEPT for a file
 
@@ -262,6 +288,8 @@ $ git update-index --no-assume-unchanged /path/to/file.txt
 - [Exclude a file from a git commit](http://trillworks.com/nick/2013/03/05/exclude-a-file-from-a-git-commit/)
 
 
+---
+
 #### Change submodule origin
 
 1. Edit `.gitmodule` with the new URL
@@ -271,6 +299,8 @@ $ git update-index --no-assume-unchanged /path/to/file.txt
 
 - [How do I replace a git submodule with another repo?](http://stackoverflow.com/questions/14404704/how-do-i-replace-a-git-submodule-with-another-repo/14405542#14405542)
 
+
+---
 
 #### git tag
 
@@ -288,6 +318,8 @@ $ git push --tags # or git push origin v1.0
 - [How can I push a tag to a remote repository using Git?](http://stackoverflow.com/questions/5195859/how-can-i-push-a-tag-to-a-remote-repository-using-git/5195913#5195913)
 
 
+---
+
 #### Clone a specific branch from remote branch
 
 ```sh
@@ -301,6 +333,8 @@ $ git checkout -b wanted_branch origin/wanted_branch
 - [How do I clone all remote branches with Git?](http://stackoverflow.com/questions/67699/how-do-i-clone-all-remote-branches-with-git/72156#72156)
 
 
+---
+
 #### un-commit last commit
 
 ```sh
@@ -311,6 +345,8 @@ $ git reset --hard HEAD^
 
 - [How to uncommit my last commit in git](http://stackoverflow.com/questions/2845731/how-to-uncommit-my-last-commit-in-git/2846154#2846154)
 
+
+---
 
 #### Rename branch
 
@@ -330,6 +366,8 @@ $ git branch -m master
 - [How do I rename a local Git branch?](http://stackoverflow.com/questions/6591213/how-do-i-rename-a-local-git-branch/6591218#6591218)
 
 
+---
+
 #### Show updated file name between 2 commits
 
 ```sh
@@ -341,6 +379,8 @@ $ git diff --name-only HEAD~10 HEAD~5
 
 - [Show all changed files between two Git commits](https://stackoverflow.com/questions/1552340/show-all-changed-files-between-two-git-commits/1552353#1552353)
 
+
+---
 
 #### Choose specific key for specific host
 
@@ -357,6 +397,8 @@ Host bitbucket.org
 
 - [Specify private SSH-key to use when executing shell command with or without Ruby?](http://stackoverflow.com/questions/4565700/specify-private-ssh-key-to-use-when-executing-shell-command-with-or-without-ruby/11251797#11251797)
 
+
+---
 
 #### Merge certain files from other branch
 

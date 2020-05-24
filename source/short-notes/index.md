@@ -16,9 +16,18 @@ This section is my personal short note about my learning
 - [C#](csharp)
 - [JavaScript](javascript)
     - [Vue.js](vue)
+- [PHP](php)
+    - [Laravel](laravel)
+    - [Zend Framework](zend-framework)
+    - [Wordpress](wordpress)
+    - [Joomla](joomla)
+- [Python](python)
+    - [Django](django)
+    - [SQLalchemy](sqlalchemy)
 - iOS/MacOS
     - [Objective-C](objective-c)
     - [Swift](swift)
+- [CSS](css)
 - Testing
     - [Appium](appium)
 - Others

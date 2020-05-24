@@ -2984,3 +2984,277 @@ Usage: `NSLog(@"obj %@", [self descriptionForObject:obj]);`
 ##### Reference:
 
 - [Github: arundevma/ICHObjectPrinter](https://github.com/arundevma/ICHObjectPrinter/blob/master/ICHObjectPrinter/ICHObjectPrinter/ICHObjectPrinter/ICHObjectPrinter.m)
+
+---
+
+### AFNetworking
+
+#### Check is offline
+
+```obj-c
+[[AFNetworkReachabilityManager sharedManager] startMonitoring];
+[[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+    NSLog(@"Reachability: %@", AFStringFromNetworkReachabilityStatus(status));
+    switch (status) {
+        case AFNetworkReachabilityStatusReachableViaWWAN:
+        case AFNetworkReachabilityStatusReachableViaWiFi:
+            NSLog(@"online");
+            break;
+        case AFNetworkReachabilityStatusNotReachable:
+        default:
+            NSLog(@"offline");
+            break;
+    }
+}];
+```
+
+##### Reference:
+
+- [AFNetworking 2.0 queue request when device is offline with setReachabilityStatusChangeBlock does nothing](http://stackoverflow.com/questions/21938680/afnetworking-2-0-queue-request-when-device-is-offline-with-setreachabilitystatus/22112135#22112135)
+
+---
+
+### Animation
+
+#### Flip animation between view controllers
+
+Present
+
+```obj-c
+viewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+[self presentViewController:viewController animated:YES completion:nil];
+```
+
+Dismiss
+
+```obj-c
+[self dismissViewControllerAnimated:YES completion:nil];
+```
+
+##### Reference:
+
+- [How to do the flip animation between two UIViewControllers while clicking info button?](http://stackoverflow.com/questions/4622996/how-to-do-the-flip-animation-between-two-uiviewcontrollers-while-clicking-info-b/7384986#7384986)
+
+---
+
+#### Move object from bottom to top
+
+```obj-c
+// set the initial position
+UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(40, 320, 240, 100)];
+...
+
+[UIView animateWithDuration:1.0 // 1 second
+                      delay:0.0
+                    options:UIViewAnimationOptionCurveLinear
+                 animations:^{
+                     // move the image to top
+                     imageView.center = CGPointMake(imageView.center.x, 100);
+                 }
+                 completion:nil];
+```
+
+---
+
+#### Fade in UIButton
+
+```obj-c
+UIButton *fooButton = [UIButton buttonWithType:UIButtonTypeCustom];
+fooButton.frame = ...;
+fooButton.alpha = 0; // set to transparent first
+
+[UIView animateWithDuration:0.5 // 0.5 second
+                      delay:0.0
+                    options:UIViewAnimationOptionCurveLinear
+                 animations:^{
+                     fooButton.alpha = 1.0; // slowly fade in
+                 }
+                 completion:nil];
+```
+
+##### Reference:
+
+- [Fading in and out UIButton in view](http://stackoverflow.com/questions/8047536/fading-in-and-out-uibutton-in-view/8047622#8047622)
+
+---
+
+#### Flip animation between 2 views
+
+```obj-c
+[UIView beginAnimations:nil context:NULL];
+[UIView setAnimationDuration:1.0];
+[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.view cache:NO];
+
+// optional: event handler after animation
+[UIView setAnimationDelegate:self];
+[UIView setAnimationDidStopSelector:@selector(viewFlipped)];
+
+int listViewIndex = [self.view.subviews indexOfObject:self.tableView];
+int mapViewIndex = [self.view.subviews indexOfObject:self.mapView];
+
+if (listViewIndex > mapViewIndex)
+{
+    sender.title = @"List";
+    [self.view bringSubviewToFront:self.mapView];
+}
+else
+{
+    sender.title = @"Map";
+    [self.view bringSubviewToFront:self.tableView];
+}
+
+[UIView commitAnimations];
+```
+
+If you added the event handler, just add the code below
+```obj-c
+- (void)viewFlipped
+{
+    NSLog(@"Flip animation completed.");
+}
+```
+
+##### References:
+
+- [iPhone subview flip between 2 views](http://stackoverflow.com/questions/2336998/iphone-subview-flip-between-2-views/2337273#2337273)
+- [iPhone: How to commit two animations after another](http://stackoverflow.com/questions/5486164/iphone-how-to-commit-two-animations-after-another/5486230#5486230)
+
+---
+
+### Facebook
+
+#### Force user to allow `publish_actions` permission
+
+```obj-c
+@implementation MyViewController {
+    NSString *fbToken;
+}
+
+...
+
+// when tapped on facebook button
+- (IBAction)facebookTouched:(UIButton *)sender
+{
+    // We will request the user's public profile and the user's birthday
+    // These are the permissions we need:
+    NSArray *permissionsNeeded = @[@"publish_actions", @"email"];
+    
+    // don't cache the token
+    FBSession *mySession = [[FBSession alloc] initWithAppID:nil permissions:permissionsNeeded urlSchemeSuffix:nil tokenCacheStrategy:[FBSessionTokenCachingStrategy nullCacheInstance]];
+    
+    [mySession openWithCompletionHandler:^(FBSession *session,
+                                                     FBSessionState status,
+                                                     NSError *error) {
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Facebook Error" message:@"You must allow Facebook permissions" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+
+        if (error) { // user not allow "email"
+            [alert show];
+        } else {
+            
+            // i don't know what is this for, if without this line, this block will be executed 2 times and get error
+            if (status == 258) return;
+            
+            [FBSession setActiveSession:session];
+            
+            // Request the permissions the user currently has
+            [FBRequestConnection startWithGraphPath:@"/me/permissions"
+                                  completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+                                      if (!error) {
+                                          // These are the current permissions the user has:
+                                          NSDictionary *currentPermissions = [(NSArray *)[result data] objectAtIndex:0];
+                                          
+                                          // We will store here the missing permissions that we will have to request
+                                          NSMutableArray *requestPermissions = [[NSMutableArray alloc] initWithArray:@[]];
+                                          
+                                          // Check if all the permissions we need are present in the user's current permissions
+                                          // If they are not present add them to the permissions to be requested
+                                          for (NSString *permission in permissionsNeeded){
+                                              if (![currentPermissions objectForKey:permission]){
+                                                  [requestPermissions addObject:permission];
+                                              }
+                                          }
+                                          
+                                          // If we have more permissions to request
+                                          if ([requestPermissions count] > 0) { // user haven't allow publish_actions
+                                              [alert show];
+                                          } else {
+                                              fbToken = session.accessTokenData.accessToken;
+                                          }
+                                          
+                                      } else {
+                                          // An error occurred, we need to handle the error
+                                          // See: https://developers.facebook.com/docs/ios/errors
+                                          NSLog(@"error %@", error.description);
+                                      }
+                                  }];
+        }
+    }];
+}
+```
+
+---
+
+#### Get profile picture
+
+```obj-c
+// set image & user name
+[FBSession setActiveSession:self.session];
+[[FBRequest requestForMe] startWithCompletionHandler:^(FBRequestConnection *connection, NSDictionary<FBGraphUser> *FBuser, NSError *error) {
+    if (error) {
+        NSLog(@"error %@", error.description);
+    } else {
+        self.usernameLabel.text = [FBuser name];
+        [self.avatarImageView setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?height=100&type=normal&width=100", [FBuser username]]]];
+    }
+}];
+```
+
+##### Reference:
+
+- [Getting username and profile picture from Facebook iOS 7](http://stackoverflow.com/questions/20623728/getting-username-and-profile-picture-from-facebook-ios-7/20623845#20623845)
+
+---
+
+#### FacebookSDK 4.x
+
+Login
+
+**ViewController.m**
+
+```obj-c
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+
+- (void)facebookButtonTapped:(id)sender
+{
+    FBSDKLoginManager *loginManager = [[FBSDKLoginManager alloc] init];
+    [loginManager logInWithReadPermissions:@[@"email"] handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
+        if (error) {
+            NSLog(@"Facebook error: %@", [error localizedDescription]);
+            return;
+        }
+        NSLog(@"Facebook token: %@", result.token.tokenString);
+    }];
+}
+```
+
+**AppDelegate.m**
+
+```obj-c
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+
+...
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
+    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [FBSDKAppEvents activateApp];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [[FBSDKApplicationDelegate sharedInstance] application:application
+                                                          openURL:url
+                                                sourceApplication:sourceApplication
+                                                       annotation:annotation];
+}
+```

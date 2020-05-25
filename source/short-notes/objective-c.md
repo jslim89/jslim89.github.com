@@ -19,7 +19,7 @@ NSString *str = [NSString stringWithFormat:@"This is string type: %d", num];
 
 will output
 
-```
+```sh
 This is string type: 1
 ```
 
@@ -1579,6 +1579,7 @@ if ([[UIDevice currentDevice].systemVersion floatValue] >= 7) {
 **On splash screen**
 
 Edit `Info.plist`
+
 ```xml
 <dict>
     ...
@@ -1841,7 +1842,8 @@ It always matches the main match then only followed by submatch
 ---
 
 #### Resize UIImage
-```obj-
+
+```obj-c
 
 + (UIImage *)resizeImage:(UIImage *)image withSize:(CGSize)size retainAspectRatio:(BOOL)aspectRatio
 {
@@ -2020,6 +2022,7 @@ This will set the color of view to yellow color in (0, 300, 320, 100)
 ---
 
 #### `UITableView` delegate after `reloadData` is called
+
 ```obj-c
 -(void) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {

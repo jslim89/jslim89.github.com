@@ -24,6 +24,7 @@ This section is my personal short note about my learning
 - [Python](python)
     - [Django](django)
     - [SQLalchemy](sqlalchemy)
+    - [Boto (AWS) client](python-boto)
 - iOS/MacOS
     - [Objective-C](objective-c)
     - [Swift](swift)

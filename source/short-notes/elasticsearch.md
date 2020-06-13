@@ -116,6 +116,41 @@ GET /index/type/_flush
 
 ---
 
+#### GROUP BY query
+
+Translate
+
+```
+SELECT COUNT(*) as doc_count
+FROM index
+GROUP BY field_name
+ORDER BY doc_count DESC
+LIMIT 10
+```
+
+equivalent to
+
+```
+GET /index/type/_mapping
+{
+   "aggregations": {
+      "some_name": {
+         "terms": {
+            "field": "field_name",
+            "size": 10
+         }
+      }
+   },
+   "size": 0
+}
+```
+
+##### References:
+
+- [ElasticSearch group by documents field and count occurences](https://stackoverflow.com/questions/58733898/elasticsearch-group-by-documents-field-and-count-occurences/58734262#58734262)
+
+---
+
 #### Add new field
 
 Update the mapping first

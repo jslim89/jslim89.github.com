@@ -62,6 +62,18 @@ pagination_dir: page
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
+
+### Rss feed
+feed:
+  type: atom
+  path: atom.xml
+  limit: 0
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  icon: icon.png
+  autodiscovery: true
+
 ## Themes: https://hexo.io/themes/
 theme: maupassant
 

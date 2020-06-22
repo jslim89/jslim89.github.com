@@ -46,3 +46,17 @@ $ ffmpeg -i XS-race-2019.mp4 -vf "scale=iw/3:ih/3" a_third_the_frame_size.mp4
 ##### Reference:
 
 - [How can I reduce a video's size with ffmpeg?](https://unix.stackexchange.com/questions/28803/how-can-i-reduce-a-videos-size-with-ffmpeg/447521#447521)
+
+----
+
+#### Kazam recorded screen not recognized by WhatsApp
+
+[Kazam](https://github.com/hzbd/kazam) is a screencasting program. But the output mp4 doesn't recognized as video in WhatsApp, thus need to change the codec
+
+```sh
+$ ffmpeg -y -i input_file.mp4 -c:v libx264 -c:a aac -strict experimental -tune fastdecode -pix_fmt yuv420p -b:a 192k -ar 48000 output_file.mp4
+```
+
+##### Reference:
+
+- [Kazam recorded MP4 Video in Ubuntu isn't recognized in Sony Vegas (corrupted MP4 file) for Windows](https://ourcodeworld.com/articles/read/989/kazam-recorded-mp4-video-in-ubuntu-isn-t-recognized-in-sony-vegas-corrupted-mp4-file-for-windows)

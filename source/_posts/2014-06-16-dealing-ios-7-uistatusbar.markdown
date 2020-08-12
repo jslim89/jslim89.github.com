@@ -13,7 +13,7 @@ In this example, I will set the status bar for each `UIViewController`
 
 So now go to Info.plist file, and set `View controller-based status bar appearance` to `YES`
 
-![Info.plist](http://jslim89.github.com/images/posts/2014-06-16-dealing-ios-7-uistatusbar/plist.png)
+![Info.plist](/images/posts/2014-06-16-dealing-ios-7-uistatusbar/plist.png)
 
 I just want to share few cases of dealing with status bar.
 
@@ -46,7 +46,7 @@ and add this function
 
 Run it...Opps... why it still in black text color?
 
-![Still in black color](http://jslim89.github.com/images/posts/2014-06-16-dealing-ios-7-uistatusbar/light-content-1.png)
+![Still in black color](/images/posts/2014-06-16-dealing-ios-7-uistatusbar/light-content-1.png)
 
 The reason is here, since the main view controller is inside a `UINavigationController`, then the status bar will follow the `UINavigationController` style.
 
@@ -60,7 +60,7 @@ self.window.rootViewController = navigationController;
 
 Run it... It works
 
-![Now it works](http://jslim89.github.com/images/posts/2014-06-16-dealing-ios-7-uistatusbar/light-content-2.png)
+![Now it works](/images/posts/2014-06-16-dealing-ios-7-uistatusbar/light-content-2.png)
 
 ## 2. `UIImageView` not cover up the top position
 Now create another `UIViewController`, just name it `JSTransparentBgViewController`, but hide the `UINavigationBar` in this case
@@ -99,7 +99,7 @@ coverImageView.image = [UIImage imageNamed:@"Cover"];
 
 You will get a result like this
 
-![extra 20px](http://jslim89.github.com/images/posts/2014-06-16-dealing-ios-7-uistatusbar/image-statusbar-1.png)
+![extra 20px](/images/posts/2014-06-16-dealing-ios-7-uistatusbar/image-statusbar-1.png)
 
 so now you see that the status bar is not covered up
 
@@ -111,7 +111,7 @@ UIImageView *coverImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, -
 
 change the position-y to `-20` _(as we already know that height of status bar is 20)_. Run it
 
-![Image cover the status bar](http://jslim89.github.com/images/posts/2014-06-16-dealing-ios-7-uistatusbar/image-statusbar-2.png)
+![Image cover the status bar](/images/posts/2014-06-16-dealing-ios-7-uistatusbar/image-statusbar-2.png)
 
 Yeaaaaahh.... DONE :)
 

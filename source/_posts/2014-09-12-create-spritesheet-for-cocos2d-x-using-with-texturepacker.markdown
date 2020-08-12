@@ -9,7 +9,7 @@ tags:
 
 ## Create spritesheet
 
-![Select Cocos2d](http://jslim89.github.com/images/posts/2014-09-12-create-spritesheet-for-cocos2d-x-using-with-texturepacker/spritesheet-demo.png)
+![Select Cocos2d](/images/posts/2014-09-12-create-spritesheet-for-cocos2d-x-using-with-texturepacker/spritesheet-demo.png)
 
 Have you seen this sort of image before? The first time I saw this I thought this is created using Photoshop, and I also
 have no idea how to use this _BIG_ image in the game.
@@ -18,43 +18,43 @@ Until... I started to look in the game development, I only know that this is act
 
 Here I will be using [TexturePacker](https://www.codeandweb.com/texturepacker).
 
-![TexturePacker logo](http://jslim89.github.com/images/posts/2014-09-12-create-spritesheet-for-cocos2d-x-using-with-texturepacker/TP_logo_512.png)
+![TexturePacker logo](/images/posts/2014-09-12-create-spritesheet-for-cocos2d-x-using-with-texturepacker/TP_logo_512.png)
 
 Why? I have seen many game tutorials are talking about this, I tried it and found that it is very easy to use.
 
 ### How to use demo
 
-![Select Cocos2d](http://jslim89.github.com/images/posts/2014-09-12-create-spritesheet-for-cocos2d-x-using-with-texturepacker/texturepacker-start.png)
+![Select Cocos2d](/images/posts/2014-09-12-create-spritesheet-for-cocos2d-x-using-with-texturepacker/texturepacker-start.png)
 
 First of all, I'm going to do this in Cocos2d-x engine, so select **Cocos2d** here.
 
-![Drag images to here](http://jslim89.github.com/images/posts/2014-09-12-create-spritesheet-for-cocos2d-x-using-with-texturepacker/texturepacker-drag.png)
+![Drag images to here](/images/posts/2014-09-12-create-spritesheet-for-cocos2d-x-using-with-texturepacker/texturepacker-drag.png)
 
 Now, drag images to the _box_
 
-![Drag done](http://jslim89.github.com/images/posts/2014-09-12-create-spritesheet-for-cocos2d-x-using-with-texturepacker/texturepacker-merged.png)
+![Drag done](/images/posts/2014-09-12-create-spritesheet-for-cocos2d-x-using-with-texturepacker/texturepacker-merged.png)
 
 Here I drag 3 bird images, and you can see the left pane, there are `hero_01.png`, `hero_02.png`, `hero_03.png`, these are the original 
 file name.
 
 Once you've done, select **Publish sprite sheet**
 
-![Publish spritesheet 1](http://jslim89.github.com/images/posts/2014-09-12-create-spritesheet-for-cocos2d-x-using-with-texturepacker/publish-step-1.png)
+![Publish spritesheet 1](/images/posts/2014-09-12-create-spritesheet-for-cocos2d-x-using-with-texturepacker/publish-step-1.png)
 
 It will prompt you twice, one is to save the plist file contains the meta data of the original images such as
 `frame`, `offset`, `rotated`, etc. It may sound complicated, but no worry, Cocos2d-x will handle it.
 
-![Publish spritesheet 2](http://jslim89.github.com/images/posts/2014-09-12-create-spritesheet-for-cocos2d-x-using-with-texturepacker/publish-step-2.png)
+![Publish spritesheet 2](/images/posts/2014-09-12-create-spritesheet-for-cocos2d-x-using-with-texturepacker/publish-step-2.png)
 
 The second prompt is to save the merged image.
 
-![Publish spritesheet done](http://jslim89.github.com/images/posts/2014-09-12-create-spritesheet-for-cocos2d-x-using-with-texturepacker/publish-step-done.png)
+![Publish spritesheet done](/images/posts/2014-09-12-create-spritesheet-for-cocos2d-x-using-with-texturepacker/publish-step-done.png)
 
 And you've done.
 
 ## Use in Cocos2d-x
 
-![File structure](http://jslim89.github.com/images/posts/2014-09-12-create-spritesheet-for-cocos2d-x-using-with-texturepacker/file-structure.png)
+![File structure](/images/posts/2014-09-12-create-spritesheet-for-cocos2d-x-using-with-texturepacker/file-structure.png)
 
 File structure
 
@@ -162,6 +162,6 @@ This is to instantiate a **Hero** object, set the position to center of screen t
 
 Run it and you will get the animated bird, see screenshot below.
 
-![Animated bird](http://jslim89.github.com/images/posts/2014-09-12-create-spritesheet-for-cocos2d-x-using-with-texturepacker/animated-hero.gif)
+![Animated bird](/images/posts/2014-09-12-create-spritesheet-for-cocos2d-x-using-with-texturepacker/animated-hero.gif)
 
 Done.

@@ -18,15 +18,15 @@ You can download the latest version [here](http://www.apachefriends.org/en/xampp
 
 ### Installation
 
-![Install XAMPP](http://jslim89.github.com/images/posts/2014-01-17-setup-php-environment-in-mavericks-using-xampp/installation.png)
+![Install XAMPP](/images/posts/2014-01-17-setup-php-environment-in-mavericks-using-xampp/installation.png)
 
 Once completed, launch it
 
-![Complete install XAMPP](http://jslim89.github.com/images/posts/2014-01-17-setup-php-environment-in-mavericks-using-xampp/complete-installation.png)
+![Complete install XAMPP](/images/posts/2014-01-17-setup-php-environment-in-mavericks-using-xampp/complete-installation.png)
 
 ### Start MySQL server
 
-![Start MySQL server](http://jslim89.github.com/images/posts/2014-01-17-setup-php-environment-in-mavericks-using-xampp/start-mysql-server.png)
+![Start MySQL server](/images/posts/2014-01-17-setup-php-environment-in-mavericks-using-xampp/start-mysql-server.png)
 
 1. Select **Manage Servers** tab
 2. Select **MySQL Database**
@@ -38,7 +38,7 @@ Then close it.
 
 Hit **Command `⌘`** + **Space** key, type in `terminal` then hit **Enter** key.
 
-![Search for Terminal](http://jslim89.github.com/images/posts/2014-01-17-setup-php-environment-in-mavericks-using-xampp/open-terminal.png)
+![Search for Terminal](/images/posts/2014-01-17-setup-php-environment-in-mavericks-using-xampp/open-terminal.png)
 
 ### Create project A
 
@@ -136,7 +136,7 @@ Include etc/extra/httpd-vhosts.conf
 
 Now will look like
 
-![Uncommented vhosts](http://jslim89.github.com/images/posts/2014-01-17-setup-php-environment-in-mavericks-using-xampp/uncomment-vhost.png)
+![Uncommented vhosts](/images/posts/2014-01-17-setup-php-environment-in-mavericks-using-xampp/uncomment-vhost.png)
 
 Navigate to deeper directory
 
@@ -146,7 +146,7 @@ $ cd extra/
 
 Then edit the file named **httpd-vhosts.conf**, and it already come with this content
 
-![Default virtual hosts](http://jslim89.github.com/images/posts/2014-01-17-setup-php-environment-in-mavericks-using-xampp/default-vhosts.png)
+![Default virtual hosts](/images/posts/2014-01-17-setup-php-environment-in-mavericks-using-xampp/default-vhosts.png)
 
 Remove it and change to
 
@@ -212,30 +212,30 @@ Save it.
 
 Open your browser _(e.g. Safari)_, type in the URL **local.foosite.com**, then you will see
 
-![Foo Site](http://jslim89.github.com/images/posts/2014-01-17-setup-php-environment-in-mavericks-using-xampp/foo-site.png)
+![Foo Site](/images/posts/2014-01-17-setup-php-environment-in-mavericks-using-xampp/foo-site.png)
 
 and then change the URL to **local.barsite.com**, then you will see
 
-![Bar Site](http://jslim89.github.com/images/posts/2014-01-17-setup-php-environment-in-mavericks-using-xampp/bar-site.png)
+![Bar Site](/images/posts/2014-01-17-setup-php-environment-in-mavericks-using-xampp/bar-site.png)
 
 ## 5. Add MySQL password for root user
 
 In your browser, type in the URL **localhost/phpmyadmin**, select a user
 
-![Edit root user](http://jslim89.github.com/images/posts/2014-01-17-setup-php-environment-in-mavericks-using-xampp/edit-user.png)
+![Edit root user](/images/posts/2014-01-17-setup-php-environment-in-mavericks-using-xampp/edit-user.png)
 
 1. Select **Users** tab
 2. Click on the link
 
 Scroll to **Change password** section
 
-![Change root user's password](http://jslim89.github.com/images/posts/2014-01-17-setup-php-environment-in-mavericks-using-xampp/change-password.png)
+![Change root user's password](/images/posts/2014-01-17-setup-php-environment-in-mavericks-using-xampp/change-password.png)
 
 Then type in the password you want _(e.g. password)_.
 
 Once completed, when you simply click on any link above, error appear.
 
-![phpMyAdmin error](http://jslim89.github.com/images/posts/2014-01-17-setup-php-environment-in-mavericks-using-xampp/phpmyadmin-error.png)
+![phpMyAdmin error](/images/posts/2014-01-17-setup-php-environment-in-mavericks-using-xampp/phpmyadmin-error.png)
 
 To solve this, just have to edit the file located in **/Applications/XAMPP/xamppfiles/phpmyadmin/config.inc.php**
 
@@ -245,7 +245,7 @@ $ sudo vi /Applications/XAMPP/xamppfiles/phpmyadmin/config.inc.php
 
 Add in the password you just set
 
-![phpMyAdmin new password](http://jslim89.github.com/images/posts/2014-01-17-setup-php-environment-in-mavericks-using-xampp/new-password.png)
+![phpMyAdmin new password](/images/posts/2014-01-17-setup-php-environment-in-mavericks-using-xampp/new-password.png)
 
 Save it and exit.
 

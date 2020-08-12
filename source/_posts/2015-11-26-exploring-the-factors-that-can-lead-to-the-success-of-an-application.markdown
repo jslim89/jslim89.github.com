@@ -14,7 +14,7 @@ The giant mobile marketplace already has a plethora of applications, and many mo
 
 No matter what is the genre of application that you are interested in developing,  there are certain common factors that can lead to the success or failure of an application. Thus, by keeping the winning factors in mind, you can increase the likelihood of your app success in the market.
 
-![Factor that lead to the success of an application](http://jslim89.github.com/images/posts/2015-11-26-exploring-the-factors-that-can-lead-to-the-success-of-an-application/iphone.png)
+![Factor that lead to the success of an application](/images/posts/2015-11-26-exploring-the-factors-that-can-lead-to-the-success-of-an-application/iphone.png)
 
 Fortunately, there are many examples in the industry, who have committed mistakes while developing an application, from which you can learn and shun away the common mistakes. Here are some best practices that one must employ to ensure an intriguing and worthwhile application.
 

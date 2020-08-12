@@ -8,7 +8,7 @@ tags:
 - setup
 ---
 
-Before start, you need to [setup vagrant](http://jslim.net/blog/2015/10/31/vagrant-for-php-development-environment/) and ssh into the virtual machine
+Before start, you need to [setup vagrant](/blog/2015/10/31/vagrant-for-php-development-environment/) and ssh into the virtual machine
 
 ```
 $ vagrant up
@@ -56,15 +56,15 @@ $ sudo /etc/init.d/dnsmasq restart
 
 ## 3. Go back to host machine _(I'm using OS X here)_
 
-![open network preference](http://jslim89.github.com/images/posts/2015-12-01-setup-wildcard-subdomain-in-laravel-homestead/network-preference-1.png)
+![open network preference](/images/posts/2015-12-01-setup-wildcard-subdomain-in-laravel-homestead/network-preference-1.png)
 
 Open up the **Network Preferences**
 
-![Network preference - overview](http://jslim89.github.com/images/posts/2015-12-01-setup-wildcard-subdomain-in-laravel-homestead/network-preference-2.png)
+![Network preference - overview](/images/posts/2015-12-01-setup-wildcard-subdomain-in-laravel-homestead/network-preference-2.png)
 
 Click on the **Advanced...** tab
 
-![Network preference - DNS settings](http://jslim89.github.com/images/posts/2015-12-01-setup-wildcard-subdomain-in-laravel-homestead/network-preference-dns.png)
+![Network preference - DNS settings](/images/posts/2015-12-01-setup-wildcard-subdomain-in-laravel-homestead/network-preference-dns.png)
 
 Now add these DNS to the settings, in the **DNS** tab
 

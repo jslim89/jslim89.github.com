@@ -88,7 +88,7 @@ Then we calculate the 3 distances base on this 3 points
 }
 ```
 
-![Pythagorean theorem](http://jslim89.github.com/images/posts/2013-07-02-ios-get-the-radius-of-mkmapview/pythagorean-theorem.png)
+![Pythagorean theorem](/images/posts/2013-07-02-ios-get-the-radius-of-mkmapview/pythagorean-theorem.png)
 
 _References:_
 

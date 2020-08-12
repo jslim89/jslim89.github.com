@@ -214,11 +214,11 @@ public function postPayment()
 }
 ```
 
-![PayPal summary](http://jslim89.github.com/images/posts/2014-09-19-integrate-paypal-sdk-into-laravel-4/paypal-summary.png)
+![PayPal summary](/images/posts/2014-09-19-integrate-paypal-sdk-into-laravel-4/paypal-summary.png)
 
 Up to this point, you will see the page above.
 
-![PayPal pay](http://jslim89.github.com/images/posts/2014-09-19-integrate-paypal-sdk-into-laravel-4/paypal-pay.png)
+![PayPal pay](/images/posts/2014-09-19-integrate-paypal-sdk-into-laravel-4/paypal-pay.png)
 
 Then login & pay.
 
@@ -523,23 +523,23 @@ If you have problem with live credentials, please read through this section
 
 ### 1. Login to PayPal developer portal
 
-![PayPal credential step 1](http://jslim89.github.com/images/posts/2014-09-19-integrate-paypal-sdk-into-laravel-4/get-credential-1.png)
+![PayPal credential step 1](/images/posts/2014-09-19-integrate-paypal-sdk-into-laravel-4/get-credential-1.png)
 
 Click on **Dashboard** link
 
 ### 2. Edit your app
 
-![PayPal credential step 2](http://jslim89.github.com/images/posts/2014-09-19-integrate-paypal-sdk-into-laravel-4/get-credential-2.png)
+![PayPal credential step 2](/images/posts/2014-09-19-integrate-paypal-sdk-into-laravel-4/get-credential-2.png)
 
 Under **My apps**, click on the app you wanted to use in your project
 
 ### 3. Get the live credentials
 
-![PayPal credential step 3](http://jslim89.github.com/images/posts/2014-09-19-integrate-paypal-sdk-into-laravel-4/get-credential-3.png)
+![PayPal credential step 3](/images/posts/2014-09-19-integrate-paypal-sdk-into-laravel-4/get-credential-3.png)
 
 Scroll down after the **Add webhook** button, click on the **Show** link
 
-![PayPal credential step 4](http://jslim89.github.com/images/posts/2014-09-19-integrate-paypal-sdk-into-laravel-4/get-credential-4.png)
+![PayPal credential step 4](/images/posts/2014-09-19-integrate-paypal-sdk-into-laravel-4/get-credential-4.png)
 
 Then edit **app/config/paypal.php**, replace **client_id** & **secret** with the live credentials, and change the **mode** to `live`
 

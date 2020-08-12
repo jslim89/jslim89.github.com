@@ -7,43 +7,43 @@ tags:
 - cocos2d-x
 ---
 
-I mention about [TexturePacker in my previous post](http://jslim.net/blog/2014/09/12/create-spritesheet-for-cocos2d-x-using-with-texturepacker/).
+I mention about [TexturePacker in my previous post](/blog/2014/09/12/create-spritesheet-for-cocos2d-x-using-with-texturepacker/).
 Now is [PhysicsEditor](https://www.codeandweb.com/physicseditor).
 
-![PhysicsEditor](http://jslim89.github.com/images/posts/2014-10-10-cocos2d-x-v3-accurate-physics-body-shape-with-physicseditor/PhysicsEditor-logo.png)
+![PhysicsEditor](/images/posts/2014-10-10-cocos2d-x-v3-accurate-physics-body-shape-with-physicseditor/PhysicsEditor-logo.png)
 
 ## Create a physics file
 
 First of all, create a physics file with PhysicsEditor. Just drag image(s) to the left pane.
 
-![Drag images to PhysicsEditor](http://jslim89.github.com/images/posts/2014-10-10-cocos2d-x-v3-accurate-physics-body-shape-with-physicseditor/drag.png)
+![Drag images to PhysicsEditor](/images/posts/2014-10-10-cocos2d-x-v3-accurate-physics-body-shape-with-physicseditor/drag.png)
 
-![Traverse body shape](http://jslim89.github.com/images/posts/2014-10-10-cocos2d-x-v3-accurate-physics-body-shape-with-physicseditor/select-shape.png)
+![Traverse body shape](/images/posts/2014-10-10-cocos2d-x-v3-accurate-physics-body-shape-with-physicseditor/select-shape.png)
 
 1. Set the **Exporter** to `Chipmunk generic (PLIST) - BETA`
 2. Set the **Relative** both values to `0.5` to move the anchor point to the center
 3. Click on that icon
 
-![Adjust tolerance](http://jslim89.github.com/images/posts/2014-10-10-cocos2d-x-v3-accurate-physics-body-shape-with-physicseditor/adjust-tolerance.png)
+![Adjust tolerance](/images/posts/2014-10-10-cocos2d-x-v3-accurate-physics-body-shape-with-physicseditor/adjust-tolerance.png)
 
 You will see the face is highlighted, PhysicsEditor helps you to generate vertices/points of the image.
 You can change the tolerance value _(by default is `1`)_, of course, the lower the better, but will be slower _(theoretically)_.
 
-![Image highlighted](http://jslim89.github.com/images/posts/2014-10-10-cocos2d-x-v3-accurate-physics-body-shape-with-physicseditor/highlighted.png)
+![Image highlighted](/images/posts/2014-10-10-cocos2d-x-v3-accurate-physics-body-shape-with-physicseditor/highlighted.png)
 
 Once you have done, the image is now highlighted with its shape.
 
-![Publish physics](http://jslim89.github.com/images/posts/2014-10-10-cocos2d-x-v3-accurate-physics-body-shape-with-physicseditor/publish.png)
+![Publish physics](/images/posts/2014-10-10-cocos2d-x-v3-accurate-physics-body-shape-with-physicseditor/publish.png)
 
 Publish it as `.plist` file. You have done the part.
 
 ## Add the physics file to Xcode project
 
-![Add physics to Xcode](http://jslim89.github.com/images/posts/2014-10-10-cocos2d-x-v3-accurate-physics-body-shape-with-physicseditor/create-folder-references.png)
+![Add physics to Xcode](/images/posts/2014-10-10-cocos2d-x-v3-accurate-physics-body-shape-with-physicseditor/create-folder-references.png)
 
 Drag the published file to Xcode file pane and select `Create folder references`.
 
-![File inspector](http://jslim89.github.com/images/posts/2014-10-10-cocos2d-x-v3-accurate-physics-body-shape-with-physicseditor/file-pane.png)
+![File inspector](/images/posts/2014-10-10-cocos2d-x-v3-accurate-physics-body-shape-with-physicseditor/file-pane.png)
 
 It will looks like this.
 
@@ -56,7 +56,7 @@ auto spriteBody = PhysicsBody::createBox(sprite->getContentSize());
 sprite->setPhysicsBody(spriteBody);
 ```
 
-![Rectangle shape](http://jslim89.github.com/images/posts/2014-10-10-cocos2d-x-v3-accurate-physics-body-shape-with-physicseditor/rectangle-shape.png)
+![Rectangle shape](/images/posts/2014-10-10-cocos2d-x-v3-accurate-physics-body-shape-with-physicseditor/rectangle-shape.png)
 
 It is rectangle.
 
@@ -99,7 +99,7 @@ bool HelloWorld::init()
 
 Then finally you get
 
-![Custom shape](http://jslim89.github.com/images/posts/2014-10-10-cocos2d-x-v3-accurate-physics-body-shape-with-physicseditor/custom-shape.png)
+![Custom shape](/images/posts/2014-10-10-cocos2d-x-v3-accurate-physics-body-shape-with-physicseditor/custom-shape.png)
 
 Although it is not perfect yet, but it basically solve the issue that I faced. Will continue to seek for solution to make it perfect :)
 

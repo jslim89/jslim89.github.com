@@ -10,7 +10,7 @@ tags:
 
 I have a mask here _(the Sun Goku hair)_, and I want to put a face to this mask.
 
-![mask](http://jslim89.github.com/images/posts/2014-12-09-ios-crop-image-based-on-a-mask/mask.png)
+![mask](/images/posts/2014-12-09-ios-crop-image-based-on-a-mask/mask.png)
 
 ## Setup the base view
 
@@ -92,11 +92,11 @@ The question here is "How do you know the number?"
 
 1. Open up the image, select the area that I wanted to crop _(get the `width` & `height`)_
 
-![select crop area](http://jslim89.github.com/images/posts/2014-12-09-ios-crop-image-based-on-a-mask/crop-area.png)
+![select crop area](/images/posts/2014-12-09-ios-crop-image-based-on-a-mask/crop-area.png)
 
 2. Drag all the way to top left _(get the position `x` & `y`)_
 
-![get crop area position (top left)](http://jslim89.github.com/images/posts/2014-12-09-ios-crop-image-based-on-a-mask/crop-area-xy.png)
+![get crop area position (top left)](/images/posts/2014-12-09-ios-crop-image-based-on-a-mask/crop-area-xy.png)
 
 Now I got the `CGRect` value
 
@@ -317,11 +317,11 @@ oval shape. _(you uncomment the line and save it to see what is the difference)_
 
 Test it, you can adjust the main image.
 
-![Adjust the image to the mask](http://jslim89.github.com/images/posts/2014-12-09-ios-crop-image-based-on-a-mask/adjust-image.png)
+![Adjust the image to the mask](/images/posts/2014-12-09-ios-crop-image-based-on-a-mask/adjust-image.png)
 
 Then the final result will be like
 
-![The final result](http://jslim89.github.com/images/posts/2014-12-09-ios-crop-image-based-on-a-mask/result.png)
+![The final result](/images/posts/2014-12-09-ios-crop-image-based-on-a-mask/result.png)
 
 You can download the sample project in my [GitHub repo](https://github.com/jslim89/CropImageObjc-Example).
 

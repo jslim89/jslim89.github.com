@@ -26,11 +26,11 @@ My intention was to jot down the learning so that I can refer anytime. But up un
 
 ### Alexa rank
 
-![Alexa rank for jslim.net](http://jslim89.github.com/images/posts/2015-08-01-how-branding-is-important-to-a-developer/alexa.png)
+![Alexa rank for jslim.net](/images/posts/2015-08-01-how-branding-is-important-to-a-developer/alexa.png)
 
 ### Google Analytics
 
-![Google Analytics for jslim.net](http://jslim89.github.com/images/posts/2015-08-01-how-branding-is-important-to-a-developer/google-analytics.png)
+![Google Analytics for jslim.net](/images/posts/2015-08-01-how-branding-is-important-to-a-developer/google-analytics.png)
 
 In March 2015, I received an email from [Packt publishing](https://www.packtpub.com), offer me to review a book <a href="http://www.amazon.com/gp/product/1785285025/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1785285025&linkCode=as2&tag=jssi-20&linkId=RSMIDDEFUPXJ6IPB">Mastering Laravel</a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=jssi-20&l=as2&o=1&a=1785285025" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 . I think they get my email from my blog, you can see how a normal software developer can reach to the world.

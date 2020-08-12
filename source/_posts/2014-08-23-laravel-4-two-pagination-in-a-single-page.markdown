@@ -75,7 +75,7 @@ whereas **conversion** tab shows nothing. You know why? Because both of them tak
 string, i.e. `page=10`, both of them also look for page 10. What we want is **impression** page 10, but **conversion**
 remain page 1.
 
-![No ajax](http://jslim89.github.com/images/posts/2014-08-23-laravel-4-two-pagination-in-a-single-page/no-ajax.gif)
+![No ajax](/images/posts/2014-08-23-laravel-4-two-pagination-in-a-single-page/no-ajax.gif)
 
 ## Solution
 One of the solution that I found out is implement by using AJAX.
@@ -222,6 +222,6 @@ $(function() {
 
 You have done. See the result
 
-![Ajax](http://jslim89.github.com/images/posts/2014-08-23-laravel-4-two-pagination-in-a-single-page/ajax.gif)
+![Ajax](/images/posts/2014-08-23-laravel-4-two-pagination-in-a-single-page/ajax.gif)
 
-[Download the sample source code](http://jslim89.github.com/attachments/posts/2014-08-23-laravel-4-two-pagination-in-a-single-page/sample.zip)
+[Download the sample source code](/attachments/posts/2014-08-23-laravel-4-two-pagination-in-a-single-page/sample.zip)

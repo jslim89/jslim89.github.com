@@ -8,7 +8,7 @@ tags:
 - ios
 ---
 
-![Desire result](http://jslim89.github.com/images/posts/2015-03-28-show-html-description-in-uiwebview-in-a-better-way/end-result.gif)
+![Desire result](/images/posts/2015-03-28-show-html-description-in-uiwebview-in-a-better-way/end-result.gif)
 
 Let's take a look on the output above, the **Event Description** content.
 Yes, it can achieved by using `UILabel`, but somehow HTML would be easy
@@ -21,7 +21,7 @@ to achieve this.
 
 _(I assumed that you know how to add constraint through storyboard)_
 
-![Add constraint to UIWebView](http://jslim89.github.com/images/posts/2015-03-28-show-html-description-in-uiwebview-in-a-better-way/add-constraint.png)
+![Add constraint to UIWebView](/images/posts/2015-03-28-show-html-description-in-uiwebview-in-a-better-way/add-constraint.png)
 
 Now add 4 or 5 constraints to `UIWebView`, make sure the _Height_ constraint is added, you can put any value you like.
 
@@ -37,7 +37,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
 
 Go back the storyboard, hold the right-click and drag it over to the controller
 
-![drag to delegate](http://jslim89.github.com/images/posts/2015-03-28-show-html-description-in-uiwebview-in-a-better-way/delegate.png)
+![drag to delegate](/images/posts/2015-03-28-show-html-description-in-uiwebview-in-a-better-way/delegate.png)
 
 ## Disable scroll, format subview
 

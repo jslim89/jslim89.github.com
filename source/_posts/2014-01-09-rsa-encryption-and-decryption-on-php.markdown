@@ -82,7 +82,7 @@ openssl_free_key($private_key);
 echo $output;
 ```
 
-You can download the [example here](http://jslim89.github.com/attachments/posts/2014-01-09-rsa-encryption-and-decryption-on-php/rsa.php).
+You can download the [example here](/attachments/posts/2014-01-09-rsa-encryption-and-decryption-on-php/rsa.php).
 
 _References:_
 

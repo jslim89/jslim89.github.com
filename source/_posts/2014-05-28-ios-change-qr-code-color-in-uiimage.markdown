@@ -9,11 +9,11 @@ tags:
 
 **Original QR code**
 
-![Original QR code](http://jslim89.github.com/images/posts/2014-05-28-ios-change-qr-code-color-in-uiimage/ori-qrcode.png)
+![Original QR code](/images/posts/2014-05-28-ios-change-qr-code-color-in-uiimage/ori-qrcode.png)
 
 **Red QR code**
 
-![Red QR code](http://jslim89.github.com/images/posts/2014-05-28-ios-change-qr-code-color-in-uiimage/red-qrcode.png)
+![Red QR code](/images/posts/2014-05-28-ios-change-qr-code-color-in-uiimage/red-qrcode.png)
 
 In order to change the QR code color, 2 steps need to be done
 

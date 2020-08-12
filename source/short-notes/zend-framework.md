@@ -125,7 +125,7 @@ if ($form->isValid() && !$form->get('element')->getMessages()) {
 
 #### Get config in view
 
-First create a view helper (Refer to [here](http://jslim.net/blog/2013/04/19/zendframework-2-create-a-custom-view-helper/))
+First create a view helper (Refer to [here](/blog/2013/04/19/zendframework-2-create-a-custom-view-helper/))
 
 **./module/Application/src/Application/View/Helper/Config.php**
 

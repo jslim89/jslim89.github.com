@@ -24,7 +24,7 @@ You can deal with such an issue by changing some default permalinks of your Word
 
 ### 2. Don't Forget to Change Default Administrator Name
 
-![Strong password](http://jslim89.github.com/images/posts/2015-10-31-top-5-strategies-to-heighten-security-of-your-wordpress-site/password.png)
+![Strong password](/images/posts/2015-10-31-top-5-strategies-to-heighten-security-of-your-wordpress-site/password.png)
 
 One common mistake that site owners tend to make is that they overlook or forget to change the default username (i.e. admin) for their WordPress account. Keep in mind that not changing the administrator name makes the brute force successful, as hackers just need to guess your password to break into your site admin interface.
 
@@ -33,7 +33,7 @@ You just need to create a new admin user for changing your website default user 
 
 ### 3. Use an Updated WordPress Version
 
-![Updated version of WordPress](http://jslim89.github.com/images/posts/2015-10-31-top-5-strategies-to-heighten-security-of-your-wordpress-site/updated.jpg)
+![Updated version of WordPress](/images/posts/2015-10-31-top-5-strategies-to-heighten-security-of-your-wordpress-site/updated.jpg)
 
 Each new WordPress release comes with several new and improved features. More importantly, the latest version boasts security fixes to resolve bugs found in previous WP version. Thus, running your site on an up-to-date WordPress version will not just help add many more features, but will also help fix security loopholes and issues.
 

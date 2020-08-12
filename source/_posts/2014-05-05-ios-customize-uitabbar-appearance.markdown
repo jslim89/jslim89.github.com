@@ -9,7 +9,7 @@ tags:
 
 Final look will be
 
-![Desired appearance](http://jslim89.github.com/images/posts/2014-05-05-ios-customize-uitabbar-appearance/tabbar-appearance-2.png)
+![Desired appearance](/images/posts/2014-05-05-ios-customize-uitabbar-appearance/tabbar-appearance-2.png)
 
 - The selected tab will be in dimmed background
 - The selected/unselected tab icon & text will be in white color
@@ -77,7 +77,7 @@ UIColor *backgroundColor = [UIColor greenColor];
 
 Until this stage, you will get this,
 
-![Icon color changed](http://jslim89.github.com/images/posts/2014-05-05-ios-customize-uitabbar-appearance/tabbar-appearance-1.png)
+![Icon color changed](/images/posts/2014-05-05-ios-customize-uitabbar-appearance/tabbar-appearance-1.png)
 
 by right it should shows white color, but somehow the icon image has changed.
 

@@ -179,10 +179,10 @@ See the images below:
 
 **Not working example**
 
-![content size problem](http://jslim89.github.com/images/posts/2014-04-01-infinite-scroll-using-on-uitableview/contentsize-notwork.gif)
+![content size problem](/images/posts/2014-04-01-infinite-scroll-using-on-uitableview/contentsize-notwork.gif)
 
 **Working example**
 
-![content size solved](http://jslim89.github.com/images/posts/2014-04-01-infinite-scroll-using-on-uitableview/contentsize-work.gif)
+![content size solved](/images/posts/2014-04-01-infinite-scroll-using-on-uitableview/contentsize-work.gif)
 
 Done :)

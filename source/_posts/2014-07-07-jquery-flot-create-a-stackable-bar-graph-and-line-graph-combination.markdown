@@ -172,7 +172,7 @@ You're done!!!
 <script src="http://cdnjs.cloudflare.com/ajax/libs/flot/0.8.2/jquery.flot.min.js"></script>
 <script src="http://cdn.jsdelivr.net/jquery.flot.tooltip/0.7.1/jquery.flot.tooltip.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/flot/0.8.2/jquery.flot.resize.min.js"></script>
-<script src="http://jslim89.github.com/assets/posts/2014-07-07-jquery-flot-create-a-stackable-bar-graph-and-line-graph-combination/jquery.flot.grow.js"></script>
+<script src="/assets/posts/2014-07-07-jquery-flot-create-a-stackable-bar-graph-and-line-graph-combination/jquery.flot.grow.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/flot/0.8.2/jquery.flot.stack.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-dateFormat/1.0/jquery.dateFormat.min.js"></script>
 <script>

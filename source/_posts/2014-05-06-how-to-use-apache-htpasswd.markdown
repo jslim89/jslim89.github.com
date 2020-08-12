@@ -10,7 +10,7 @@ tags:
 
 In order to prevent your site from outsider, you may need to add a password prompt so that only authenticated user can access.
 
-![Password prompt](http://jslim89.github.com/images/posts/2014-05-06-how-to-use-apache-htpasswd/password-prompt.png)
+![Password prompt](/images/posts/2014-05-06-how-to-use-apache-htpasswd/password-prompt.png)
 
 To achieve this, [Apache .htpasswd](http://httpd.apache.org/docs/2.0/en/programs/htpasswd.html) helps.
 

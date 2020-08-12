@@ -223,7 +223,7 @@ Create a new class (subclass of NSObject), just named it **Crypto**
 ```
 
 ### Step 4: Usage
-Refer to my [previous blog](http://jslim.net/blog/2013/01/05/rsa-encryption-in-ios-and-decrypt-it-using-php/), encrypt it and get the cipher text, so that you can test here.
+Refer to my [previous blog](/blog/2013/01/05/rsa-encryption-in-ios-and-decrypt-it-using-php/), encrypt it and get the cipher text, so that you can test here.
 
 ```obj-c
 Crypto *crypto = [[Crypto alloc] init];

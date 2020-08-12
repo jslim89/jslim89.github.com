@@ -79,7 +79,7 @@ def http_test():
 ...
 ```
 
-_If you don't understand why need the cookie, you can refer [Session hijacking: facebook.com example](http://jslim.net/blog/2016/03/29/session-hijacking-facebook-dot-com-example/)._
+_If you don't understand why need the cookie, you can refer [Session hijacking: facebook.com example](/blog/2016/03/29/session-hijacking-facebook-dot-com-example/)._
 
 Note that the above function `http_test()` actually perform **POST login**, **GET sales report**, **POST sales report**
 

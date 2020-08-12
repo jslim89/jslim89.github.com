@@ -13,29 +13,29 @@ I shows an exmple to host the **ipa** & **plist** files on [Dropbox](https://db.
 
 Without **https**
 
-![Invalid certificate](http://jslim89.github.com/images/posts/2014-03-31-distribute-ios-app-via-website/invalid-cert.png)
+![Invalid certificate](/images/posts/2014-03-31-distribute-ios-app-via-website/invalid-cert.png)
 
 ## 1st: Generate ipa file
 
 Open your XCode, then archive the project
 
-![Archive](http://jslim89.github.com/images/posts/2014-03-31-distribute-ios-app-via-website/archive.png)
+![Archive](/images/posts/2014-03-31-distribute-ios-app-via-website/archive.png)
 
 Then select distribute
 
-![Distribute](http://jslim89.github.com/images/posts/2014-03-31-distribute-ios-app-via-website/distribute.png)
+![Distribute](/images/posts/2014-03-31-distribute-ios-app-via-website/distribute.png)
 
 Select **Save for Enterprise or Ad Hoc Deployment** distribution method
 
-![Distribution method](http://jslim89.github.com/images/posts/2014-03-31-distribute-ios-app-via-website/distribution-method.png)
+![Distribution method](/images/posts/2014-03-31-distribute-ios-app-via-website/distribution-method.png)
 
 Then choose the provisioning profile that you have selected before Archive
 
-![Select provisioning profile](http://jslim89.github.com/images/posts/2014-03-31-distribute-ios-app-via-website/provisioning-profile-selection.png)
+![Select provisioning profile](/images/posts/2014-03-31-distribute-ios-app-via-website/provisioning-profile-selection.png)
 
 Finally save the **ipa** file
 
-![Save ipa to anywhere](http://jslim89.github.com/images/posts/2014-03-31-distribute-ios-app-via-website/save-ipa.png)
+![Save ipa to anywhere](/images/posts/2014-03-31-distribute-ios-app-via-website/save-ipa.png)
 
 ## 2nd: Create a .plist
 
@@ -88,6 +88,6 @@ Dropbox
 
 ## 4th: Get the public link from Dropbox
 
-![Copy Dropbox public link](http://jslim89.github.com/images/posts/2014-03-31-distribute-ios-app-via-website/dropbox-public-link.png)
+![Copy Dropbox public link](/images/posts/2014-03-31-distribute-ios-app-via-website/dropbox-public-link.png)
 
 Then send the link over to your beta tester, then they will be able to install via Safari.

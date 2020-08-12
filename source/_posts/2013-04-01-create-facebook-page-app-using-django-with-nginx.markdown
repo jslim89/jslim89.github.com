@@ -9,7 +9,7 @@ tags:
 - django
 ---
 
-This is continue from [previous post](http://jslim89.github.com/blog/2013/03/29/setup-django-slash-mysql-in-ubuntu-server-in-vmware-fusion/).
+This is continue from [previous post](/blog/2013/03/29/setup-django-slash-mysql-in-ubuntu-server-in-vmware-fusion/).
 
 ## Enable SSL
 As we know that Facebook app required SSL, so first we must self-sign a certificate
@@ -226,7 +226,7 @@ Edit the **index.html**
 
 Configure the setting
 
-![facebook setting](http://jslim89.github.com/images/posts/2013-04-01-create-facebook-page-app-using-django-with-nginx/facebook-app-setting.png)
+![facebook setting](/images/posts/2013-04-01-create-facebook-page-app-using-django-with-nginx/facebook-app-setting.png)
 
 **Remember to check both _Website with Facebook Login_ and _Page Tab_**
 

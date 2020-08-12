@@ -13,7 +13,7 @@ I googled and found [this blog](http://www.fanhow.com/knowhow:Chinese_Subtitles_
 
 First, open VLC and in top menu click on **VLC** -> **Preferences...**
 
-![Top menu](http://jslim89.github.com/images/posts/2013-05-05-show-chinese-subtitle-on-vlc-player-in-os-x/top-menu.png)
+![Top menu](/images/posts/2013-05-05-show-chinese-subtitle-on-vlc-player-in-os-x/top-menu.png)
 
 Then
 
@@ -21,6 +21,6 @@ Then
 2. change the **Default Encoding** to `Universal, Chinese (GB18030)`
 3. change the **Font** to `GB18030Bitmap`
 
-![Preferences...](http://jslim89.github.com/images/posts/2013-05-05-show-chinese-subtitle-on-vlc-player-in-os-x/config.png)
+![Preferences...](/images/posts/2013-05-05-show-chinese-subtitle-on-vlc-player-in-os-x/config.png)
 
 Reopen the program and it should work. :)

@@ -19,7 +19,7 @@ Example:
 
 The **input** contains missing numbers which are `1`, `3`, `9`, `10`. Now the mission is to remove the gap in missing numbers.
 
-![Input - result mapping](http://jslim89.github.com/images/posts/2014-05-21-restructure-a-series-of-numbers/mapping.png)
+![Input - result mapping](/images/posts/2014-05-21-restructure-a-series-of-numbers/mapping.png)
 
 See the mapping above:
 

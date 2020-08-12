@@ -15,7 +15,7 @@ tags:
 
 With millions of apps available in the app marketplace, several organizations and individuals are fighting in order to attain maximum app downloads. Many believe that the success of an app depends on its capabilities, usability and the platform for which the app is built. While this is true, but you must also focus on testing the apps. Remember that ignoring to test an app can lead to its failure.
 
-![Selenium](http://jslim89.github.com/images/posts/2015-10-26-selenium-vs-phantomjs-which-one-is-better-for-testing-web-apps/selenium.png)
+![Selenium](/images/posts/2015-10-26-selenium-vs-phantomjs-which-one-is-better-for-testing-web-apps/selenium.png)
 
 No matter whether you're creating a web application for the desktop or a mobile app, be sure that the app is tested thoroughly before releasing it for public use. Doing so, will ensure that your app is bug-free and will let you know about the errors that you need to troubleshoot. Thankfully, there are a few high quality JavaScript testing frameworks that provide convenience and ease to test apps.
 
@@ -53,7 +53,7 @@ Below are some of the cons of the Selenium framework:
 
 ### PhantomJS: Pros and Cons
 
-![PhantomJS](http://jslim89.github.com/images/posts/2015-10-26-selenium-vs-phantomjs-which-one-is-better-for-testing-web-apps/phantomjs.png)
+![PhantomJS](/images/posts/2015-10-26-selenium-vs-phantomjs-which-one-is-better-for-testing-web-apps/phantomjs.png)
 
 
 Some of the pros of PhantomJS are listed below:

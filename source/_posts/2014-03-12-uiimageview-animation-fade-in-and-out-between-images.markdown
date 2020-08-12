@@ -11,13 +11,13 @@ To animate between images _(not .gif)_ in a UIImageView like the example below
 
 **Original images**
 
-![First image](http://jslim89.github.com/images/posts/2014-03-12-uiimageview-animation-fade-in-and-out-between-images/Image1.png)
+![First image](/images/posts/2014-03-12-uiimageview-animation-fade-in-and-out-between-images/Image1.png)
 
-![Second image](http://jslim89.github.com/images/posts/2014-03-12-uiimageview-animation-fade-in-and-out-between-images/Image2.png)
+![Second image](/images/posts/2014-03-12-uiimageview-animation-fade-in-and-out-between-images/Image2.png)
 
 **Result**
 
-![Animate between 2 images](http://jslim89.github.com/images/posts/2014-03-12-uiimageview-animation-fade-in-and-out-between-images/animation.gif)
+![Animate between 2 images](/images/posts/2014-03-12-uiimageview-animation-fade-in-and-out-between-images/animation.gif)
 
 The existing method in `UIImageView` simply won't work.
 

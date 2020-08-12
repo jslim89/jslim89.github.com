@@ -18,7 +18,7 @@ I keep hitting an error like this
 terminate called throwing an exception(lldb)
 ```
 
-![Error thread](http://jslim89.github.com/images/posts/2013-03-02-nsinvalidargumentexception-caused-by-uitableviewcell/uitableviewcell-error.png)
+![Error thread](/images/posts/2013-03-02-nsinvalidargumentexception-caused-by-uitableviewcell/uitableviewcell-error.png)
 
 This took me few hours to figure out the problem. The problem is just make use of wrong **cell identifier**.
 

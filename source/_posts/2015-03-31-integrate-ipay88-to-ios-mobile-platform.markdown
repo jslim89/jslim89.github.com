@@ -112,7 +112,7 @@ So in this case, the **request URL** is http://mysite.com/payment.php
 
 But wait a minute, during the development, the URL should be **localhost**.
 Don't worry, we can use virtual host here, you can refer this in [my other
-blog post](http://jslim.net/blog/2014/01/17/setup-php-environment-in-mavericks-using-xampp/)
+blog post](/blog/2014/01/17/setup-php-environment-in-mavericks-using-xampp/)
 section 3. Make sure you put the real url to **/etc/hosts**
 
 ```

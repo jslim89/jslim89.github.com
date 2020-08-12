@@ -18,7 +18,7 @@ $ xcodebuild clean -project /path/to/project.xcodeproj -configuration Release -a
 
 ### 2. Create archive
 
-![Xcode - Scheme](http://jslim89.github.com/images/posts/2014-11-14-ios-export-to-ipa-thru-command-line/scheme.png)
+![Xcode - Scheme](/images/posts/2014-11-14-ios-export-to-ipa-thru-command-line/scheme.png)
 
 ```
 $ xcodebuild archive -project /path/to/project.xcodeproj -scheme "Scheme name" -archivePath /path/to/output
@@ -30,7 +30,7 @@ E.g. **Warranty Reminder**
 
 ### 3. Export the archive to ipa
 
-![Xcode - Build Settings](http://jslim89.github.com/images/posts/2014-11-14-ios-export-to-ipa-thru-command-line/xcode.png)
+![Xcode - Build Settings](/images/posts/2014-11-14-ios-export-to-ipa-thru-command-line/xcode.png)
 
 ```
 $ xcodebuild -exportArchive -archivePath /path/to/output.xcarchive -exportPath /path/to/output -exportFormat ipa -exportProvisioningProfile "Provisioning Profile Name"
@@ -44,7 +44,7 @@ Note that the output file name without the **ipa** extension.
 
 You're done.
 
-I have make this into a shell script, you can [download here](http://jslim89.github.com/attachments/posts/2014-11-14-ios-export-to-ipa-thru-command-line/export.sh).
+I have make this into a shell script, you can [download here](/attachments/posts/2014-11-14-ios-export-to-ipa-thru-command-line/export.sh).
 
 Usage: Just edit the file, instruction is inside. Then run in your terminal
 

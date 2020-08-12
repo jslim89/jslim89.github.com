@@ -61,7 +61,7 @@ var marker = new google.maps.Marker({
 
 Now, add the block of code after `var map = ...`. Then refresh your browser again, then you will see
 
-![Google map with marker](http://jslim89.github.com/images/posts/2014-06-15-how-to-add-google-map-to-your-web-page/map.png)
+![Google map with marker](/images/posts/2014-06-15-how-to-add-google-map-to-your-web-page/map.png)
 
 You can even customize your marker
 

@@ -41,7 +41,7 @@ You must add this before you can use the font
 
 Go to **Project** -> **Targets** and select your project. In **Build Phases** tab, look for **Copy Bundle Resources** and make sure the font is there.
 
-![Resource Bundle](http://jslim89.github.com/images/posts/2013-10-08-use-custom-font-in-ios-application/font-in-resource-bundle.png)
+![Resource Bundle](/images/posts/2013-10-08-use-custom-font-in-ios-application/font-in-resource-bundle.png)
 
 ## Step 4: Print out all available font
 

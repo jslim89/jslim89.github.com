@@ -20,7 +20,7 @@ I had come across a problem which didSelectRowAtIndexPath doesn't execute when I
 ```
 No matter how I tap, it doesn't show the **log**.
 
-![Attributes Inspector](http://jslim89.github.com/images/posts/2012-12-21-ios-uitabelview-didselectrowatindexpath-is-not-called/attributes_inspector.png)
+![Attributes Inspector](/images/posts/2012-12-21-ios-uitabelview-didselectrowatindexpath-is-not-called/attributes_inspector.png)
 
 As shown in the attribute inspector, the **Selection** is not `none`, **User Interaction Enabled** is also `checked`.
 

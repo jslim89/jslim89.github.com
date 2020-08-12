@@ -12,22 +12,22 @@ existing project and rename it. But how to rename it _completely_?
 
 ## 1. Change the project name in Xcode
 
-![Original name](http://jslim89.github.com/images/posts/2015-01-08-how-to-rename-xcode-project-thoroughly/original.png)
+![Original name](/images/posts/2015-01-08-how-to-rename-xcode-project-thoroughly/original.png)
 
 Click on the project, at the right pane, update the name to the name that you want,
 then hit **`<Enter>`**
 
-![Rename confirmation](http://jslim89.github.com/images/posts/2015-01-08-how-to-rename-xcode-project-thoroughly/confirm-rename.png)
+![Rename confirmation](/images/posts/2015-01-08-how-to-rename-xcode-project-thoroughly/confirm-rename.png)
 
 Then it will prompt you which one to rename, just check all and hit **`<Enter>`**
 
 ## 2. Rename scheme
 
-![Rename scheme](http://jslim89.github.com/images/posts/2015-01-08-how-to-rename-xcode-project-thoroughly/rename-scheme.png)
+![Rename scheme](/images/posts/2015-01-08-how-to-rename-xcode-project-thoroughly/rename-scheme.png)
 
 Click the scheme up there, then **Manage schemes...**
 
-![Change scheme name](http://jslim89.github.com/images/posts/2015-01-08-how-to-rename-xcode-project-thoroughly/change-scheme-name.png)
+![Change scheme name](/images/posts/2015-01-08-how-to-rename-xcode-project-thoroughly/change-scheme-name.png)
 
 Then change the scheme name _(click on that row, then hit **`<Enter>`**)_
 
@@ -113,7 +113,7 @@ $ mv JsFooTests JsBarTests
 
 Now you can open up your Xcode project, and build it
 
-![Build error](http://jslim89.github.com/images/posts/2015-01-08-how-to-rename-xcode-project-thoroughly/build-error.png)
+![Build error](/images/posts/2015-01-08-how-to-rename-xcode-project-thoroughly/build-error.png)
 
 Oops... Got error?
 
@@ -127,7 +127,7 @@ One more file that we forgot to rename
 $ mv JsBarTests/JsFooTests.swift JsBarTests/JsBarTests.swift
 ```
 
-![Successful rename](http://jslim89.github.com/images/posts/2015-01-08-how-to-rename-xcode-project-thoroughly/rename-success.png)
+![Successful rename](/images/posts/2015-01-08-how-to-rename-xcode-project-thoroughly/rename-success.png)
 
 Done!!!
 

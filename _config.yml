@@ -71,7 +71,7 @@ feed:
   content_limit: 140
   content_limit_delim: ' '
   order_by: -date
-  icon: http://jsify.com/files/img/logo.png
+  icon: http://blog.jsl.im/files/img/logo.png
   autodiscovery: true
 
 ## Themes: https://hexo.io/themes/

@@ -6,6 +6,8 @@ block content
     h1.post-title= page.title
     .post-content
       != page.content
+  if page.donate
+     include _widget/donate.pug
   if page.comments
-    include _partial/comments
+    include _partial/comments.pug
 

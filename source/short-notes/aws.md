@@ -65,6 +65,14 @@ We can specify with `--profile` option. e.g.
 $ aws s3 ls --profile pf2
 ```
 
+OR
+
+Run any command with specific aws profile
+
+```
+$ AWS_PROFILE=pf2 python3 download_s3.py
+```
+
 ##### Reference:
 
 - [Support for --profile for selecting IAM credentials](https://github.com/awslabs/aws-sam-cli/issues/27)

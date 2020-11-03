@@ -104,7 +104,7 @@ Example if the project is run inside VM _(I'm using VMWare Fusion)_, then
 $ bin/rails server -b 192.168.1.xx
 ```
 
-Later on, in your host OS's browser, type in [192.168.1.xx:3000](192.168.1.xx:3000)
+Later on, in your host OS's browser, type in 192.168.1.xx:3000
 
 References:
 

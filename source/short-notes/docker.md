@@ -10,8 +10,12 @@ footer: true
 
 https://www.docker.com/
 
-#### Create a micro container run infinitely
+#### Clear docker log
 
 ```
+$ sudo sh -c "truncate -s 0 $(docker inspect --format='{{.LogPath}}' <container_name_or_id>)"
 ```
 
+##### Reference:
+
+- [How to clear the logs properly for a Docker container?](https://stackoverflow.com/questions/42510002/how-to-clear-the-logs-properly-for-a-docker-container/42510314#42510314)

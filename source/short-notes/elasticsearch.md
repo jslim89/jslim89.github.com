@@ -165,3 +165,25 @@ PUT /index/type/_mapping
   }
 }
 ```
+
+----
+
+#### Copy data from source index to dest index
+
+```
+POST _reindex
+{
+   "source": {
+      "index": "source_idx",
+      "type": "product"
+   },
+   "dest": {
+      "index": "destination_idx",
+      "type": "product"
+   }
+}
+```
+
+##### References:
+
+- [ElasticSearch - Reindex API](https://www.elastic.co/guide/en/elasticsearch/reference/6.4/docs-reindex.html)

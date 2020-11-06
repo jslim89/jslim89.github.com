@@ -6,7 +6,7 @@
   <link href="http://jslim.net/atom.xml" rel="self"/>
   
   <link href="http://jslim.net/"/>
-  <updated>2020-04-24T13:21:38.904Z</updated>
+  <updated>2020-11-06T10:03:48.444Z</updated>
   <id>http://jslim.net/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Thinkpad - Set battery charging threshold in Linux</title>
+    <link href="http://jslim.net/blog/2020/11/06/Thinkpad-Set-battery-charging-threshold-in-Linux/"/>
+    <id>http://jslim.net/blog/2020/11/06/Thinkpad-Set-battery-charging-threshold-in-Linux/</id>
+    <published>2020-11-06T10:00:14.000Z</published>
+    <updated>2020-11-06T10:03:48.444Z</updated>
+    
+    <content type="html"><![CDATA[<p>With kernel 4.17 above, we can set the threshold directly</p><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ echo <span class="number">85</span> &gt; /sys/<span class="keyword">class</span>/<span class="symbol">power_supply</span>/<span class="symbol">BAT0</span>/<span class="symbol">charge_start_threshold</span></span><br><span class="line">$ <span class="symbol">echo</span> <span class="symbol">95</span> &gt; /<span class="symbol">sys</span>/<span class="symbol">class</span>/<span class="symbol">power_supply</span>/<span class="symbol">BAT0</span>/<span class="symbol">charge_stop_threshold</span></span><br></pre></td></tr></table></figure><p>When the battery down to 85%, the charging will start<br>When it’s over 95%, will stop</p><h2 id="References"><a href="#References" class="headerlink" title="References:"></a>References:</h2><p><a href="https://wiki.archlinux.org/index.php/tp_smapi">Archlinux Wiki - tp_smapi</a></p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;With kernel 4.17 above, we can set the threshold directly&lt;/p&gt;
+&lt;figure class=&quot;highlight angelscript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    
+    <category term="linux" scheme="http://jslim.net/tags/linux/"/>
+    
+    <category term="thinkpad" scheme="http://jslim.net/tags/thinkpad/"/>
+    
+  </entry>
   
   <entry>
     <title>Activate Windows 10 in VirtualBox</title>

@@ -76,3 +76,23 @@ $ AWS_PROFILE=pf2 python3 download_s3.py
 ##### Reference:
 
 - [Support for --profile for selecting IAM credentials](https://github.com/awslabs/aws-sam-cli/issues/27)
+
+----
+
+#### S3 copy wildcard (*)
+
+let say we want to achieve
+
+```
+$ cp /path/to/files/wanted* s3://bucket/new_folder/
+```
+
+The correct way should be
+
+```
+$ aws s3 cp /path/to/files/ s3://bucket/new_folder/ --exclude "*" --include "wanted*" --recursive
+```
+
+##### Reference:
+
+- [How do i use wildcards to copy group of files in AWS CLI?](https://intellipaat.com/community/525/how-do-i-use-wildcards-to-copy-group-of-files-in-aws-cli)

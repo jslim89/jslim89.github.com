@@ -15,13 +15,10 @@ Hire me 😉
 
 - Comfortably work in Linux environment, edit code & some basic linux commands
 - Work on PHP since 2011, Laravel since 2013
-- Ever develop iOS app _(Objective-C)_ from 2012 - 2015
 - Vim as my favourite text editor
-- Ever write some basic Node.js & python scripts
-- Basic knowledge on manage Linux server
-- Basic experience in AWS
+- AWS & GCP experience
 - PHPUnit
-- Basic knowledge on Elasticsearch
+- Elasticsearch
 
 ### What I'm NOT
 
@@ -35,6 +32,9 @@ Hire me 😉
 - PHPUnit test
 - Jira for project management
 - ElasticSearch
+- Work with ETL pipeline in PySpark to process billions of products from data feeds
+- Configure [Apache Airflow](https://airflow.apache.org/) for daily run tasks
+- use of docker & terraform for deployment
 
 ### Involve Asia (Jun 18 - Apr 20)
 

@@ -24,10 +24,8 @@ variable "brands" {
 To pass in variable via command line
 
 ```
-$ terraform apply -var='brands_list=["apple","samsung","huawei"]'
+$ terraform apply -var='brands=["apple","samsung","huawei"]'
 ```
-
-Need to append suffix `_list`
 
 ##### References:
 

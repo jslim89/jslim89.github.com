@@ -52,6 +52,7 @@ This section is my personal short note about my learning
 - [Nginx](nginx)
 - [Apache](apache)
 - [OpenSSL](openssl)
+- [Terraform](terraform)
 
 ## Version Control
 

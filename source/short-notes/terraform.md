@@ -30,3 +30,25 @@ $ terraform apply -var='brands=["apple","samsung","huawei"]'
 ##### References:
 
 - [Terraform - Input Variables](https://www.terraform.io/docs/configuration/variables.html#variables-on-the-command-line)
+
+----
+
+#### Run terraform directly from docker container
+
+Pull the image
+
+```
+$ docker pull hashicorp/terraform:light
+```
+
+Then run it this way
+
+```
+$ cd /path/to/tf_scripts
+$ docker run -i -t -v "$PWD:/tf_scripts" hashicorp/terraform:light plan /tf_scripts/
+```
+
+##### References:
+
+- [terraform Docker Container](https://hub.docker.com/r/hashicorp/terraform/)
+- [Terraform as Docker returns error on plan](https://stackoverflow.com/questions/60366661/terraform-as-docker-returns-error-on-plan/60366859#60366859)

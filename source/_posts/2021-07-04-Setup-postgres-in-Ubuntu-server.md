@@ -43,6 +43,17 @@ postgres=# GRANT USAGE ON SCHEMA public TO my_user;
 GRANT
 ```
 
+**Import data if necessary**
+
+Then run
+
+```
+postgres=# \c my_database
+You are now connected to database "my_database" as user "postgres".
+my_database=# GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO my_user;
+GRANT
+```
+
 Then back to root user. To enable public remote access
 
 ```

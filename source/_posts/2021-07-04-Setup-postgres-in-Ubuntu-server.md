@@ -52,6 +52,8 @@ postgres=# \c my_database
 You are now connected to database "my_database" as user "postgres".
 my_database=# GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO my_user;
 GRANT
+my_database=# GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO my_user;
+GRANT
 ```
 
 Then back to root user. To enable public remote access

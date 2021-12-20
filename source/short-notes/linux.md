@@ -595,3 +595,11 @@ $ sudo -u www-data php run.php
 ##### Reference:
 
 - [How to configure PHP CLI on linux ubuntu to run as www-data?](https://serverfault.com/questions/453811/how-to-configure-php-cli-on-linux-ubuntu-to-run-as-www-data/453823#453823)
+
+---
+
+#### Find the filename from a content
+
+```sh
+ls -S /path/to/files_*.csv.gz | xargs -L1 -d'\n' -I{} sh -c "zcat '{}' | grep 'some content' && echo '{}'"
+```

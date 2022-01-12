@@ -96,3 +96,11 @@ $ aws s3 cp /path/to/files/ s3://bucket/new_folder/ --exclude "*" --include "wan
 ##### Reference:
 
 - [How do i use wildcards to copy group of files in AWS CLI?](https://intellipaat.com/community/525/how-do-i-use-wildcards-to-copy-group-of-files-in-aws-cli)
+
+----
+
+#### Get the top 10 lines from a large S3 file
+
+```
+aws s3api get-object --bucket my-bucket --key path/to/large-file.csv --range bytes=0-10000 /dev/stdout | head -10
+```

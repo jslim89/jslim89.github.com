@@ -187,3 +187,20 @@ POST _reindex
 ##### References:
 
 - [ElasticSearch - Reindex API](https://www.elastic.co/guide/en/elasticsearch/reference/6.4/docs-reindex.html)
+
+----
+
+#### Sort by nested object count
+
+```
+GET index_name/_doc/_search
+{
+    "sort" : {
+        "_script" : {
+            "script": "params['_source']['some_nested_objects'].size()",
+            "order": "desc",
+            "type" : "number"
+        }
+    }
+}
+```

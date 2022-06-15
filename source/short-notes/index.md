@@ -45,6 +45,7 @@ This section is my personal short note about my learning
 
 - [Linux](linux)
     - [Ubuntu](ubuntu)
+    - [Kubuntu](kubuntu)
 - [Mac](mac)
 - [Docker](docker)
 - [AWS](aws)

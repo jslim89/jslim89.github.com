@@ -52,3 +52,25 @@ $ docker run -i -t -v "$PWD:/tf_scripts" hashicorp/terraform:light plan /tf_scri
 
 - [terraform Docker Container](https://hub.docker.com/r/hashicorp/terraform/)
 - [Terraform as Docker returns error on plan](https://stackoverflow.com/questions/60366661/terraform-as-docker-returns-error-on-plan/60366859#60366859)
+
+----
+
+#### Run terraform in detached state
+
+Can be used for debugging
+
+```
+$ docker run -d -it --name terraform --entrypoint "/usr/bin/tail" -v $(pwd):/workspace -w /workspace hashicorp/terraform:${TAG} sh tail -f /dev/null
+$ docker exec -it terraform sh
+```
+
+To remove the container
+
+```
+$ docker stop terraform
+$ docker rm terraform
+```
+
+##### References:
+
+- [Running Terraform in Docker Locally](https://www.mrjamiebowman.com/software-development/docker/running-terraform-in-docker-locally/)

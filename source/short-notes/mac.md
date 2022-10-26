@@ -315,3 +315,16 @@ Download [create-catalina-iso.sh](/attachments/short-notes/mac/create-catalina-i
 ##### Reference:
 
 - [agentsim/highsierra bootable.sh](https://gist.github.com/agentsim/00cc38c693e7d0e1b36a2080870d955b#gistcomment-3113518)
+
+---
+
+#### PhpStorm (ideavim) cursor not moving when holding on `j` `k` `h` `l`
+
+```
+$ defaults write com.jetbrains.PhpStorm ApplePressAndHoldEnabled -bool false
+```
+
+##### Reference:
+
+- [IdeaVim j and k behavior on OS X](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206750615-IdeaVim-j-and-k-behavior-on-OS-X)
+

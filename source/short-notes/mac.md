@@ -318,10 +318,11 @@ Download [create-catalina-iso.sh](/attachments/short-notes/mac/create-catalina-i
 
 ---
 
-#### PhpStorm (ideavim) cursor not moving when holding on `j` `k` `h` `l`
+#### PhpStorm (ideavim) / VScode cursor not moving when holding on `j` `k` `h` `l`
 
 ```
 $ defaults write com.jetbrains.PhpStorm ApplePressAndHoldEnabled -bool false
+$ defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 ```
 
 ##### Reference:

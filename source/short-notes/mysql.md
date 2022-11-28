@@ -326,6 +326,18 @@ UPDATE table SET birthday = null WHERE CAST(birthday AS CHAR(10)) = '0000-00-00'
 
 ---
 
+#### Export a query to a csv file
+
+```
+mysql -h 123.123.123.123 -u db_username -p db_name < custom-query.sql > output.tsv
+```
+
+##### Reference:
+
+- [How can I output MySQL query results in CSV format?](https://stackoverflow.com/questions/356578/how-can-i-output-mysql-query-results-in-csv-format/2601837#2601837)
+
+---
+
 ### MariaDB
 
 #### mysqld start failed

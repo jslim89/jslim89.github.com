@@ -104,3 +104,34 @@ $ aws s3 cp /path/to/files/ s3://bucket/new_folder/ --exclude "*" --include "wan
 ```
 aws s3api get-object --bucket my-bucket --key path/to/large-file.csv --range bytes=0-10000 /dev/stdout | head -10
 ```
+
+
+#### S3 bucket policy deny all but allow only a single role
+
+```json
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Effect": "Deny",
+			"NotPrincipal": {
+				"AWS": [
+					"arn:aws:iam::444455556666:root"
+				]
+			},
+			"Action": "s3:*",
+			"Resource": ["arn:aws:s3:::BUCKETNAME", "arn:aws:s3:::BUCKETNAME/*"],
+            "Condition": {
+                "ArnNotEquals": {
+                    "aws:PrincipalArn": "arn:aws:iam::444455556666:role/the-allowed-role-name"
+                }
+            }
+		}
+	]
+}
+```
+
+##### Reference:
+
+- [AWS JSON policy elements: NotPrincipal](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_notprincipal.html)
+

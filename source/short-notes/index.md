@@ -28,6 +28,8 @@ This section is my personal short note about my learning
 - iOS/MacOS
     - [Objective-C](objective-c)
     - [Swift](swift)
+- TypeScript
+    - [Jest](typescript-jest)
 - [CSS](css)
 - Testing
     - [Appium](appium)

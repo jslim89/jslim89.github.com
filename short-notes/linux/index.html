@@ -22,332 +22,288 @@ if ($('.tags > a').length > 0) {
   });
 }
 </script><script type="text/javascript" src="//cdn.jsdelivr.net/npm/clipboard/dist/clipboard.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.js"></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.css"><meta name="generator" content="Hexo 5.4.2"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Linux</h1><a id="logo" href="/.">Js' Technical Blog</a><p class="description">This is my technical blog about programming, server setup &amp; configuration, technical learning experience.</p></div><div id="nav-menu"><a href="/."><i class="fa fa-home"> Home</i></a><a href="/archives/"><i class="fa fa-archive"> Archive</i></a><a class="current" href="/short-notes/"><i class="fa fa-graduation-cap"> Short-Notes</i></a><a href="/about/"><i class="fa fa-user"> About</i></a><a href="/atom.xml"><i class="fa fa-rss"> RSS</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Linux</h1><div class="post-content"><p><a target="_blank" rel="noopener" href="https://www.linuxfoundation.org/">https://www.linuxfoundation.org/</a></p>
-<h4 id="Mount-from-remote-windows-server-windows-share">Mount from remote windows server (windows share)</h4>
-<ol>
+<h4 id="Mount-from-remote-windows-server-windows-share"><a href="#Mount-from-remote-windows-server-windows-share" class="headerlink" title="Mount from remote windows server (windows share)"></a>Mount from remote windows server (windows share)</h4><ol>
 <li>Login as root</li>
 </ol>
 <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>su -</span><br></pre></td></tr></table></figure>
+
 <ol start="2">
 <li>Create a mount point</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">mkdir</span> -p /mnt/ntserver</span></span><br></pre></td></tr></table></figure>
+
 <ol start="3">
 <li>Mount the server</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">mount -t cifs //192.168.1.100/folder_to_be_mount -o username=jslim89,password=passwd /mnt/ntserver</span></span><br></pre></td></tr></table></figure>
+
 <p><strong>NOTE</strong></p>
 <ul>
 <li><code>-t cifs</code> - File system type to be mount</li>
 <li><code>-o</code> - in order to pass in arguments (i.e. <strong>username</strong> and <strong>password</strong>)</li>
 </ul>
-<h5 id="Reference">Reference:</h5>
-<ul>
+<h5 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h5><ul>
 <li><a target="_blank" rel="noopener" href="http://www.cyberciti.biz/tips/how-to-mount-remote-windows-partition-windows-share-under-linux.html">How to mount remote windows partition (windows share) under Linux</a></li>
 </ul>
 <hr>
-<h4 id="GREP-exclude-certain-keyword">GREP exclude certain keyword</h4>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ grep <span class="string">&quot;*wanted*&quot;</span> -v <span class="string">&quot;*dontWant*&quot;</span> *</span><br></pre></td></tr></table></figure>
-<p>In this case it will match the keyword <strong>wanted</strong> but exclude all the word with <strong>dontWant</strong></p>
+<h4 id="GREP-exclude-certain-keyword"><a href="#GREP-exclude-certain-keyword" class="headerlink" title="GREP exclude certain keyword"></a>GREP exclude certain keyword</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ grep <span class="string">&quot;*wanted*&quot;</span> -v <span class="string">&quot;*dontWant*&quot;</span> *</span><br></pre></td></tr></table></figure>
+<p>In this case it will match the keyword <strong>wanted</strong> but exclude all the word with <strong>dontWant</strong>  </p>
 <p><code>-v</code> option is for excluding what you don’t want</p>
-<h5 id="Reference-2">Reference:</h5>
-<ul>
+<h5 id="Reference-1"><a href="#Reference-1" class="headerlink" title="Reference:"></a>Reference:</h5><ul>
 <li><a target="_blank" rel="noopener" href="http://droptips.com/using-grep-to-exclude-lines-containing-certain-characterstext">Using grep to Exclude Lines Containing Certain Characters/Text</a></li>
 </ul>
 <hr>
-<h4 id="find-exclude-certain-filename">find exclude certain filename</h4>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ find . -not -iname <span class="string">&quot;*dontWant*&quot;</span> -iname <span class="string">&quot;*wanted*&quot;</span></span><br></pre></td></tr></table></figure>
-<p>In this case it will match the filename with the word <strong>wanted</strong> but exclude those with the word <strong>dontWant</strong></p>
-<h5 id="Reference-3">Reference:</h5>
-<ul>
+<h4 id="find-exclude-certain-filename"><a href="#find-exclude-certain-filename" class="headerlink" title="find exclude certain filename"></a>find exclude certain filename</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ find . -not -iname <span class="string">&quot;*dontWant*&quot;</span> -iname <span class="string">&quot;*wanted*&quot;</span></span><br></pre></td></tr></table></figure>
+<p>In this case it will match the filename with the word <strong>wanted</strong> but exclude those with the word <strong>dontWant</strong>  </p>
+<h5 id="Reference-2"><a href="#Reference-2" class="headerlink" title="Reference:"></a>Reference:</h5><ul>
 <li><a target="_blank" rel="noopener" href="http://www.linuxforums.org/forum/programming-scripting/66523-how-do-you-exclude-files-find-command.html#post354455">How do you exclude files in the find command</a></li>
 </ul>
 <hr>
-<h4 id="svn-commit-excluding-those-files-you-haven’t-done">svn commit excluding those files you haven’t done</h4>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ svn st | grep -v Foo | <span class="built_in">cut</span> -c9- | xargs svn commit</span><br></pre></td></tr></table></figure>
-<p><code>svn st</code> - show the files that have been modified<br>
-<code>grep -v Foo</code> - exclude those file path with the word <strong>Foo</strong><br>
-<code>cut -c9-</code> - to remove the extra character in front. i.e.<br>
-<code>M          ./path/to/Foo/bar.php</code><br>
-after <code>cut</code> become <strong>./path/to/Foo/bar.php</strong><br>
-<code>xargs svn commit</code> - pass the output from command in front to <code>svn commit</code></p>
-<h5 id="Reference-4">Reference:</h5>
-<ul>
+<h4 id="svn-commit-excluding-those-files-you-haven’t-done"><a href="#svn-commit-excluding-those-files-you-haven’t-done" class="headerlink" title="svn commit excluding those files you haven’t done"></a>svn commit excluding those files you haven’t done</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ svn st | grep -v Foo | <span class="built_in">cut</span> -c9- | xargs svn commit</span><br></pre></td></tr></table></figure>
+<p><code>svn st</code> - show the files that have been modified<br><code>grep -v Foo</code> - exclude those file path with the word <strong>Foo</strong><br><code>cut -c9-</code> - to remove the extra character in front. i.e.<br><code>M          ./path/to/Foo/bar.php</code><br>after <code>cut</code> become <strong>./path/to/Foo/bar.php</strong><br><code>xargs svn commit</code> - pass the output from command in front to <code>svn commit</code></p>
+<h5 id="Reference-3"><a href="#Reference-3" class="headerlink" title="Reference:"></a>Reference:</h5><ul>
 <li><a target="_blank" rel="noopener" href="http://stackoverflow.com/questions/289626/how-to-loop-files-in-linux-from-svn-status#answers">how to loop files in linux from svn status</a></li>
 </ul>
 <hr>
-<h4 id="Change-“localhost”-to-other-name">Change “localhost” to other name</h4>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi /etc/sysconfig/network</span><br></pre></td></tr></table></figure>
+<h4 id="Change-“localhost”-to-other-name"><a href="#Change-“localhost”-to-other-name" class="headerlink" title="Change “localhost” to other name"></a>Change “localhost” to other name</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi /etc/sysconfig/network</span><br></pre></td></tr></table></figure>
+
 <p>Just change from here</p>
 <hr>
-<h4 id="echo-with-new-line-character">echo with new line character</h4>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> -e [ui]\nusername = Your Name &lt;your@email.com&gt;</span><br></pre></td></tr></table></figure>
-<p>which will produce:</p>
+<h4 id="echo-with-new-line-character"><a href="#echo-with-new-line-character" class="headerlink" title="echo with new line character"></a>echo with new line character</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> -e [ui]\nusername = Your Name &lt;your@email.com&gt;</span><br></pre></td></tr></table></figure>
+
+<p>which will produce:  </p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[ui]</span><br><span class="line">username = Your Name &lt;your@email.com&gt;</span><br></pre></td></tr></table></figure>
 <p><code>-e</code> - is to enable intepretation of backslash escapes (i.e. <strong>\n</strong> in this case)</p>
-<h5 id="Reference-5">Reference:</h5>
-<ul>
+<h5 id="Reference-4"><a href="#Reference-4" class="headerlink" title="Reference:"></a>Reference:</h5><ul>
 <li><a target="_blank" rel="noopener" href="http://www.unix.com/shell-programming-scripting/56666-new-line-echo.html#post302271720">new line in echo</a></li>
 </ul>
 <hr>
-<h4 id="Change-password-for-other-users">Change password for other users</h4>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo passwd userfoo</span><br></pre></td></tr></table></figure>
-<h5 id="Reference-6">Reference:</h5>
-<ul>
+<h4 id="Change-password-for-other-users"><a href="#Change-password-for-other-users" class="headerlink" title="Change password for other users"></a>Change password for other users</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> passwd userfoo</span><br></pre></td></tr></table></figure>
+
+<h5 id="Reference-5"><a href="#Reference-5" class="headerlink" title="Reference:"></a>Reference:</h5><ul>
 <li><a target="_blank" rel="noopener" href="http://mohsinpage.wordpress.com/2011/01/20/postgresql-default-password/">PostgreSQL default password</a></li>
 </ul>
 <hr>
-<h4 id="Display-size-of-directory">Display size of directory</h4>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">du</span> -ch /path/to/dir | grep total</span><br></pre></td></tr></table></figure>
-<h5 id="Reference-7">Reference:</h5>
-<ul>
+<h4 id="Display-size-of-directory"><a href="#Display-size-of-directory" class="headerlink" title="Display size of directory"></a>Display size of directory</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">du</span> -ch /path/to/dir | grep total</span><br></pre></td></tr></table></figure>
+
+<h5 id="Reference-6"><a href="#Reference-6" class="headerlink" title="Reference:"></a>Reference:</h5><ul>
 <li>(<a target="_blank" rel="noopener" href="http://www.codecoffee.com/tipsforlinux/articles/22.html">http://www.codecoffee.com/tipsforlinux/articles/22.html</a>)</li>
 </ul>
 <hr>
-<h4 id="Start-SSH-server-on-bootup">Start SSH server on bootup</h4>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ su -c <span class="string">&#x27;chkconfig sshd on&#x27;</span></span><br></pre></td></tr></table></figure>
+<h4 id="Start-SSH-server-on-bootup"><a href="#Start-SSH-server-on-bootup" class="headerlink" title="Start SSH server on bootup"></a>Start SSH server on bootup</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ su -c <span class="string">&#x27;chkconfig sshd on&#x27;</span></span><br></pre></td></tr></table></figure>
+
 <hr>
-<h4 id="yum-install-without-gpg-key">yum install without gpg-key</h4>
-<p><code># yum install --nogpgcheck package-name</code></p>
+<h4 id="yum-install-without-gpg-key"><a href="#yum-install-without-gpg-key" class="headerlink" title="yum install without gpg-key"></a>yum install without gpg-key</h4><p><code># yum install --nogpgcheck package-name</code></p>
 <hr>
-<h4 id="replace-pattern-with-sed">replace pattern with sed</h4>
-<p>Example: replace <code>window.location.reload('#page1#&amp;#page2#')</code> to <code>window.location.href='#page1#&amp;#page2#';</code></p>
+<h4 id="replace-pattern-with-sed"><a href="#replace-pattern-with-sed" class="headerlink" title="replace pattern with sed"></a>replace pattern with sed</h4><p>Example: replace <code>window.location.reload(&#39;#page1#&amp;#page2#&#39;)</code> to <code>window.location.href=&#39;#page1#&amp;#page2#&#39;;</code>  </p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sed -i <span class="string">&quot;s/reload(&#x27;#\(\w\+\)#&amp;#\(\w\+\)#&#x27;)/href=&#x27;#\1#\&amp;#\2#&#x27;;/&quot;</span> /path/to/file</span><br></pre></td></tr></table></figure>
-<p><strong>NOTE:</strong> the <code>&amp;</code> in the <em>destination</em> must use <code>\</code> to escape, otherwise it will refer to the <em>source</em><br>
-i.e.</p>
+
+<p><strong>NOTE:</strong> the <code>&amp;</code> in the <em>destination</em> must use <code>\</code> to escape, otherwise it will refer to the <em>source</em><br>i.e.</p>
 <figure class="highlight leaf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sed -i &quot;s/reload(&#x27;<span class="punctuation">#</span>\(\w\+\)<span class="punctuation">#</span>&amp;<span class="punctuation">#</span>\(\w\+\)<span class="punctuation">#</span>&#x27;)/href=&#x27;<span class="punctuation">#</span>\1<span class="punctuation">#</span>&amp;<span class="punctuation">#</span>\2<span class="punctuation">#</span>&#x27;;/&quot; /path/to/file</span><br></pre></td></tr></table></figure>
+
 <p>will be come</p>
 <figure class="highlight leaf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">window.location.href=&#x27;<span class="punctuation">#</span><span class="keyword">choosepage</span><span class="punctuation">#</span><span class="keyword">reload</span><span class="params">(&#x27;#<span class="variable">choosepage</span>#&amp;#<span class="variable">queryString</span>#&#x27;)</span><span class="punctuation">#</span><span class="keyword">queryString</span><span class="punctuation">#</span>&#x27;;</span><br></pre></td></tr></table></figure>
-<p>Replace all occurance in a directory</p>
+
+<p>Replace all occurance in a directory  </p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ grep <span class="string">&quot;reload&quot;</span> -Rl * | xargs sed -i <span class="string">&quot;s/reload(&#x27;#\(\w\+\)#&amp;#\(\w\+\)#&#x27;)/href=&#x27;#\1#\&amp;#\2#&#x27;;/&quot;</span></span><br></pre></td></tr></table></figure>
-<p><strong>Assumption:</strong> <code>reload</code> keyword only occur in this situation.<br>
-<code>-R</code> - recursively looking for all files in sub-directories<br>
-<code>-l</code> - show only the filename</p>
+
+<p><strong>Assumption:</strong> <code>reload</code> keyword only occur in this situation.<br><code>-R</code> - recursively looking for all files in sub-directories<br><code>-l</code> - show only the filename</p>
 <hr>
-<h4 id="Sync-2-directories-using-rsync">Sync 2 directories using rsync</h4>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ rsync -vr /path/to/source/ /path/to/destination/</span><br></pre></td></tr></table></figure>
+<h4 id="Sync-2-directories-using-rsync"><a href="#Sync-2-directories-using-rsync" class="headerlink" title="Sync 2 directories using rsync"></a>Sync 2 directories using rsync</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ rsync -vr /path/to/source/ /path/to/destination/</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li><code>-v</code> - verbose</li>
 <li><code>-r</code> - recursive</li>
 </ul>
-<h5 id="Reference-8">Reference:</h5>
-<ul>
+<h5 id="Reference-7"><a href="#Reference-7" class="headerlink" title="Reference:"></a>Reference:</h5><ul>
 <li><a target="_blank" rel="noopener" href="http://www.thegeekstuff.com/2010/09/rsync-command-examples/">How to Backup Linux? 15 rsync Command Examples</a></li>
 </ul>
 <hr>
-<h4 id="Forward-Backward-search-in-bash">Forward &amp; Backward search in bash</h4>
-<p><code>CTRL + R</code> - backward search<br>
-<code>CTRL + S</code> - forward search <strong>(Use after typing <em>CTRL + R</em>)</strong><br>
-If <code>CTRL + S</code> doesn’t work, use the command below:</p>
+<h4 id="Forward-amp-Backward-search-in-bash"><a href="#Forward-amp-Backward-search-in-bash" class="headerlink" title="Forward &amp; Backward search in bash"></a>Forward &amp; Backward search in bash</h4><p><code>CTRL + R</code> - backward search<br><code>CTRL + S</code> - forward search <strong>(Use after typing <em>CTRL + R</em>)</strong><br>If <code>CTRL + S</code> doesn’t work, use the command below:</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">stty</span> stop ^J</span><br></pre></td></tr></table></figure>
-<h5 id="Reference-9">Reference:</h5>
-<ul>
+
+<h5 id="Reference-8"><a href="#Reference-8" class="headerlink" title="Reference:"></a>Reference:</h5><ul>
 <li><a target="_blank" rel="noopener" href="http://askubuntu.com/questions/60071/how-to-forward-search-history-with-the-reverse-i-search-command-ctrlr#answers">How to forward-search-history with the reverse-i-search command (ctrl+r)?</a></li>
 </ul>
 <hr>
-<h4 id="Remove-the-trailing-dot-behind-the-permission-drwxrwxrwx">Remove the trailing dot behind the permission drwxrwxrwx</h4>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ find /path/to/dir -print0 | xargs -0 -n 1 sudo setfattr -h -x security.selinux</span><br></pre></td></tr></table></figure>
-<p><em>The last character can be:</em><br>
-<code> </code> <strong>(Blank)</strong> - no SELinux coverage<br>
-<code>.</code> <strong>(dot)</strong> - ordinary SELinux context only<br>
-<code>+</code> <strong>(plus)</strong> - SELinux ACLs or other things beyond ordinary context</p>
-<p><img src="/images/short-notes/linux/permission_trailing_dot.png" alt="Permission trailing dot" title="Permission trailing dot"></p>
-<h5 id="Reference-10">Reference:</h5>
-<ul>
+<h4 id="Remove-the-trailing-dot-behind-the-permission-drwxrwxrwx"><a href="#Remove-the-trailing-dot-behind-the-permission-drwxrwxrwx" class="headerlink" title="Remove the trailing dot behind the permission drwxrwxrwx"></a>Remove the trailing dot behind the permission drwxrwxrwx</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ find /path/to/dir -print0 | xargs -0 -n 1 <span class="built_in">sudo</span> setfattr -h -x security.selinux</span><br></pre></td></tr></table></figure>
+
+<p><em>The last character can be:</em><br><code> </code> <strong>(Blank)</strong> - no SELinux coverage<br><code>.</code> <strong>(dot)</strong> - ordinary SELinux context only<br><code>+</code> <strong>(plus)</strong> - SELinux ACLs or other things beyond ordinary context</p>
+<p><img src="/images/short-notes/linux/permission_trailing_dot.png" alt="Permission trailing dot" title="Permission trailing dot">  </p>
+<h5 id="Reference-9"><a href="#Reference-9" class="headerlink" title="Reference:"></a>Reference:</h5><ul>
 <li><a target="_blank" rel="noopener" href="http://lists.fedoraproject.org/pipermail/users/2009-November/092469.html">what’s with that trailing “.” for the mode from “ls -l”</a></li>
 </ul>
 <hr>
-<h4 id="Debugging-in-Apache-configuration">Debugging in Apache configuration</h4>
-<p>Recently I faced a problem faced a problem in Fedora 17. <a target="_blank" rel="noopener" href="http://serverfault.com/questions/444629/getting-403-on-apache-with-php-on-fedora-17/446570">Here</a> is the question that I post to <a target="_blank" rel="noopener" href="http://serverfault.com">serverfault.com</a>.</p>
+<h4 id="Debugging-in-Apache-configuration"><a href="#Debugging-in-Apache-configuration" class="headerlink" title="Debugging in Apache configuration"></a>Debugging in Apache configuration</h4><p>Recently I faced a problem faced a problem in Fedora 17. <a target="_blank" rel="noopener" href="http://serverfault.com/questions/444629/getting-403-on-apache-with-php-on-fedora-17/446570">Here</a> is the question that I post to serverfault.com.</p>
 <p>If you faced 403 status in your browser, please check the following:</p>
 <ol>
 <li>Permission for your <code>/home/user</code> and subdirectories to your project if you’re using symbolic link</li>
-<li>Check your httpd.conf file
-<ul>
+<li>Check your httpd.conf file<ul>
 <li><code>AllowOverride None</code> change to <code>AllowOverride All</code> to enable <code>.htaccess</code></li>
 <li><code>Options Indexes FollowSymLinks</code> make sure that <code>FollowSymLinks</code> is there if you’re using symbolic link</li>
 </ul>
 </li>
 </ol>
-<p><strong>NOTE:</strong> For the <strong>2</strong>, the configuration is in document root,<br>
-i.e.</p>
+<p><strong>NOTE:</strong> For the <strong>2</strong>, the configuration is in document root,<br>i.e.</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;Directory &quot;/var/www/html&quot;&gt;</span><br><span class="line">    Options Indexes FollowSymLinks</span><br><span class="line">    AllowOverride All</span><br><span class="line">    Order allow,deny</span><br><span class="line">    Allow from all</span><br><span class="line">&lt;/Directory&gt;</span><br></pre></td></tr></table></figure>
+
 <p>Credit: <a target="_blank" rel="noopener" href="https://github.com/kianmeng">Kian-Meng, Ang</a></p>
 <hr>
-<h4 id="awk-usage">awk usage</h4>
-<p>Extract out certain portion of input by a separator</p>
+<h4 id="awk-usage"><a href="#awk-usage" class="headerlink" title="awk usage"></a>awk usage</h4><p>Extract out certain portion of input by a separator</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="string">&quot;hello to awk&quot;</span> | awk <span class="string">&#x27;&#123;print $3&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
-<p>The output will be <code>awk</code>.<br>
-<strong>By default it will separated by a <em>&lt;space&gt;</em> character</strong></p>
+
+<p>The output will be <code>awk</code>.<br><strong>By default it will separated by a <em>&lt;space&gt;</em> character</strong></p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="string">&quot;hello_to_awk&quot;</span> | awk -F _ <span class="string">&#x27;&#123;print $3&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
+
 <p><code>-F</code> - specify <strong>separator</strong> instead of using <strong>&lt;space&gt;</strong> by default</p>
-<h5 id="Reference-11">Reference:</h5>
-<ul>
+<h5 id="Reference-10"><a href="#Reference-10" class="headerlink" title="Reference:"></a>Reference:</h5><ul>
 <li><a target="_blank" rel="noopener" href="http://www.hcs.harvard.edu/~dholland/computers/awk.html">simple awk tutorial</a></li>
 </ul>
 <hr>
-<h4 id="Rename-a-file-to-md5-hash">Rename a file to md5 hash</h4>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">md5sum</span> ori_filename | awk <span class="string">&#x27;&#123;print $1&#125;&#x27;</span> | xargs <span class="built_in">mv</span> ori_filename</span><br></pre></td></tr></table></figure>
+<h4 id="Rename-a-file-to-md5-hash"><a href="#Rename-a-file-to-md5-hash" class="headerlink" title="Rename a file to md5 hash"></a>Rename a file to md5 hash</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">md5sum</span> ori_filename | awk <span class="string">&#x27;&#123;print $1&#125;&#x27;</span> | xargs <span class="built_in">mv</span> ori_filename</span><br></pre></td></tr></table></figure>
+
 <hr>
-<h4 id="Xmodmap-key-mapping-fix-for-NEC-Versa-E6300">Xmodmap key mapping (fix for NEC Versa E6300)</h4>
-<p>I had faced a problem when I want to use <code>|</code> <em>(Pipe)</em> it always give me <code>&gt;</code> character, here is a fix.</p>
+<h4 id="Xmodmap-key-mapping-fix-for-NEC-Versa-E6300"><a href="#Xmodmap-key-mapping-fix-for-NEC-Versa-E6300" class="headerlink" title="Xmodmap key mapping (fix for NEC Versa E6300)"></a>Xmodmap key mapping (fix for NEC Versa E6300)</h4><p>I had faced a problem when I want to use <code>|</code> <em>(Pipe)</em> it always give me <code>&gt;</code> character, here is a fix.</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="string">&quot;keycode 94 = backslash bar&quot;</span> &gt; ~/.Xmodmap</span><br></pre></td></tr></table></figure>
-<p><code>94</code> is the key for backslash<br>
-<code>backslash bar</code> is refer to 2 character, 1 is <code>\</code> another 1 is <code>|</code></p>
+
+<p><code>94</code> is the key for backslash<br><code>backslash bar</code> is refer to 2 character, 1 is <code>\</code> another 1 is <code>|</code></p>
 <hr>
-<h4 id="Run-a-programming-without-providing-ABSOLUTE-PATH">Run a programming without providing ABSOLUTE PATH</h4>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ `<span class="built_in">which</span> javac` HelloWorld.java</span><br></pre></td></tr></table></figure>
-<p>This example is to show that compile a java file without providing absolute path for <code>javac</code> <em>(i.e. /opt/jdk/bin/javac)</em>.<br>
-Here using <code>which</code> to get the absolute path of <code>javac</code> then use the output as the command.</p>
+<h4 id="Run-a-programming-without-providing-ABSOLUTE-PATH"><a href="#Run-a-programming-without-providing-ABSOLUTE-PATH" class="headerlink" title="Run a programming without providing ABSOLUTE PATH"></a>Run a programming without providing ABSOLUTE PATH</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ `<span class="built_in">which</span> javac` HelloWorld.java</span><br></pre></td></tr></table></figure>
+
+<p>This example is to show that compile a java file without providing absolute path for <code>javac</code> <em>(i.e. /opt/jdk/bin/javac)</em>.<br>Here using <code>which</code> to get the absolute path of <code>javac</code> then use the output as the command.</p>
 <hr>
-<h4 id="tree-show-only-the-first-level">tree show only the first level</h4>
-<p>By default it will shows all files, but I definitely cannot have a clear image on that. The command below shows only the first level</p>
+<h4 id="tree-show-only-the-first-level"><a href="#tree-show-only-the-first-level" class="headerlink" title="tree show only the first level"></a>tree show only the first level</h4><p>By default it will shows all files, but I definitely cannot have a clear image on that. The command below shows only the first level</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tree /path -L 1</span><br></pre></td></tr></table></figure>
+
 <p><code>-L</code> - refer to the level you want</p>
 <hr>
-<h4 id="Remove-trailing-space-for-each-line-using-sed">Remove trailing space for each line using sed</h4>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sed -i <span class="string">&#x27;s/[[:space:]]*$//&#x27;</span> filename</span><br></pre></td></tr></table></figure>
-<h5 id="Reference-12">Reference:</h5>
-<ul>
+<h4 id="Remove-trailing-space-for-each-line-using-sed"><a href="#Remove-trailing-space-for-each-line-using-sed" class="headerlink" title="Remove trailing space for each line using sed"></a>Remove trailing space for each line using sed</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sed -i <span class="string">&#x27;s/[[:space:]]*$//&#x27;</span> filename</span><br></pre></td></tr></table></figure>
+
+<h5 id="Reference-11"><a href="#Reference-11" class="headerlink" title="Reference:"></a>Reference:</h5><ul>
 <li><a target="_blank" rel="noopener" href="http://stackoverflow.com/questions/10621828/sed-removes-all-leading-and-trailing-whitespace-from-each-line-on-solaris-syst#answers">sed + removes all leading and trailing whitespace from each line on solaris system</a></li>
 </ul>
 <hr>
-<h4 id="Continuously-watch-a-file">Continuously watch a file</h4>
-<p>This is to monitor a file in few seconds interval</p>
+<h4 id="Continuously-watch-a-file"><a href="#Continuously-watch-a-file" class="headerlink" title="Continuously watch a file"></a>Continuously watch a file</h4><p>This is to monitor a file in few seconds interval</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ watch -n 3 -d <span class="built_in">tail</span> file_to_watch.txt</span><br></pre></td></tr></table></figure>
+
 <p>In this case I monitor the file <strong>file_to_watch.txt</strong> for every <strong>3</strong> second</p>
-<h5 id="Reference-13">Reference:</h5>
-<ul>
+<h5 id="Reference-12"><a href="#Reference-12" class="headerlink" title="Reference:"></a>Reference:</h5><ul>
 <li><a target="_blank" rel="noopener" href="http://serverfault.com/questions/1669/shell-command-to-monitor-changes-in-a-file-whats-it-called-again#answer-1682">Shell command to monitor changes in a file - What’s it called again?</a></li>
 </ul>
 <hr>
-<h4 id="Kill-all-process-from-grep">Kill all process from grep</h4>
-<p>Let say now want to kill all <strong>fcgi</strong> processes</p>
+<h4 id="Kill-all-process-from-grep"><a href="#Kill-all-process-from-grep" class="headerlink" title="Kill all process from grep"></a>Kill all process from grep</h4><p>Let say now want to kill all <strong>fcgi</strong> processes</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ps aux | grep fcgi | awk <span class="string">&#x27;&#123;print $2&#125;&#x27;</span> | xargs <span class="built_in">kill</span> -9</span><br></pre></td></tr></table></figure>
+
 <p>If you want to kill other process, just replace the <strong>fcgi</strong> in the second portion with the process that you wanted to kill.</p>
 <p>i.e.</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ps aux | grep &lt;process_name&gt; | awk <span class="string">&#x27;&#123;print $2&#125;&#x27;</span> | xargs <span class="built_in">kill</span> -9</span><br></pre></td></tr></table></figure>
+
 <hr>
-<h4 id="Change-time-zone-in-Ubuntu-Server">Change time zone in Ubuntu Server</h4>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo dpkg-reconfigure tzdata</span><br></pre></td></tr></table></figure>
+<h4 id="Change-time-zone-in-Ubuntu-Server"><a href="#Change-time-zone-in-Ubuntu-Server" class="headerlink" title="Change time zone in Ubuntu Server"></a>Change time zone in Ubuntu Server</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> dpkg-reconfigure tzdata</span><br></pre></td></tr></table></figure>
+
 <p>Then choose your Time Zone now.</p>
-<h5 id="Reference-14">Reference:</h5>
-<ul>
+<h5 id="Reference-13"><a href="#Reference-13" class="headerlink" title="Reference:"></a>Reference:</h5><ul>
 <li><a target="_blank" rel="noopener" href="http://www.christopherirish.com/2012/03/21/how-to-set-the-timezone-on-ubuntu-server/">How to set the timezone on Ubuntu Server</a></li>
 </ul>
 <hr>
-<h4 id="Zip-files-with-password-protection">Zip files with password protection</h4>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ zip -e zipname.zip file1.txt folder1/*</span><br></pre></td></tr></table></figure>
-<h5 id="Reference-15">Reference:</h5>
-<ul>
+<h4 id="Zip-files-with-password-protection"><a href="#Zip-files-with-password-protection" class="headerlink" title="Zip files with password protection"></a>Zip files with password protection</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ zip -e zipname.zip file1.txt folder1/*</span><br></pre></td></tr></table></figure>
+
+<h5 id="Reference-14"><a href="#Reference-14" class="headerlink" title="Reference:"></a>Reference:</h5><ul>
 <li><a target="_blank" rel="noopener" href="http://forums.macrumors.com/showthread.php?t=653030#post7125763">How do I create a password protected ZIP archive?</a></li>
 </ul>
 <hr>
-<h4 id="Download-a-file-using-curl">Download a file using <code>curl</code></h4>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl -o dest_file.tar.gz http://example.com/file.tar.gz</span><br></pre></td></tr></table></figure>
-<h5 id="Reference-16">Reference:</h5>
-<ul>
+<h4 id="Download-a-file-using-curl"><a href="#Download-a-file-using-curl" class="headerlink" title="Download a file using curl"></a>Download a file using <code>curl</code></h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl -o dest_file.tar.gz http://example.com/file.tar.gz</span><br></pre></td></tr></table></figure>
+
+<h5 id="Reference-15"><a href="#Reference-15" class="headerlink" title="Reference:"></a>Reference:</h5><ul>
 <li><a target="_blank" rel="noopener" href="http://www.cyberciti.biz/faq/curl-download-file-example-under-linux-unix/">Linux / Unix: curl Command Download File Example</a></li>
 </ul>
 <hr>
-<h4 id="CLear-history-in-terminal">CLear history in terminal</h4>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">history</span> -c &amp;&amp; <span class="built_in">history</span> -w</span><br></pre></td></tr></table></figure>
+<h4 id="CLear-history-in-terminal"><a href="#CLear-history-in-terminal" class="headerlink" title="CLear history in terminal"></a>CLear history in terminal</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">history</span> -c &amp;&amp; <span class="built_in">history</span> -w</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li><code>history -c</code> - clear the history</li>
 <li><code>history -w</code> - write the now history file</li>
 </ul>
-<h5 id="Reference-17">Reference:</h5>
-<ul>
+<h5 id="Reference-16"><a href="#Reference-16" class="headerlink" title="Reference:"></a>Reference:</h5><ul>
 <li><a target="_blank" rel="noopener" href="http://stackoverflow.com/questions/6709349/delete-terminal-history-in-linux/6709403#6709403">Delete terminal history in Linux [closed]</a></li>
 </ul>
 <hr>
-<h4 id="Change-directory-file-permission-recursively">Change directory &amp; file permission recursively</h4>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># change directories mode to -rwxr-xr-x</span></span><br><span class="line">$ find . -<span class="built_in">type</span> d -<span class="built_in">exec</span> <span class="built_in">chmod</span> 755 &#123;&#125; \;</span><br><span class="line"><span class="comment"># change files mode to -rw-r--r--</span></span><br><span class="line">$ find . -<span class="built_in">type</span> f -<span class="built_in">exec</span> <span class="built_in">chmod</span> 644 &#123;&#125; \;</span><br></pre></td></tr></table></figure>
-<h5 id="Reference-18">Reference:</h5>
-<ul>
+<h4 id="Change-directory-amp-file-permission-recursively"><a href="#Change-directory-amp-file-permission-recursively" class="headerlink" title="Change directory &amp; file permission recursively"></a>Change directory &amp; file permission recursively</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># change directories mode to -rwxr-xr-x</span></span><br><span class="line">$ find . -<span class="built_in">type</span> d -<span class="built_in">exec</span> <span class="built_in">chmod</span> 755 &#123;&#125; \;</span><br><span class="line"><span class="comment"># change files mode to -rw-r--r--</span></span><br><span class="line">$ find . -<span class="built_in">type</span> f -<span class="built_in">exec</span> <span class="built_in">chmod</span> 644 &#123;&#125; \;</span><br></pre></td></tr></table></figure>
+
+<h5 id="Reference-17"><a href="#Reference-17" class="headerlink" title="Reference:"></a>Reference:</h5><ul>
 <li><a target="_blank" rel="noopener" href="http://stackoverflow.com/questions/4321456/find-exec-a-shell-function">find -exec a shell function?</a></li>
 </ul>
 <hr>
-<h4 id="Apache-error-when-running-a2ensite-command">Apache error when running <code>a2ensite</code> command</h4>
-<p>The error message look like <code>ERROR: Site domain.com does not exist</code></p>
+<h4 id="Apache-error-when-running-a2ensite-command"><a href="#Apache-error-when-running-a2ensite-command" class="headerlink" title="Apache error when running a2ensite command"></a>Apache error when running <code>a2ensite</code> command</h4><p>The error message look like <code>ERROR: Site domain.com does not exist</code></p>
 <p>Just have to ensure the file name end with <strong>.conf</strong> extension.</p>
-<h5 id="Reference-19">Reference:</h5>
-<ul>
+<h5 id="Reference-18"><a href="#Reference-18" class="headerlink" title="Reference:"></a>Reference:</h5><ul>
 <li><a target="_blank" rel="noopener" href="http://stackoverflow.com/questions/10557770/adding-subdomain-to-apache2-with-a2ensite-causes-error-error-site-domain-com-d/17665502#17665502">adding subdomain to apache2 with a2ensite causes error: ERROR: Site domain.com does not exist</a></li>
 </ul>
 <hr>
-<h4 id="Find-a-folder-by-it’s-name">Find a folder by it’s name</h4>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ find . -<span class="built_in">type</span> d -iname folder_name</span><br></pre></td></tr></table></figure>
+<h4 id="Find-a-folder-by-it’s-name"><a href="#Find-a-folder-by-it’s-name" class="headerlink" title="Find a folder by it’s name"></a>Find a folder by it’s name</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ find . -<span class="built_in">type</span> d -iname folder_name</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li><code>-type d</code> is refer to directory <em>(or folder)</em></li>
 <li><code>-iname</code> is looking for name <em>(case-insensitive)</em></li>
 </ul>
 <hr>
-<h4 id="List-all-users-in-a-group">List all users in a group</h4>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ grep ^usergroup /etc/group</span><br></pre></td></tr></table></figure>
-<h5 id="Reference-20">Reference:</h5>
-<ul>
+<h4 id="List-all-users-in-a-group"><a href="#List-all-users-in-a-group" class="headerlink" title="List all users in a group"></a>List all users in a group</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ grep ^usergroup /etc/group</span><br></pre></td></tr></table></figure>
+
+<h5 id="Reference-19"><a href="#Reference-19" class="headerlink" title="Reference:"></a>Reference:</h5><ul>
 <li><a target="_blank" rel="noopener" href="http://www.linuxquestions.org/questions/linux-newbie-8/how-to-list-all-members-of-a-group-602785/#post2972428">how to list all members of a group</a></li>
 </ul>
 <hr>
-<h4 id="List-all-users">List all users</h4>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ less /etc/passwd</span><br></pre></td></tr></table></figure>
-<h5 id="Reference-21">Reference:</h5>
-<ul>
+<h4 id="List-all-users"><a href="#List-all-users" class="headerlink" title="List all users"></a>List all users</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ less /etc/passwd</span><br></pre></td></tr></table></figure>
+
+<h5 id="Reference-20"><a href="#Reference-20" class="headerlink" title="Reference:"></a>Reference:</h5><ul>
 <li><a target="_blank" rel="noopener" href="http://www.cyberciti.biz/faq/linux-list-users-command/">Linux Command: List All Users In The System</a></li>
 </ul>
 <hr>
-<h4 id="Monitor-Watch-a-file-content-change">Monitor/Watch a file content change</h4>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">tail</span> -f thefile.txt</span><br></pre></td></tr></table></figure>
-<h5 id="Reference-22">Reference:</h5>
-<ul>
+<h4 id="Monitor-Watch-a-file-content-change"><a href="#Monitor-Watch-a-file-content-change" class="headerlink" title="Monitor/Watch a file content change"></a>Monitor/Watch a file content change</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">tail</span> -f thefile.txt</span><br></pre></td></tr></table></figure>
+
+<h5 id="Reference-21"><a href="#Reference-21" class="headerlink" title="Reference:"></a>Reference:</h5><ul>
 <li><a target="_blank" rel="noopener" href="http://serverfault.com/questions/1669/shell-command-to-monitor-changes-in-a-file-whats-it-called-again/1670#1670">Shell command to monitor changes in a file - What’s it called again?</a></li>
 </ul>
 <hr>
-<h4 id="Loop-through-all-files-recursively">Loop through all files recursively</h4>
-<p>Find all php files recursively</p>
+<h4 id="Loop-through-all-files-recursively"><a href="#Loop-through-all-files-recursively" class="headerlink" title="Loop through all files recursively"></a>Loop through all files recursively</h4><p>Find all php files recursively</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">FILES=$(find /path/to/project/ -<span class="built_in">type</span> f -name *.php)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> file <span class="keyword">in</span> <span class="variable">$FILES</span></span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="variable">$file</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+
 <hr>
-<h4 id="Extract-file-name-without-extension">Extract file name without extension</h4>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">filename=<span class="string">&quot;<span class="variable">$&#123;file%.*&#125;</span>&quot;</span></span><br></pre></td></tr></table></figure>
-<h5 id="Reference-23">Reference:</h5>
-<ul>
+<h4 id="Extract-file-name-without-extension"><a href="#Extract-file-name-without-extension" class="headerlink" title="Extract file name without extension"></a>Extract file name without extension</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">filename=<span class="string">&quot;<span class="variable">$&#123;file%.*&#125;</span>&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="Reference-22"><a href="#Reference-22" class="headerlink" title="Reference:"></a>Reference:</h5><ul>
 <li><a target="_blank" rel="noopener" href="http://stackoverflow.com/questions/965053/extract-filename-and-extension-in-bash/965072#965072">Extract filename and extension in bash</a></li>
 </ul>
-<h4 id="Show-current-running-distro">Show current running distro</h4>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ lsb_release -a</span><br></pre></td></tr></table></figure>
-<h5 id="Reference-24">Reference:</h5>
-<ul>
+<h4 id="Show-current-running-distro"><a href="#Show-current-running-distro" class="headerlink" title="Show current running distro"></a>Show current running distro</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ lsb_release -a</span><br></pre></td></tr></table></figure>
+
+<h5 id="Reference-23"><a href="#Reference-23" class="headerlink" title="Reference:"></a>Reference:</h5><ul>
 <li><a target="_blank" rel="noopener" href="https://superuser.com/questions/618660/how-can-i-determine-the-distro-of-linux-that-is-running-on-a-remote-server/618663#618663">How can I determine the distro of Linux that is running on a remote server?</a></li>
 </ul>
 <hr>
-<h4 id="Generate-SQL-from-script-and-import-to-db">Generate SQL from script and import to db</h4>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ php generate_sql.php | mysql -u root -p mydatabase</span><br></pre></td></tr></table></figure>
+<h4 id="Generate-SQL-from-script-and-import-to-db"><a href="#Generate-SQL-from-script-and-import-to-db" class="headerlink" title="Generate SQL from script and import to db"></a>Generate SQL from script and import to db</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ php generate_sql.php | mysql -u root -p mydatabase</span><br></pre></td></tr></table></figure>
+
 <hr>
-<h4 id="chown-to-softlink"><code>chown</code> to softlink</h4>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">chown</span> -h myuser:mygroup mysymbolic</span><br></pre></td></tr></table></figure>
+<h4 id="chown-to-softlink"><a href="#chown-to-softlink" class="headerlink" title="chown to softlink"></a><code>chown</code> to softlink</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">chown</span> -h myuser:mygroup mysymbolic</span><br></pre></td></tr></table></figure>
+
 <p>Need a <code>-h</code> option</p>
-<h5 id="Reference-25">Reference:</h5>
-<ul>
+<h5 id="Reference-24"><a href="#Reference-24" class="headerlink" title="Reference:"></a>Reference:</h5><ul>
 <li><a target="_blank" rel="noopener" href="http://superuser.com/questions/68685/chown-is-not-changing-symbolic-link/68688#68688">chown is not changing symbolic link</a></li>
 </ul>
 <hr>
-<h4 id="Install-Remove-crontab-for-other-user">Install/Remove <code>crontab</code> for other user</h4>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># install</span></span><br><span class="line">$ crontab cron_content.txt -u username</span><br><span class="line"></span><br><span class="line"><span class="comment"># remove crontab from certain user</span></span><br><span class="line">$ crontab -r -u username</span><br></pre></td></tr></table></figure>
+<h4 id="Install-Remove-crontab-for-other-user"><a href="#Install-Remove-crontab-for-other-user" class="headerlink" title="Install/Remove crontab for other user"></a>Install/Remove <code>crontab</code> for other user</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># install</span></span><br><span class="line">$ crontab cron_content.txt -u username</span><br><span class="line"></span><br><span class="line"><span class="comment"># remove crontab from certain user</span></span><br><span class="line">$ crontab -r -u username</span><br></pre></td></tr></table></figure>
+
 <hr>
-<h4 id="Kill-all-process-with-certain-name-pattern">Kill all process with certain name pattern</h4>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pkill -f foobar</span><br></pre></td></tr></table></figure>
-<h5 id="Reference-26">Reference:</h5>
-<ul>
+<h4 id="Kill-all-process-with-certain-name-pattern"><a href="#Kill-all-process-with-certain-name-pattern" class="headerlink" title="Kill all process with certain name pattern"></a>Kill all process with certain name pattern</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pkill -f foobar</span><br></pre></td></tr></table></figure>
+
+<h5 id="Reference-25"><a href="#Reference-25" class="headerlink" title="Reference:"></a>Reference:</h5><ul>
 <li><a target="_blank" rel="noopener" href="http://stackoverflow.com/questions/8987037/how-to-kill-all-processes-with-a-given-partial-name/8987063#8987063">How to kill all processes with a given partial name?</a></li>
 </ul>
 <hr>
-<h4 id="Run-command-with-specific-user">Run command with specific user</h4>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo -u www-data php run.php</span><br></pre></td></tr></table></figure>
-<h5 id="Reference-27">Reference:</h5>
-<ul>
+<h4 id="Run-command-with-specific-user"><a href="#Run-command-with-specific-user" class="headerlink" title="Run command with specific user"></a>Run command with specific user</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> -u www-data php run.php</span><br></pre></td></tr></table></figure>
+
+<h5 id="Reference-26"><a href="#Reference-26" class="headerlink" title="Reference:"></a>Reference:</h5><ul>
 <li><a target="_blank" rel="noopener" href="https://serverfault.com/questions/453811/how-to-configure-php-cli-on-linux-ubuntu-to-run-as-www-data/453823#453823">How to configure PHP CLI on linux ubuntu to run as www-data?</a></li>
 </ul>
 <hr>
-<h4 id="Find-the-filename-from-a-content">Find the filename from a content</h4>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> -S /path/to/files_*.csv.gz | xargs -L1 -d<span class="string">&#x27;\n&#x27;</span> -I&#123;&#125; sh -c <span class="string">&quot;zcat &#x27;&#123;&#125;&#x27; | grep &#x27;some content&#x27; &amp;&amp; echo &#x27;&#123;&#125;&#x27;&quot;</span></span><br></pre></td></tr></table></figure>
-</div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://jslim.net"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Categories</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"><a href="/tags/linux/" style="font-size: 15px;">linux</a> <a href="/tags/setup-configuration/" style="font-size: 15px;">setup-configuration</a> <a href="/tags/vim/" style="font-size: 15px;">vim</a> <a href="/tags/subversion/" style="font-size: 15px;">subversion</a> <a href="/tags/fedora/" style="font-size: 15px;">fedora</a> <a href="/tags/gnome/" style="font-size: 15px;">gnome</a> <a href="/tags/windows/" style="font-size: 15px;">windows</a> <a href="/tags/php/" style="font-size: 15px;">php</a> <a href="/tags/programming/" style="font-size: 15px;">programming</a> <a href="/tags/os-x/" style="font-size: 15px;">os-x</a> <a href="/tags/ruby/" style="font-size: 15px;">ruby</a> <a href="/tags/octopress/" style="font-size: 15px;">octopress</a> <a href="/tags/mac/" style="font-size: 15px;">mac</a> <a href="/tags/command-line/" style="font-size: 15px;">command-line</a> <a href="/tags/shell-script/" style="font-size: 15px;">shell-script</a> <a href="/tags/ios/" style="font-size: 15px;">ios</a> <a href="/tags/uninstallation/" style="font-size: 15px;">uninstallation</a> <a href="/tags/javascript/" style="font-size: 15px;">javascript</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/sql/" style="font-size: 15px;">sql</a> <a href="/tags/python/" style="font-size: 15px;">python</a> <a href="/tags/django/" style="font-size: 15px;">django</a> <a href="/tags/mysql/" style="font-size: 15px;">mysql</a> <a href="/tags/vmware/" style="font-size: 15px;">vmware</a> <a href="/tags/zend/" style="font-size: 15px;">zend</a> <a href="/tags/c-language/" style="font-size: 15px;">c language</a> <a href="/tags/wordpress/" style="font-size: 15px;">wordpress</a> <a href="/tags/configuration/" style="font-size: 15px;">configuration</a> <a href="/tags/apache/" style="font-size: 15px;">apache</a> <a href="/tags/laravel/" style="font-size: 15px;">laravel</a> <a href="/tags/nodejs/" style="font-size: 15px;">nodejs</a> <a href="/tags/sails-js/" style="font-size: 15px;">sails.js</a> <a href="/tags/nginx/" style="font-size: 15px;">nginx</a> <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/bootstrap3/" style="font-size: 15px;">bootstrap3</a> <a href="/tags/deployment/" style="font-size: 15px;">deployment</a> <a href="/tags/jquery/" style="font-size: 15px;">jquery</a> <a href="/tags/google-map/" style="font-size: 15px;">google-map</a> <a href="/tags/flot/" style="font-size: 15px;">flot</a> <a href="/tags/graph/" style="font-size: 15px;">graph</a> <a href="/tags/server/" style="font-size: 15px;">server</a> <a href="/tags/happyfox/" style="font-size: 15px;">happyfox</a> <a href="/tags/laravel4/" style="font-size: 15px;">laravel4</a> <a href="/tags/objective-c/" style="font-size: 15px;">objective-c</a> <a href="/tags/cocos2d-x/" style="font-size: 15px;">cocos2d-x</a> <a href="/tags/xcode/" style="font-size: 15px;">xcode</a> <a href="/tags/swift/" style="font-size: 15px;">swift</a> <a href="/tags/payment-gateway/" style="font-size: 15px;">payment-gateway</a> <a href="/tags/debian/" style="font-size: 15px;">debian</a> <a href="/tags/branding/" style="font-size: 15px;">branding</a> <a href="/tags/ruby-on-rails/" style="font-size: 15px;">ruby-on-rails</a> <a href="/tags/selenium/" style="font-size: 15px;">selenium</a> <a href="/tags/phantomjs/" style="font-size: 15px;">phantomjs</a> <a href="/tags/test/" style="font-size: 15px;">test</a> <a href="/tags/security/" style="font-size: 15px;">security</a> <a href="/tags/vagrant/" style="font-size: 15px;">vagrant</a> <a href="/tags/google-api/" style="font-size: 15px;">google-api</a> <a href="/tags/e-commerce/" style="font-size: 15px;">e-commerce</a> <a href="/tags/setup/" style="font-size: 15px;">setup</a> <a href="/tags/facebook-php-sdk/" style="font-size: 15px;">facebook-php-sdk</a> <a href="/tags/DirectAdmin/" style="font-size: 15px;">DirectAdmin</a> <a href="/tags/cronjob/" style="font-size: 15px;">cronjob</a> <a href="/tags/ads-platform/" style="font-size: 15px;">ads-platform</a> <a href="/tags/windows-form-application/" style="font-size: 15px;">windows-form-application</a> <a href="/tags/hacking/" style="font-size: 15px;">hacking</a> <a href="/tags/session-hijacking/" style="font-size: 15px;">session-hijacking</a> <a href="/tags/banned/" style="font-size: 15px;">banned</a> <a href="/tags/scam/" style="font-size: 15px;">scam</a> <a href="/tags/aws/" style="font-size: 15px;">aws</a> <a href="/tags/ssh/" style="font-size: 15px;">ssh</a> <a href="/tags/webapp/" style="font-size: 15px;">webapp</a> <a href="/tags/c/" style="font-size: 15px;">c#</a> <a href="/tags/winform/" style="font-size: 15px;">winform</a> <a href="/tags/nappupdate/" style="font-size: 15px;">nappupdate</a> <a href="/tags/devops/" style="font-size: 15px;">devops</a> <a href="/tags/homestead/" style="font-size: 15px;">homestead</a> <a href="/tags/paypal/" style="font-size: 15px;">paypal</a> <a href="/tags/angular/" style="font-size: 15px;">angular</a> <a href="/tags/cefsharp/" style="font-size: 15px;">cefsharp</a> <a href="/tags/http/" style="font-size: 15px;">http</a> <a href="/tags/guest-post/" style="font-size: 15px;">guest-post</a> <a href="/tags/ubuntu/" style="font-size: 15px;">ubuntu</a> <a href="/tags/utf-8/" style="font-size: 15px;">utf-8</a> <a href="/tags/mysql-client/" style="font-size: 15px;">mysql-client</a> <a href="/tags/config/" style="font-size: 15px;">config</a> <a href="/tags/lambda/" style="font-size: 15px;">lambda</a> <a href="/tags/node/" style="font-size: 15px;">node</a> <a href="/tags/js/" style="font-size: 15px;">js</a> <a href="/tags/tinymce/" style="font-size: 15px;">tinymce</a> <a href="/tags/guzzle/" style="font-size: 15px;">guzzle</a> <a href="/tags/laravel5/" style="font-size: 15px;">laravel5</a> <a href="/tags/eloquent/" style="font-size: 15px;">eloquent</a> <a href="/tags/subquery/" style="font-size: 15px;">subquery</a> <a href="/tags/oembed/" style="font-size: 15px;">oembed</a> <a href="/tags/datatables/" style="font-size: 15px;">datatables</a> <a href="/tags/google-analytics/" style="font-size: 15px;">google-analytics</a> <a href="/tags/google/" style="font-size: 15px;">google</a> <a href="/tags/gitlab/" style="font-size: 15px;">gitlab</a> <a href="/tags/rds/" style="font-size: 15px;">rds</a> <a href="/tags/openvpn/" style="font-size: 15px;">openvpn</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/blog/2024/01/12/manipulate-tmux-with-shell-script/">Manipulate tmux with shell script</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2023/10/17/aws-cognito-user-pool-custom-domain-error/">AWS Cognito User Pool custom domain error</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2022/06/17/Vim-DB-client-vim-dadbod-ui-connection-via-SSH-tunnel/">Vim DB client: vim-dadbod-ui connection via SSH tunnel</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2022/01/12/PHP7-Callable-Examples/">PHP7 Callable Examples</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2021/07/04/Setup-postgres-in-Ubuntu-server/">Setup postgres in Ubuntu server</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2021/06/03/Shell-script-remove-lines-contain-some-words/">Shell script - remove lines contain some words</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2021/05/09/Enable-AWS-SES-in-Laravel-web-app/">Enable AWS SES in Laravel web app</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2021/02/25/AWS-EC2-instance-used-up-CPU-100-Malware-kdevtmpfsi/">AWS EC2 instance used up CPU 100% - Malware kdevtmpfsi</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2021/02/08/Real-world-practice-on-Docker-in-Laravel-web-app/">Real world practice on Docker in Laravel web app</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2021/02/02/Laravel-Unit-Test-Mail-Send/">Laravel Unit Test Mail Send</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-comment-o"> Recent Comments</i></div><script type="text/javascript" src="//jslim89.disqus.com/recent_comments_widget.js?num_items=5&amp;hide_avatars=1&amp;avatar_size=32&amp;excerpt_length=20&amp;hide_mods=1"></script></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> Links</i></div><ul></ul><a href="http://blog.jsl.im" title="Js' Journey" target="_blank">Js' Journey</a></div><div class="affiliates"><div><a href="https://shop.ledger.com/pages/ledger-nano-x?r=005f13c38572" title="Ledger Nano X" target="_blank"><img src="http://affiliate.ledger.com/image/250/100"/></a></div><div><a href="https://luminati.io/?affiliate=ref_5d2fff2b8fcb5320de59b227&amp;cam=L_yairi" title="The largest proxy network" target="_blank"><img src="/images/ads/lum_ad_250x250.png"/></a></div><div><a href="https://m.do.co/c/abb622813f68" title="Deploy your next app in seconds. Get $50 in cloud credits from @DigitalOcean" target="_blank"><img src="/images/ads/DigitalOcean_300x250.gif" style="width:250px;height:auto;"/></a></div></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2024 <a href="/." rel="nofollow">Js' Technical Blog.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="/js/copycode.js" successtext="Copy Successed!"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
+<h4 id="Find-the-filename-from-a-content"><a href="#Find-the-filename-from-a-content" class="headerlink" title="Find the filename from a content"></a>Find the filename from a content</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> -S /path/to/files_*.csv.gz | xargs -L1 -d<span class="string">&#x27;\n&#x27;</span> -I&#123;&#125; sh -c <span class="string">&quot;zcat &#x27;&#123;&#125;&#x27; | grep &#x27;some content&#x27; &amp;&amp; echo &#x27;&#123;&#125;&#x27;&quot;</span></span><br></pre></td></tr></table></figure>
+</div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://jslim.net"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Categories</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"><a href="/tags/linux/" style="font-size: 15px;">linux</a> <a href="/tags/setup-configuration/" style="font-size: 15px;">setup-configuration</a> <a href="/tags/vim/" style="font-size: 15px;">vim</a> <a href="/tags/subversion/" style="font-size: 15px;">subversion</a> <a href="/tags/fedora/" style="font-size: 15px;">fedora</a> <a href="/tags/gnome/" style="font-size: 15px;">gnome</a> <a href="/tags/windows/" style="font-size: 15px;">windows</a> <a href="/tags/php/" style="font-size: 15px;">php</a> <a href="/tags/programming/" style="font-size: 15px;">programming</a> <a href="/tags/os-x/" style="font-size: 15px;">os-x</a> <a href="/tags/ruby/" style="font-size: 15px;">ruby</a> <a href="/tags/octopress/" style="font-size: 15px;">octopress</a> <a href="/tags/mac/" style="font-size: 15px;">mac</a> <a href="/tags/command-line/" style="font-size: 15px;">command-line</a> <a href="/tags/shell-script/" style="font-size: 15px;">shell-script</a> <a href="/tags/uninstallation/" style="font-size: 15px;">uninstallation</a> <a href="/tags/ios/" style="font-size: 15px;">ios</a> <a href="/tags/javascript/" style="font-size: 15px;">javascript</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/python/" style="font-size: 15px;">python</a> <a href="/tags/sql/" style="font-size: 15px;">sql</a> <a href="/tags/django/" style="font-size: 15px;">django</a> <a href="/tags/mysql/" style="font-size: 15px;">mysql</a> <a href="/tags/vmware/" style="font-size: 15px;">vmware</a> <a href="/tags/zend/" style="font-size: 15px;">zend</a> <a href="/tags/c-language/" style="font-size: 15px;">c language</a> <a href="/tags/wordpress/" style="font-size: 15px;">wordpress</a> <a href="/tags/configuration/" style="font-size: 15px;">configuration</a> <a href="/tags/apache/" style="font-size: 15px;">apache</a> <a href="/tags/laravel/" style="font-size: 15px;">laravel</a> <a href="/tags/nodejs/" style="font-size: 15px;">nodejs</a> <a href="/tags/sails-js/" style="font-size: 15px;">sails.js</a> <a href="/tags/nginx/" style="font-size: 15px;">nginx</a> <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/bootstrap3/" style="font-size: 15px;">bootstrap3</a> <a href="/tags/deployment/" style="font-size: 15px;">deployment</a> <a href="/tags/jquery/" style="font-size: 15px;">jquery</a> <a href="/tags/google-map/" style="font-size: 15px;">google-map</a> <a href="/tags/flot/" style="font-size: 15px;">flot</a> <a href="/tags/graph/" style="font-size: 15px;">graph</a> <a href="/tags/happyfox/" style="font-size: 15px;">happyfox</a> <a href="/tags/server/" style="font-size: 15px;">server</a> <a href="/tags/laravel4/" style="font-size: 15px;">laravel4</a> <a href="/tags/objective-c/" style="font-size: 15px;">objective-c</a> <a href="/tags/cocos2d-x/" style="font-size: 15px;">cocos2d-x</a> <a href="/tags/xcode/" style="font-size: 15px;">xcode</a> <a href="/tags/swift/" style="font-size: 15px;">swift</a> <a href="/tags/payment-gateway/" style="font-size: 15px;">payment-gateway</a> <a href="/tags/debian/" style="font-size: 15px;">debian</a> <a href="/tags/branding/" style="font-size: 15px;">branding</a> <a href="/tags/ruby-on-rails/" style="font-size: 15px;">ruby-on-rails</a> <a href="/tags/selenium/" style="font-size: 15px;">selenium</a> <a href="/tags/phantomjs/" style="font-size: 15px;">phantomjs</a> <a href="/tags/test/" style="font-size: 15px;">test</a> <a href="/tags/security/" style="font-size: 15px;">security</a> <a href="/tags/vagrant/" style="font-size: 15px;">vagrant</a> <a href="/tags/google-api/" style="font-size: 15px;">google-api</a> <a href="/tags/facebook-php-sdk/" style="font-size: 15px;">facebook-php-sdk</a> <a href="/tags/e-commerce/" style="font-size: 15px;">e-commerce</a> <a href="/tags/setup/" style="font-size: 15px;">setup</a> <a href="/tags/cronjob/" style="font-size: 15px;">cronjob</a> <a href="/tags/DirectAdmin/" style="font-size: 15px;">DirectAdmin</a> <a href="/tags/ads-platform/" style="font-size: 15px;">ads-platform</a> <a href="/tags/hacking/" style="font-size: 15px;">hacking</a> <a href="/tags/session-hijacking/" style="font-size: 15px;">session-hijacking</a> <a href="/tags/windows-form-application/" style="font-size: 15px;">windows-form-application</a> <a href="/tags/aws/" style="font-size: 15px;">aws</a> <a href="/tags/banned/" style="font-size: 15px;">banned</a> <a href="/tags/scam/" style="font-size: 15px;">scam</a> <a href="/tags/webapp/" style="font-size: 15px;">webapp</a> <a href="/tags/ssh/" style="font-size: 15px;">ssh</a> <a href="/tags/c/" style="font-size: 15px;">c#</a> <a href="/tags/winform/" style="font-size: 15px;">winform</a> <a href="/tags/nappupdate/" style="font-size: 15px;">nappupdate</a> <a href="/tags/devops/" style="font-size: 15px;">devops</a> <a href="/tags/homestead/" style="font-size: 15px;">homestead</a> <a href="/tags/paypal/" style="font-size: 15px;">paypal</a> <a href="/tags/angular/" style="font-size: 15px;">angular</a> <a href="/tags/http/" style="font-size: 15px;">http</a> <a href="/tags/cefsharp/" style="font-size: 15px;">cefsharp</a> <a href="/tags/guest-post/" style="font-size: 15px;">guest-post</a> <a href="/tags/ubuntu/" style="font-size: 15px;">ubuntu</a> <a href="/tags/utf-8/" style="font-size: 15px;">utf-8</a> <a href="/tags/config/" style="font-size: 15px;">config</a> <a href="/tags/mysql-client/" style="font-size: 15px;">mysql-client</a> <a href="/tags/lambda/" style="font-size: 15px;">lambda</a> <a href="/tags/node/" style="font-size: 15px;">node</a> <a href="/tags/js/" style="font-size: 15px;">js</a> <a href="/tags/tinymce/" style="font-size: 15px;">tinymce</a> <a href="/tags/guzzle/" style="font-size: 15px;">guzzle</a> <a href="/tags/laravel5/" style="font-size: 15px;">laravel5</a> <a href="/tags/eloquent/" style="font-size: 15px;">eloquent</a> <a href="/tags/subquery/" style="font-size: 15px;">subquery</a> <a href="/tags/oembed/" style="font-size: 15px;">oembed</a> <a href="/tags/google-analytics/" style="font-size: 15px;">google-analytics</a> <a href="/tags/google/" style="font-size: 15px;">google</a> <a href="/tags/datatables/" style="font-size: 15px;">datatables</a> <a href="/tags/gitlab/" style="font-size: 15px;">gitlab</a> <a href="/tags/rds/" style="font-size: 15px;">rds</a> <a href="/tags/openvpn/" style="font-size: 15px;">openvpn</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/blog/2024/01/12/manipulate-tmux-with-shell-script/">Manipulate tmux with shell script</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2023/10/17/aws-cognito-user-pool-custom-domain-error/">AWS Cognito User Pool custom domain error</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2022/06/17/Vim-DB-client-vim-dadbod-ui-connection-via-SSH-tunnel/">Vim DB client: vim-dadbod-ui connection via SSH tunnel</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2022/01/12/PHP7-Callable-Examples/">PHP7 Callable Examples</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2021/07/04/Setup-postgres-in-Ubuntu-server/">Setup postgres in Ubuntu server</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2021/06/03/Shell-script-remove-lines-contain-some-words/">Shell script - remove lines contain some words</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2021/05/09/Enable-AWS-SES-in-Laravel-web-app/">Enable AWS SES in Laravel web app</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2021/02/25/AWS-EC2-instance-used-up-CPU-100-Malware-kdevtmpfsi/">AWS EC2 instance used up CPU 100% - Malware kdevtmpfsi</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2021/02/08/Real-world-practice-on-Docker-in-Laravel-web-app/">Real world practice on Docker in Laravel web app</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2021/02/02/Laravel-Unit-Test-Mail-Send/">Laravel Unit Test Mail Send</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-comment-o"> Recent Comments</i></div><script type="text/javascript" src="//jslim89.disqus.com/recent_comments_widget.js?num_items=5&amp;hide_avatars=1&amp;avatar_size=32&amp;excerpt_length=20&amp;hide_mods=1"></script></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> Links</i></div><ul></ul><a href="http://blog.jsl.im" title="Js' Journey" target="_blank">Js' Journey</a></div><div class="affiliates"><div><a href="https://shop.ledger.com/pages/ledger-nano-x?r=005f13c38572" title="Ledger Nano X" target="_blank"><img src="http://affiliate.ledger.com/image/250/100"/></a></div><div><a href="https://luminati.io/?affiliate=ref_5d2fff2b8fcb5320de59b227&amp;cam=L_yairi" title="The largest proxy network" target="_blank"><img src="/images/ads/lum_ad_250x250.png"/></a></div><div><a href="https://m.do.co/c/abb622813f68" title="Deploy your next app in seconds. Get $50 in cloud credits from @DigitalOcean" target="_blank"><img src="/images/ads/DigitalOcean_300x250.gif" style="width:250px;height:auto;"/></a></div></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2024 <a href="/." rel="nofollow">Js' Technical Blog.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="/js/copycode.js" successtext="Copy Successed!"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

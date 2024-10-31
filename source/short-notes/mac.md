@@ -318,14 +318,22 @@ Download [create-catalina-iso.sh](/attachments/short-notes/mac/create-catalina-i
 
 ---
 
-#### PhpStorm (ideavim) / VScode cursor not moving when holding on `j` `k` `h` `l`
+#### PhpStorm (ideavim) / VScode / Cursor cursor not moving when holding on `j` `k` `h` `l`
 
-```
-$ defaults write com.jetbrains.PhpStorm ApplePressAndHoldEnabled -bool false
-$ defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
-```
+1. Find the app's unique id
+   ```sh
+   osascript -e 'id of app "Cursor"'
+   ```
+2. Then
+   ```
+   defaults write com.todesktop.230313mzl4w4u92 ApplePressAndHoldEnabled -bool false
+   defaults write com.jetbrains.PhpStorm ApplePressAndHoldEnabled -bool false
+   defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+   ```
+3. Restart the application
 
 ##### Reference:
 
 - [IdeaVim j and k behavior on OS X](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206750615-IdeaVim-j-and-k-behavior-on-OS-X)
+- [Setting up Vim press and hold on cursor](https://github.com/getcursor/cursor/issues/801#issuecomment-1712798006)
 

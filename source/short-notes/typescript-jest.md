@@ -37,3 +37,22 @@ jest.mock('my-module', () => {
 expect(mockCreate).toHaveBeenCalledTimes(1);
 ```
 
+#### Mock non-class module
+
+```ts
+import * as someModule from 'my-module';
+
+jest.mock('my-module');
+
+const mockFunc1 = jest.spyOn(someModule, 'func1');
+
+// alternative of mockFunc1.mockReturnValue('non promise result')
+mockFunc1.mockImplementation(() => 'non promise result');
+
+// alternative of mockFunc1.mockResolvedValue('promise result')
+mockFunc1.mockImplementation(() => Promise.resolve('promise result'));
+
+// alternative of mockFunc1.mockRejectedValue(new Error('unknown error'))
+mockFunc1.mockImplementation(() => { throw new Error('unknown error'); });
+```
+
